@@ -9,12 +9,10 @@ body {
 
 .hero {
     position: relative;
-    /* Adicione isso para que o posicionamento absoluto funcione */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Ocupa toda a altura da tela */
     text-align: center;
     background-color: black;
     border-radius: 20px;
@@ -65,10 +63,8 @@ a {
 
 #h1principal {
     position: absolute;
-    /* Posiciona o h1 acima do h1 de Guilherme Lima */
     left: 40%;
     top: 51%;
-    /* Ajuste a posição vertical conforme necessário */
     font-size: 40px;
     color: #ffffff;
 
@@ -76,9 +72,7 @@ a {
 
 #Navprojetos a {
     padding: 5px 10px;
-    /* Espaçamento interno */
     border-radius: 5px;
-    /* Bordas arredondadas */
     transition: background-color 0.3s, color 0.3s;
     /* Transição suave */
     text-decoration: none;
@@ -86,26 +80,20 @@ a {
 
 #Navhome a:hover {
     background-color: #ffffff;
-    /* Cor de fundo amarela ao passar o mouse */
     color: #0F172A;
-    /* Cor do texto ao passar o mouse */
     text-decoration: none;
 }
 
 #Navhome a {
     padding: 5px 10px;
-    /* Espaçamento interno */
     border-radius: 5px;
-    /* Bordas arredondadas */
     transition: background-color 0.3s, color 0.3s;
     /* Transição suave */
 }
 
 #Navprojetos a:hover {
     background-color: #ffffff;
-    /* Cor de fundo amarela ao passar o mouse */
     color: #0F172A;
-    /* Cor do texto ao passar o mouse */
 }
 
 #hoverrr a:hover {
@@ -115,24 +103,23 @@ a {
 
 section {
     margin-top: 70px;
-    /* Para evitar que o conteúdo fique atrás do header fixo */
 }
 
 #h1gradient {
     color: #ffffff;
-    /* Cor do h1 */
+
     font-size: 40px;
 }
 
 h2 {
     color: #ffffff;
-    /* Cor do h2 */
+
     font-size: 30px;
 }
 
 #h2gradient {
     color: #ffffff;
-    /* Cor do h2 */
+
     font-size: 35px;
 }
 
@@ -145,47 +132,51 @@ p {
     text-align: justify;
     font-size: 20px;
     margin-bottom: 15px;
-    /* Espaço entre os parágrafos */
     text-indent: 20px;
-    /* Indentação de 20 pixels no início do parágrafo */
     max-width: 850px;
-    /* Limita a largura do parágrafo */
 }
 
 .sobre-container {
-    display: flex; /* Usar Flexbox */
-    align-items: center; /* Alinha verticalmente ao centro */
+    display: flex;
+    /* Usar Flexbox */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
 }
 
 #minhafoto {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-left: 20%; /* Espaço à esquerda da foto */
-    margin-top: 5%; /* Espaço acima da foto */
+    margin-left: 20%;
+    margin-top: 5%;
 }
 
 #Sobremim {
     font-size: 35px;
-    margin-left: 43%; /* Espaço à esquerda do título */
-    opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.5s ease; /* Transição suave */
-    animation: fadeIn 1s forwards; /* Animação para aparecer */
-    animation-delay: 2s; /* Atraso de 1 segundo */
+    margin-left: 43%;
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.5s ease;
+    animation: fadeIn 1s forwards;
+    /* Animação para aparecer */
+    animation-delay: 2s;
+    /* Atraso de 1 segundo */
 }
 
 #TextoSobreMim {
     margin-left: 2%;
     margin-top: 180px;
 }
+
 /* Animação para fazer o texto aparecer */
 @keyframes fadeIn {
     to {
-        opacity: 1; /* Torna o título visível */
+        opacity: 1;
+        /* Torna o título visível */
     }
 }
 
-/* Efeito de hover */
+
 #Sobremim:hover {
-    color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+    color: #ffffff;
 }
