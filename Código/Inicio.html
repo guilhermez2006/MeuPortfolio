@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,8 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,69 +34,56 @@
         <a href="https://www.instagram.com/_guiszl7/" target="_blank" id="iconeInsta" class="icon-social">
             <i class="fab fa-instagram" style="color: #ffffff;"></i>
         </a>
-        <a href="https://www.linkedin.com/in/guik1ng-3-3b27362b8/" target="_blank" id="iconelinkedin" class="icon-social">
+        <a href="https://www.linkedin.com/in/guik1ng-3-3b27362b8/" target="_blank" id="iconelinkedin"
+            class="icon-social">
             <i class="fab fa-linkedin" style="color: #ffffff;"></i>
         </a>
-        
+
         <div class="sobre-container">
-            <img src="/Imagens/BATMAN.jpeg" alt="Batman" id="minhafoto">
+            <img src="/Imagens/2.jpg" alt="JinWoo" id="minhafoto">
             <h1 id="h1nome">Guilherme Lima</h1>
             <h2 id="devweb">Desenvolvedor Web</h2>
-          
         </div>
 
         <!--   <h1 id="Sobremim">SOBRE MIM</h1> -->
         <main>
     </div>
-    <section> <!-- ID adicionado para a seção Projetos -->
+    <section id="projetosSection" class="hidden">
         <h1 id="projetos">Projetos</h1>
     </section>
-    <section>
-        <h2>Projeto Android</h2>
-        <p>Neste projeto, explorei o Bugdroid, mascote do Android, e sua evolução ao longo dos anos.
-            <br>
-            Pesquisei a história do sistema, suas versões e seu impacto no mercado mobile. <br> Também
-            desenvolvi uma apresentação interativa com imagens e informações técnicas sobre o Android e
-            seu desenvolvimento. <br>Esse projeto aprimorou minhas habilidades em design, pesquisa e
-            tecnologia.
-        </p>
-        <h2>
-            Dandroids:
-        </h2>
-        <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado Dan Morrill.
-            Ele conta que abriu o Inkscape (software livre para vetorização de imagens) e criou sua própria versão
-            de robô.</p>
-        <picture>
-            <source media="(max-width: 670px)" srcset="/Imagens/dan-droids-pq.png">
-            <img src="/Imagens/dan-droids.png" alt="Primeiro mascote do Android">
-        </picture>
-    </section>
-    <section>
-        <h2>Bugdroid:</h2>
-        <p>O Bugdroid, criado em 2007, simboliza o sistema operacional móvel do Google. Ele reflete a evolução e a
-            filosofia de código aberto da plataforma. Com um design amigável, o Bugdroid se tornou um ícone
-            reconhecido globalmente, representando a diversidade do Android e sendo central em eventos e campanhas
-            de marketing.</p>
-        <img src="/Imagens/bugdroid.png" alt="Bugdroid">
-        <h3>Link do Site</h3>
-        <ul id="hoverrr">
-            <li>
-                <a href="https://guilhermez2006.github.io/projeto-android/index.html">Acesse o Projeto Android no
-                    Github</a>
-            </li>
-        </ul>
-        <section>
-            <div>
-                <h2 id="h2gradient">Tecnologias</h2>
-                <ul id="habilidades">
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>JavaScript</li>
-                    <li>Banco de Dados</li>
-                    <li>Git/Github</li>
-                </ul>
+       <section>
+        <div id="projetoAndroid">
+            <h2 id="titleAndroid">Projeto Android</h2>
+            <p>Neste projeto, explorei o Bugdroid, mascote do Android, e sua evolução ao longo dos anos.
+                <br>
+                Pesquisei a história do sistema, suas versões e seu impacto no mercado mobile. <br> Também
+                desenvolvi uma apresentação interativa com imagens e informações técnicas sobre o Android e
+                seu desenvolvimento. <br>Esse projeto aprimorou minhas habilidades em design, pesquisa e
+                tecnologia.
+            </p>
+            <div class="image-container">
+                <img src="/Imagens/bugdroid.png" alt="Bugdroid" id="Bugdroid">
+                <img src="/Imagens/dan-droids-pq.png" alt="dan" id="Dandroid">
             </div>
-        </section>
+            <ul id="hoverrr">
+                <li id="linkAndroid">
+                    <a href="https://guilhermez2006.github.io/projeto-android/index.html">Acesse o Projeto Android no Github</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div>
+
+        <h2 id="h2gradient">Habilidades</h2>
+        <ul id="habilidades">
+            <li>Html</li>
+            <li>Css</li>
+            <li>JavaScript</li>
+            <li>Banco de Dados</li>
+            <li>Git/Github</li>
+        </ul>
+    </div>
+    </section>
     </section>
     <section>
         <h2 id="Contato">Contato</h2>
@@ -113,4 +95,5 @@
             <li><a href="https://github.com/guilhermez2006" target="_blank">Me siga no Github</a></li>
     </section>
     </main>
+    <script src="script.js"></script>
 </body

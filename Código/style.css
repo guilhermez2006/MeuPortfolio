@@ -85,14 +85,30 @@ a {
     font-family: "Arial Black", Arial, sans-serif;
     color: #ffffff;
 }
+
 .icon-social {
-    font-size: 50px; /* Aumenta o tamanho do ícone */
-    margin: 10px;    /* Espaçamento entre os ícones */
-    transition: transform 0.3s; /* Efeito suave */
+    font-size: 50px;
+    /* Aumenta o tamanho do ícone */
+    margin: 10px;
+    /* Espaçamento entre os ícones */
+    transition: transform 0.3s;
+    /* Efeito suave */
 }
 
 .icon-social:hover {
-    transform: scale(1.2); /* Aumenta o ícone quando passar o mouse */
+    transform: scale(1.2);
+    /* Aumenta o ícone quando passar o mouse */
+}
+
+#projetosSection.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.80s ease, transform 0.80s ease;
+}
+
+#projetosSection.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #h1nome {
@@ -130,6 +146,77 @@ a {
     font-family: "Roboto", sans-serif;
 }
 
+#projetoAndroid {
+    position: relative;
+    background-image: linear-gradient(to bottom, #3dd384, #1a5c37);
+    left: -685px;
+    width: 25vw;
+    height: 25vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    /* Suaviza o movimento */
+}
+#projetoAndroid:hover{
+    transform: translateY(-10px);
+}
+    
+#titleAndroid {
+    margin-left: 100px;
+}
+
+#projetoAndroid #titleAndroid h2:hover {
+    color: #2fa866;
+}
+
+#linkAndroid {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    bottom: 5px;
+    left: 90px;
+}
+
+#linkAndroid a {
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+#projetoAndroid #linkAndroid a:hover {
+    color: #2fa866;
+}
+
+#linkAndroid::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.image-container { /* Novo contêiner */
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: flex-start; /* Alinha horizontalmente */
+}
+
+#Bugdroid {
+    width: 200px;
+    height: 125px;
+    margin: -10px -40px -10px 0; /* Adiciona margem direita */
+}
+
+#Dandroid {
+    width: 170px;
+    height: 130px;
+    margin: -40px 0 -20px 90px; /* Adiciona margem esquerda */
+}
 #Navhome a:hover {
     background-color: #ffffff;
     color: #0F172A;
@@ -225,7 +312,7 @@ p {
     border-radius: 50%;
     width: 350px;
     height: 350px;
-    margin-left: 165%;
+    margin-left: 140%;
     margin-top: 5%;
     display: block;
     /* Garante que o estilo seja aplicado corretamente */
