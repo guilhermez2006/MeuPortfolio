@@ -85,6 +85,15 @@ a {
     font-family: "Arial Black", Arial, sans-serif;
     color: #ffffff;
 }
+.icon-social {
+    font-size: 50px; /* Aumenta o tamanho do ícone */
+    margin: 10px;    /* Espaçamento entre os ícones */
+    transition: transform 0.3s; /* Efeito suave */
+}
+
+.icon-social:hover {
+    transform: scale(1.2); /* Aumenta o ícone quando passar o mouse */
+}
 
 #h1nome {
     position: absolute;
