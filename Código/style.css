@@ -5,6 +5,7 @@ body {
     font-family: "Outfit", sans-serif;
     background-color: black;
     color: #F5F5F5;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero {
@@ -60,19 +61,26 @@ a {
     color: #ffffff;
     text-decoration: none;
 }
+
 #h1Frontend {
-    position: absolute; /* Agora trabalhamos com posicionamento absoluto */
-    top: 40%; /* Ajusta a posição vertical */
-    left: 10%; /* Posiciona horizontalmente */
+    position: absolute;
+    /* Agora trabalhamos com posicionamento absoluto */
+    top: 40%;
+    /* Ajusta a posição vertical */
+    left: 10%;
+    /* Posiciona horizontalmente */
     font-size: 70px;
     font-family: "Arial Black", Arial, sans-serif;
     color: #ffffff;
 }
 
 #h1Developer {
-    position: absolute; /* Mantém alinhamento em relação ao Frontend */
-    top: 50%; /* Coloque logo abaixo de FRONTEND ajustando a porcentagem */
-    left: 10%; /* Alinha com FRONTEND */
+    position: absolute;
+    /* Mantém alinhamento em relação ao Frontend */
+    top: 50%;
+    /* Coloque logo abaixo de FRONTEND ajustando a porcentagem */
+    left: 10%;
+    /* Alinha com FRONTEND */
     font-size: 70px;
     font-family: "Arial Black", Arial, sans-serif;
     color: #ffffff;
@@ -85,7 +93,6 @@ a {
     font-size: 55px;
     color: #ffffff;
     font-family: "Arial Black", Arial, sans-serif;
-
 }
 
 #devweb {
@@ -106,6 +113,12 @@ a {
     transition: background-color 0.3s, color 0.3s;
     /* Transição suave */
     text-decoration: none;
+}
+
+#projetos {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Roboto", sans-serif;
 }
 
 #Navhome a:hover {
