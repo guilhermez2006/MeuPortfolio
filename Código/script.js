@@ -1,9 +1,14 @@
+// Seleciona as seções
 const projetosSection = document.getElementById('projetosSection');
+const projetoAndroid = document.getElementById('projetoAndroid');
+const habilidades = document.getElementById('habilidades');
+const contato = document.getElementById('Contato');
 
-const observer = new IntersectionObserver((entries) => {
+// Configuração do IntersectionObserver para projetosSection
+const observerProjetos = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            setTimeout(() => { // Adiciona um delay de 300ms (ajuste conforme necessário)
+            setTimeout(() => {
                 projetosSection.classList.remove('hidden');
                 projetosSection.classList.add('visible');
             }, 300);
@@ -13,5 +18,52 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+observerProjetos.observe(projetosSection);
 
-observer.observe(projetosSection);
+// Configuração do IntersectionObserver para projetoAndroid
+const observerAndroid = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                projetoAndroid.classList.remove('hidden');
+                projetoAndroid.classList.add('visible');
+            }, 300);
+        } else {
+            projetoAndroid.classList.remove('visible');
+            projetoAndroid.classList.add('hidden');
+        }
+    });
+});
+observerAndroid.observe(projetoAndroid);
+
+// Configuração do IntersectionObserver para habilidades
+const observerHabilidades = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                habilidades.classList.remove('hidden');
+                habilidades.classList.add('visible');
+            }, 300);
+        } else {
+            habilidades.classList.remove('visible');
+            habilidades.classList.add('hidden');
+        }
+    });
+});
+observerHabilidades.observe(habilidades);
+
+// Configuração do IntersectionObserver para Contato
+const observerContato = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                contato.classList.remove('hidden');
+                contato.classList.add('visible');
+            }, 300);
+        } else {
+            contato.classList.remove('visible');
+            contato.classList.add('hidden');
+        }
+    });
+});
+observerContato.observe(contato);

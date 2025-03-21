@@ -100,17 +100,6 @@ a {
     /* Aumenta o ícone quando passar o mouse */
 }
 
-#projetosSection.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.80s ease, transform 0.80s ease;
-}
-
-#projetosSection.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 #h1nome {
     position: absolute;
     left: 67%;
@@ -140,6 +129,17 @@ a {
     text-decoration: none;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 #projetos {
     text-align: center;
     font-size: 60px;
@@ -159,13 +159,14 @@ a {
     border-radius: 20px;
     overflow: hidden;
     padding: 20px;
-    transition: transform 0.3s ease;
     /* Suaviza o movimento */
+    transition: opacity 1s ease, transform 1s ease;
 }
-#projetoAndroid:hover{
-    transform: translateY(-10px);
+
+#projetoAndroid:hover {
+    transform: translateY(-16px);
 }
-    
+
 #titleAndroid {
     margin-left: 100px;
 }
@@ -192,31 +193,38 @@ a {
 }
 
 #projetoAndroid #linkAndroid a:hover {
-    color: #2fa866;
+    color: #3dd384;
 }
+
 
 #linkAndroid::before {
     content: "•";
     margin-right: 5px;
 }
 
-.image-container { /* Novo contêiner */
+.image-container {
+    /* Novo contêiner */
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: flex-start; /* Alinha horizontalmente */
+    align-items: center;
+    /* Alinha verticalmente */
+    justify-content: flex-start;
+    /* Alinha horizontalmente */
 }
 
 #Bugdroid {
     width: 200px;
     height: 125px;
-    margin: -10px -40px -10px 0; /* Adiciona margem direita */
+    margin: -10px -40px -10px 0;
+    /* Adiciona margem direita */
 }
 
 #Dandroid {
     width: 170px;
     height: 130px;
-    margin: -40px 0 -20px 90px; /* Adiciona margem esquerda */
+    margin: -40px 0 -20px 90px;
+    /* Adiciona margem esquerda */
 }
+
 #Navhome a:hover {
     background-color: #ffffff;
     color: #0F172A;
@@ -264,6 +272,16 @@ a {
 #hoverrr a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+#habilidades {
+    font-size: 45px;
+    font-family: "Roboto", sans-serif;
+}
+
+#Contato {
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
 }
 
 section {
@@ -321,7 +339,7 @@ p {
 }
 
 #minhafoto:hover {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
 }
 
 #TextoSobreMim {
