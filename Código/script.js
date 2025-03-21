@@ -1,6 +1,7 @@
 // Seleciona as seções
 const projetosSection = document.getElementById('projetosSection');
 const projetoAndroid = document.getElementById('projetoAndroid');
+const projetoGameStorm = document.getElementById('projetoGameStorm')
 const habilidades = document.getElementById('habilidades');
 const contato = document.getElementById('Contato');
 
@@ -67,3 +68,19 @@ const observerContato = new IntersectionObserver((entries) => {
     });
 });
 observerContato.observe(contato);
+
+const observerGameStorm = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                projetoGameStorm.classList.remove('hidden');
+                projetoGameStorm.classList.add('visible');
+            }, 300);
+        } else {
+            projetoGameStorm.classList.remove('visible');
+            projetoGameStorm.classList.add('hidden');
+        }
+    });
+});
+observerGameStorm.observe(projetoGameStorm);
+

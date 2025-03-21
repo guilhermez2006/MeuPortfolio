@@ -146,23 +146,87 @@ a {
     font-family: "Roboto", sans-serif;
 }
 
-#projetoAndroid {
+/* Adicionando um contêiner para alinhar os projetos lado a lado */
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* Espaço entre os dois projetos */
+}
+#projetoGameStorm #titleGameStorm {
+    margin-left: 90px;
+}
+/* Ajustando o GameStorm */
+#projetoGameStorm {
     position: relative;
-    background-image: linear-gradient(to bottom, #3dd384, #1a5c37);
-    left: -685px;
+    background-image: linear-gradient(to bottom, #ff0000, #000000);
     width: 25vw;
     height: 25vw;
     max-width: 500px;
     max-height: 500px;
-    margin: 20px auto;
+    left: -300px;
+    margin: 20px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    overflow: hidden;
-    padding: 20px;
-    /* Suaviza o movimento */
+    overflow-y: auto;  /* Barra de rolagem vertical apenas quando necessário */
+    padding: 5px;
     transition: opacity 1s ease, transform 1s ease;
 }
 
+#projetoGameStorm:hover {
+    transform: translateY(-16px);
+}
+
+#projetoGameStorm #titleGameStorm h2:hover {
+    color: #ff0000;
+}
+
+#linkGameStorm {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    bottom: 5px;
+    left: 90px;
+}
+
+#linkGameStorm a {
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+#projetoGameStorm #linkGameStorm a:hover {
+    color: #ff0000;
+}
+
+#linkGameStorm::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+/* Ajustando o Android */
+#projetoAndroid {
+    position: relative;
+    background-image: linear-gradient(to bottom, #2eda7e, #0c351e);
+    width: 25vw;
+    height: 25vw;
+    left: -400px;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow-y: auto;  /* Barra de rolagem vertical apenas quando necessário */
+    padding: 5px;
+    transition: opacity 1s ease, transform 1s ease;
+}
+#projetoAndroid p,
+#projetoGameStorm p {
+    max-height: 80%;  /* Ajuste a altura conforme necessário */
+    overflow-y: auto; /* Habilita a rolagem vertical */
+}
 #projetoAndroid:hover {
     transform: translateY(-16px);
 }
@@ -196,19 +260,15 @@ a {
     color: #3dd384;
 }
 
-
 #linkAndroid::before {
     content: "•";
     margin-right: 5px;
 }
 
 .image-container {
-    /* Novo contêiner */
     display: flex;
     align-items: center;
-    /* Alinha verticalmente */
     justify-content: flex-start;
-    /* Alinha horizontalmente */
 }
 
 #Bugdroid {
@@ -223,6 +283,10 @@ a {
     height: 130px;
     margin: -40px 0 -20px 90px;
     /* Adiciona margem esquerda */
+}
+
+#titleGameStorm {
+    margin-left: 200px;
 }
 
 #Navhome a:hover {
