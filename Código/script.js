@@ -4,6 +4,7 @@ const projetoAndroid = document.getElementById('projetoAndroid');
 const projetoVicioGamer = document.getElementById('projetoVicioGamer');
 const habilidades = document.getElementById('habilidades');
 const contato = document.getElementById('Contato');
+const projetoDragon = document.getElementById('projetoDragon');
 
 // Configuração do IntersectionObserver para projetosSection
 const observerProjetos = new IntersectionObserver((entries) => {
@@ -84,3 +85,18 @@ const observerVicioGamer = new IntersectionObserver((entries) => {
     });
 });
 observerVicioGamer.observe(projetoVicioGamer);
+
+const observerprojetoDragon = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                projetoDragon.classList.remove('hidden');
+                projetoDragon.classList.add('visible');
+            }, 300);
+        } else {
+            projetoDragon.classList.remove('visible');
+            projetoDragon.classList.add('hidden');
+        }
+    });
+});
+observerprojetoDragon.observe(projetoDragon);

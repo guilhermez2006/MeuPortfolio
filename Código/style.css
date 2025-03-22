@@ -150,124 +150,66 @@ a {
 .projetos-container {
     display: flex;
     justify-content: center;
-    gap: 70px;
-    /* Espaço entre os dois projetos */
+    gap: 70px; /* Espaço entre os projetos */
+    margin: 20px 0; /* Espaço ao redor do contêiner */
 }
-
-#projetoVicioGamer #titleVicioGamer {
-    margin-left: 90px;
-}
-
-/* Ajustando o VicioGamer */
-#projetoVicioGamer {
-    position: relative;
-    background-image: linear-gradient(to bottom, #ff0000, #000000);
-    width: 25vw;
-    height: 25vw;
-    max-width: 500px;
-    max-height: 500px;
-    left: -300px;
-    margin: 20px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    overflow-y: auto;
-    /* Barra de rolagem vertical apenas quando necessário */
-    padding: 5px;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-#projetoVicioGamer:hover {
-    transform: translateY(-16px);
-}
-
-#projetoVicioGamer #titleVicioGamer h2:hover {
-    color: #ff0000;
-}
-
-#linkVicioGamer {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    bottom: 5px;
-    left: 90px;
-}
-
-#linkVicioGamer a {
-    white-space: nowrap;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    left: 0;
-}
-
-#projetoVicioGamer #linkVicioGamer a:hover {
-    color: #ff0000;
-}
-
-#linkVicioGamer::before {
-    content: "•";
-    margin-right: 5px;
-}
-
-#LogoVicioGamer {
-    text-align: center;
-}
-
-#image-containerVicioGamer {
-    margin-left: 55px;
-    width: 350px;
-    height: 100px;
-}
-
-/* Ajustando o Android */
-#projetoAndroid {
-    position: relative;
-    background-image: linear-gradient(to bottom, #2eda7e, #0c351e);
-    width: 25vw;
-    height: 25vw;
-    left: -400px;
-    max-width: 500px;
-    max-height: 500px;
-    margin: 20px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    overflow-y: auto;
-    /* Barra de rolagem vertical apenas quando necessário */
-    padding: 5px;
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-#projetoAndroid p,
-#projetoVicioGamer p {
-    max-height: 80%;
-    /* Ajuste a altura conforme necessário */
-    overflow-y: auto;
-    /* Habilita a rolagem vertical */
-    text-align: justify;
-}
-
-#titleVicioGamer {
-    margin-left: 200px;
-}
-
-#projetoAndroid:hover {
-    transform: translateY(-16px);
-}
-
-#titleAndroid {
-    margin-left: 68px;
+#projetoAndroid #titleAndroid {
+    margin-left: 10px;
     font-family: 'MinhaFonte', sans-serif;
     font-size: 32px; /* Ajuste o tamanho conforme necessário */
     color: #016b31;
     font-weight: normal; /* Certifique-se de que está como normal */
 }
 
-#projetoAndroid #titleAndroid h2:hover {
-    color: #2fa866;
+#projetoVicioGamer, #projetoAndroid, #projetoDragon {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow-y: auto; /* Barra de rolagem vertical apenas quando necessário */
+    padding: 5px;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-#linkAndroid {
+/* Ajuste de hover para os projetos */
+#projetoVicioGamer:hover, #projetoAndroid:hover, #projetoDragon:hover {
+    transform: translateY(-16px);
+}
+#projetoVicioGamer #linkVicioGamer a:hover {
+    color: #ff0000;
+}
+
+/* Ajustando o VicioGamer */
+#projetoVicioGamer {
+    background-image: linear-gradient(to bottom, #ff0000, #000000);
+}
+
+/* Ajustando o Dragon */
+#projetoDragon {
+    background-color: palevioletred;
+}
+
+/* Ajustando o Android */
+#projetoAndroid {
+    background-image: linear-gradient(to bottom, #2eda7e, #0c351e);
+}
+
+/* Ajustando o título de cada projeto */
+#titleVicioGamer, #titleAndroid, #titleDragon {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+#projetoVicioGamer #titleVicioGamer {
+    margin-left: 90px;
+}
+
+/* Ajustando os links de cada projeto */
+#linkVicioGamer, #linkAndroid, #linkDragon {
     display: flex;
     align-items: center;
     text-align: left;
@@ -276,23 +218,22 @@ a {
     left: 90px;
 }
 
-#linkAndroid a {
+#linkVicioGamer a, #linkAndroid a, #linkDragon a {
     white-space: nowrap;
     font-weight: bold;
     padding: 0;
     margin: 0;
-    left: 0;
+}
+
+#linkVicioGamer::before, #linkAndroid::before, #linkDragon::before {
+    content: "•";
+    margin-right: 5px;
 }
 
 #projetoAndroid #linkAndroid a:hover {
     color: #3dd384;
 }
-
-#linkAndroid::before {
-    content: "•";
-    margin-right: 5px;
-}
-
+/* Ajustando os containers das imagens */
 .image-container {
     display: flex;
     align-items: center;
@@ -302,17 +243,36 @@ a {
 #Bugdroid {
     width: 200px;
     height: 125px;
-    margin: -10px -40px -10px 0;
-    /* Adiciona margem direita */
+    margin: -10px -40px -10px 0; /* Adiciona margem direita */
 }
 
 #Dandroid {
     width: 170px;
     height: 130px;
-    margin: -10px 0 -20px 90px;
-    /* Adiciona margem esquerda */
+    margin: -10px 0 -20px 90px; /* Adiciona margem esquerda */
 }
 
+#image-containerVicioGamer {
+    margin-left: 55px;
+    width: 350px;
+    height: 100px;
+}
+
+
+
+#hoverrr {
+    margin-top: 20px;
+}
+
+#hoverrr li {
+    list-style: none;
+}
+
+#hoverrr a {
+    text-decoration: none;
+    color: white;
+}
+ 
 #Navhome a:hover {
     background-color: #ffffff;
     color: #0F172A;
