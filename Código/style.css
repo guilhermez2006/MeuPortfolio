@@ -256,7 +256,11 @@ a {
 }
 
 #titleAndroid {
-    margin-left: 100px;
+    margin-left: 68px;
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 32px; /* Ajuste o tamanho conforme necessário */
+    color: #016b31;
+    font-weight: normal; /* Certifique-se de que está como normal */
 }
 
 #projetoAndroid #titleAndroid h2:hover {
@@ -305,7 +309,7 @@ a {
 #Dandroid {
     width: 170px;
     height: 130px;
-    margin: -40px 0 -20px 90px;
+    margin: -10px 0 -20px 90px;
     /* Adiciona margem esquerda */
 }
 
@@ -442,4 +446,10 @@ p {
 
 #Sobremim:hover {
     color: #ffffff;
+}
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fonts/Android.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
