@@ -37,19 +37,60 @@ body {
 }
 
 .icon-social {
-    font-size: 50px;
-    /* Aumenta o tamanho do ícone */
-    margin: 10px;
-    /* Espaçamento entre os ícones */
-    transition: transform 0.3s;
-    /* Efeito suave */
+    font-size: 50px; /* Tamanho dos ícones */
+    margin: 1px; /* Espaçamento entre ícones */
+    color: white; /* Cor inicial */
+    transition: transform 0.3s, color 0.3s; /* Transição suave para animação */
 }
-
 .icon-social:hover {
-    transform: scale(1.2);
-    /* Aumenta o ícone quando passar o mouse */
+    transform: translateY(-10px); 
+}
+.habilidade:hover {
+    transform: translateY(-10px);  /* Leve animação ao passar o mouse */
 }
 
+.habilidade {
+    border: 1px solid #4d4d4d; /* Borda cinza escura */
+    box-shadow:
+    0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15; /* Sombra para efeito de profundidade */
+    margin-top: 80px;
+    width: 22vw;  /* Largura relativa para ajustar conforme o tamanho da tela */
+    height: 22vw;  /* Altura proporcional */
+    max-width: 540px;  /* Largura máxima */
+    max-height: 500px;  /* Altura máxima */
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical dos elementos */
+    justify-content: flex-start; /* Garante que os ícones fiquem no topo */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #000000;  /* Cor de fundo */
+    border-radius: 15px; /* Cantos arredondados */
+    color: white; /* Cor do texto */
+    font-size: 18px; /* Tamanho do texto */
+    box-sizing: border-box; /* Inclui bordas no cálculo de tamanho */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Transições suaves */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Animação inicial */
+    transition: opacity 1s ease, transform 1s ease, background-color 0.3s; /* Transição de opacidade e transformação */
+}
+.habilidade i {
+    font-size: 50px; /* Tamanho dos ícones */
+    margin-bottom: 20px; /* Espaçamento entre ícones e texto */
+    margin-top: 10px;
+    color: #F5F5F5;
+    transition: color 0.3s ease-in-out;
+}
+
+.habilidade p {
+    margin: 0; /* Remove qualquer margem adicional */
+    text-align: center; /* Centraliza o texto */
+    padding: 0 10px; /* Adiciona um espaço interno para evitar contato com as bordas */
+}
+#GitGithubH1 {
+    margin-top: -60px;
+}
+#BancoDeDadosH1 {
+    margin-top: -70px;
+}
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -191,6 +232,67 @@ a {
     /* Transição suave */
     text-decoration: none;
 }
+#hoverrr {
+    margin-top: 20px;
+}
+
+#hoverrr li {
+    list-style: none;
+}
+
+#hoverrr a {
+    text-decoration: none;
+    color: white;
+}
+
+#Navhome a:hover {
+    background-color: #ffffff;
+    color: #0F172A;
+    text-decoration: none;
+}
+
+#Navhome a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave */
+}
+
+#Navprojetos a:hover {
+    background-color: #ffffff;
+    color: #0F172A;
+}
+
+#NavTecnologias a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave */
+    text-decoration: none;
+}
+
+#NavTecnologias a:hover {
+    background-color: #ffffff;
+    color: #0F172A;
+}
+
+#NavContato a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave */
+    text-decoration: none;
+}
+
+#NavContato a:hover {
+    background-color: #ffffff;
+    color: #0F172A;
+}
+
+#hoverrr a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 
 #projetos {
     text-align: center;
@@ -327,67 +429,6 @@ a {
     height: 100px;
 }
 
-#hoverrr {
-    margin-top: 20px;
-}
-
-#hoverrr li {
-    list-style: none;
-}
-
-#hoverrr a {
-    text-decoration: none;
-    color: white;
-}
-
-#Navhome a:hover {
-    background-color: #ffffff;
-    color: #0F172A;
-    text-decoration: none;
-}
-
-#Navhome a {
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    /* Transição suave */
-}
-
-#Navprojetos a:hover {
-    background-color: #ffffff;
-    color: #0F172A;
-}
-
-#NavTecnologias a {
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    /* Transição suave */
-    text-decoration: none;
-}
-
-#NavTecnologias a:hover {
-    background-color: #ffffff;
-    color: #0F172A;
-}
-
-#NavContato a {
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    /* Transição suave */
-    text-decoration: none;
-}
-
-#NavContato a:hover {
-    background-color: #ffffff;
-    color: #0F172A;
-}
-
-#hoverrr a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
 
 #habilidades {
     text-align: center;
@@ -399,34 +440,12 @@ a {
     display: flex;
     flex-wrap: wrap;  /* Para que os itens que não cabem na linha se movam para a próxima linha */
     justify-content: center;  /* Alinha os itens horizontalmente no centro */
-    gap: 100px;
+    gap: 72px;
 }
-
-.habilidade {
-    margin-top: 80px;
-    width: 22vw;  /* Largura relativa para ajustar conforme o tamanho da tela */
-    height: 22vw;  /* Altura proporcional */
-    max-width: 540px;  /* Largura máxima */
-    max-height: 500px;  /* Altura máxima */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;  /* Cor de fundo */
-    border-radius: 15px;
-    color: white;
-    font-size: 18px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-}
-
-.habilidade:hover {
-    transform: translateY(-10px);  /* Leve animação ao passar o mouse */
-    background-color: #4CAF50;  /* Cor de fundo no hover */
-}
-
-.habilidade p {
-    margin: 0;
-    text-align: center;
+#BancoDeDados,
+#GitGithub {
+    margin-top: -20px; /* Ajuste este valor até obter a posição ideal */
+    gap: 60px;
 }
 
 #Contato {
