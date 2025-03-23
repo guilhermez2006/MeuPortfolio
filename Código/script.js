@@ -4,7 +4,12 @@ const projetoAndroid = document.getElementById('projetoAndroid');
 const projetoVicioGamer = document.getElementById('projetoVicioGamer');
 const habilidades = document.getElementById('habilidades');
 const contato = document.getElementById('Contato');
-const projetoDragon = document.getElementById('projetoDragon');
+const Html = document.getElementById('Html');
+const Css = document.getElementById('Css');
+const JavaScript = document.getElementById('JavaScript');
+const BancoDeDados = document.getElementById('BancoDeDados');
+const GitGithub = document.getElementById('GitGithub');
+
 
 // Configuração do IntersectionObserver para projetosSection
 const observerProjetos = new IntersectionObserver((entries) => {
@@ -100,3 +105,76 @@ const observerprojetoDragon = new IntersectionObserver((entries) => {
     });
 });
 observerprojetoDragon.observe(projetoDragon);
+
+const observerHtml = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                Html.classList.remove('hidden');
+                Html.classList.add('visible');
+            }, 300);
+        } else {
+            Html.classList.remove('visible');
+            Html.classList.add('hidden');
+        }
+    });
+});
+observerHtml.observe(Html);
+
+const observerCss = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                Css.classList.remove('hidden');
+                Css.classList.add('visible');
+            }, 300);
+        } else {
+            Css.classList.remove('visible');
+            Css.classList.add('hidden');
+        }
+    });
+});
+observerCss.observe(Css);
+
+const observerJavaScript = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                JavaScript.classList.remove('hidden');
+                JavaScript.classList.add('visible');
+            }, 300);
+        } else {
+            JavaScript.classList.remove('visible');
+            JavaScript.classList.add('hidden');
+        }
+    });
+});
+observerJavaScript.observe(JavaScript);
+const observerBancoDeDados = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                BancoDeDados.classList.remove('hidden');
+                BancoDeDados.classList.add('visible');
+            }, 300);
+        } else {
+            BancoDeDados.classList.remove('visible');
+            BancoDeDados.classList.add('hidden');
+        }
+    });
+});
+observerBancoDeDados.observe(BancoDeDados);
+const observerGitGithub = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                GitGithub.classList.remove('hidden');
+                GitGithub.classList.add('visible');
+            }, 300);
+        } else {
+            GitGithub.classList.remove('visible');
+            GitGithub.classList.add('hidden');
+        }
+    });
+});
+observerGitGithub.observe(GitGithub);

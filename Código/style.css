@@ -168,6 +168,22 @@ a {
     font-family: "Arial Black", Arial, sans-serif;
 }
 
+#minhafoto {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin-left: 140%;
+    margin-top: 5%;
+    display: block;
+    /* Garante que o estilo seja aplicado corretamente */
+    transition: transform 0.3s ease;
+    /* Suaviza o movimento */
+}
+
+#minhafoto:hover {
+    transform: translateY(-7px);
+}
+
 #Navprojetos a {
     padding: 5px 10px;
     border-radius: 5px;
@@ -180,6 +196,7 @@ a {
     text-align: center;
     font-size: 60px;
     font-family: "Roboto", sans-serif;
+    padding-top: 150px;
 }
 
 #projetoAndroid #titleAndroid {
@@ -373,8 +390,43 @@ a {
 }
 
 #habilidades {
+    text-align: center;
     font-size: 45px;
     font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+}
+ #Habilidades-Container{
+    display: flex;
+    flex-wrap: wrap;  /* Para que os itens que não cabem na linha se movam para a próxima linha */
+    justify-content: center;  /* Alinha os itens horizontalmente no centro */
+    gap: 100px;
+}
+
+.habilidade {
+    margin-top: 80px;
+    width: 22vw;  /* Largura relativa para ajustar conforme o tamanho da tela */
+    height: 22vw;  /* Altura proporcional */
+    max-width: 540px;  /* Largura máxima */
+    max-height: 500px;  /* Altura máxima */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;  /* Cor de fundo */
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.habilidade:hover {
+    transform: translateY(-10px);  /* Leve animação ao passar o mouse */
+    background-color: #4CAF50;  /* Cor de fundo no hover */
+}
+
+.habilidade p {
+    margin: 0;
+    text-align: center;
 }
 
 #Contato {
@@ -417,36 +469,10 @@ p {
     max-width: 850px;
 }
 
-#minhafoto {
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    margin-left: 140%;
-    margin-top: 5%;
-    display: block;
-    /* Garante que o estilo seja aplicado corretamente */
-    transition: transform 0.3s ease;
-    /* Suaviza o movimento */
-}
-
-#minhafoto:hover {
-    transform: translateY(-7px);
-}
-
-#TextoSobreMim {
-    margin-left: 2%;
-    margin-top: 180px;
-}
-
 /* Animação para fazer o texto aparecer */
 @keyframes fadeIn {
     to {
         opacity: 1;
         /* Torna o título visível */
     }
-}
-
-
-#Sobremim:hover {
-    color: #ffffff;
 }
