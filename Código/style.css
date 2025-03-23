@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fonts/Android.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dragon';
+    src: url(/fonts/Dragonlord_PERSONAL_USE_ONLY.otf);
+}
+
 body {
     margin: 0;
     font-family: "Outfit", sans-serif;
@@ -22,6 +34,55 @@ body {
 .hero h1 {
     font-size: 60px;
     color: #ffffff;
+}
+
+.icon-social {
+    font-size: 50px;
+    /* Aumenta o tamanho do ícone */
+    margin: 10px;
+    /* Espaçamento entre os ícones */
+    transition: transform 0.3s;
+    /* Efeito suave */
+}
+
+.icon-social:hover {
+    transform: scale(1.2);
+    /* Aumenta o ícone quando passar o mouse */
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adicionando um contêiner para alinhar os projetos lado a lado */
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    /* Espaço entre os projetos */
+    margin: 20px 0;
+    /* Espaço ao redor do contêiner */
+}
+
+/* Ajustando os containers das imagens */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sobre-container {
+    display: flex;
+    /* Usar Flexbox */
+    align-items: center;
+    /* Alinha verticalmente ao centro */
 }
 
 main {
@@ -86,20 +147,6 @@ a {
     color: #ffffff;
 }
 
-.icon-social {
-    font-size: 50px;
-    /* Aumenta o tamanho do ícone */
-    margin: 10px;
-    /* Espaçamento entre os ícones */
-    transition: transform 0.3s;
-    /* Efeito suave */
-}
-
-.icon-social:hover {
-    transform: scale(1.2);
-    /* Aumenta o ícone quando passar o mouse */
-}
-
 #h1nome {
     position: absolute;
     left: 67%;
@@ -129,39 +176,25 @@ a {
     text-decoration: none;
 }
 
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 #projetos {
     text-align: center;
     font-size: 60px;
     font-family: "Roboto", sans-serif;
 }
 
-/* Adicionando um contêiner para alinhar os projetos lado a lado */
-.projetos-container {
-    display: flex;
-    justify-content: center;
-    gap: 70px; /* Espaço entre os projetos */
-    margin: 20px 0; /* Espaço ao redor do contêiner */
-}
 #projetoAndroid #titleAndroid {
     margin-left: 10px;
     font-family: 'MinhaFonte', sans-serif;
-    font-size: 32px; /* Ajuste o tamanho conforme necessário */
+    font-size: 32px;
+    /* Ajuste o tamanho conforme necessário */
     color: #016b31;
-    font-weight: normal; /* Certifique-se de que está como normal */
+    font-weight: normal;
+    /* Certifique-se de que está como normal */
 }
 
-#projetoVicioGamer, #projetoAndroid, #projetoDragon {
+#projetoVicioGamer,
+#projetoAndroid,
+#projetoDragon {
     position: relative;
     width: 25vw;
     height: 25vw;
@@ -170,15 +203,75 @@ a {
     margin: 20px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    overflow-y: auto; /* Barra de rolagem vertical apenas quando necessário */
+    overflow-y: auto;
+    /* Barra de rolagem vertical apenas quando necessário */
     padding: 5px;
     transition: opacity 1s ease, transform 1s ease;
 }
 
 /* Ajuste de hover para os projetos */
-#projetoVicioGamer:hover, #projetoAndroid:hover, #projetoDragon:hover {
+#projetoVicioGamer:hover,
+#projetoAndroid:hover,
+#projetoDragon:hover {
     transform: translateY(-16px);
 }
+
+/* Ajustando o título de cada projeto */
+#titleVicioGamer,
+#titleAndroid,
+#titleDragon {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Ajustando os links de cada projeto */
+#linkVicioGamer,
+#linkAndroid,
+#linkDragon {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: absolute;
+    bottom: 5px;
+    left: 90px;
+}
+
+#linkVicioGamer a,
+#linkAndroid a,
+#linkDragon a {
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+#linkVicioGamer::before,
+#linkAndroid::before,
+#linkDragon::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+#titleDragon {
+    font-family: 'Dragon', sans-serif;
+    font-size: 60px;
+    margin-top: 15px;
+}
+
+#projetoDragon #linkDragon :hover {
+    color: rgb(58, 58, 58);
+}
+
+/* Ajustando o Dragon */
+#projetoDragon {
+    background-image: linear-gradient(to top, black, rgb(66, 66, 66));
+}
+
+#projetoVicioGamer #titleVicioGamer {
+    margin-left: 90px;
+}
+
 #projetoVicioGamer #linkVicioGamer a:hover {
     color: #ff0000;
 }
@@ -188,9 +281,8 @@ a {
     background-image: linear-gradient(to bottom, #ff0000, #000000);
 }
 
-/* Ajustando o Dragon */
-#projetoDragon {
-    background-color: palevioletred;
+#projetoAndroid #linkAndroid a:hover {
+    color: #3dd384;
 }
 
 /* Ajustando o Android */
@@ -198,58 +290,18 @@ a {
     background-image: linear-gradient(to bottom, #2eda7e, #0c351e);
 }
 
-/* Ajustando o título de cada projeto */
-#titleVicioGamer, #titleAndroid, #titleDragon {
-    text-align: center;
-    font-size: 24px;
-    color: white;
-}
-#projetoVicioGamer #titleVicioGamer {
-    margin-left: 90px;
-}
-
-/* Ajustando os links de cada projeto */
-#linkVicioGamer, #linkAndroid, #linkDragon {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    bottom: 5px;
-    left: 90px;
-}
-
-#linkVicioGamer a, #linkAndroid a, #linkDragon a {
-    white-space: nowrap;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-}
-
-#linkVicioGamer::before, #linkAndroid::before, #linkDragon::before {
-    content: "•";
-    margin-right: 5px;
-}
-
-#projetoAndroid #linkAndroid a:hover {
-    color: #3dd384;
-}
-/* Ajustando os containers das imagens */
-.image-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 #Bugdroid {
     width: 200px;
     height: 125px;
-    margin: -10px -40px -10px 0; /* Adiciona margem direita */
+    margin: -10px -40px -10px 0;
+    /* Adiciona margem direita */
 }
 
 #Dandroid {
     width: 170px;
     height: 130px;
-    margin: -10px 0 -20px 90px; /* Adiciona margem esquerda */
+    margin: -10px 0 -20px 90px;
+    /* Adiciona margem esquerda */
 }
 
 #image-containerVicioGamer {
@@ -257,8 +309,6 @@ a {
     width: 350px;
     height: 100px;
 }
-
-
 
 #hoverrr {
     margin-top: 20px;
@@ -272,7 +322,7 @@ a {
     text-decoration: none;
     color: white;
 }
- 
+
 #Navhome a:hover {
     background-color: #ffffff;
     color: #0F172A;
@@ -367,13 +417,6 @@ p {
     max-width: 850px;
 }
 
-.sobre-container {
-    display: flex;
-    /* Usar Flexbox */
-    align-items: center;
-    /* Alinha verticalmente ao centro */
-}
-
 #minhafoto {
     border-radius: 50%;
     width: 350px;
@@ -406,10 +449,4 @@ p {
 
 #Sobremim:hover {
     color: #ffffff;
-}
-@font-face {
-    font-family: 'MinhaFonte';
-    src: url('/fonts/Android.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
