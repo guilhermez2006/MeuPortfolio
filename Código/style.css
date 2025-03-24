@@ -91,6 +91,7 @@ body {
 #BancoDeDadosH1 {
     margin-top: -70px;
 }
+
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -106,10 +107,11 @@ body {
 .projetos-container {
     display: flex;
     justify-content: center;
-    gap: 130px;
+    gap: 120px;
     /* Espaço entre os projetos */
     margin: 20px 0;
     /* Espaço ao redor do contêiner */
+    margin-bottom: 210px;
 }
 
 /* Ajustando os containers das imagens */
@@ -322,7 +324,7 @@ a {
     margin: 20px 0;
     box-sizing: border-box;
     border-radius: 20px;
-    overflow-y: auto;
+    overflow-y: hidden;
     /* Barra de rolagem vertical apenas quando necessário */
     padding: 5px;
     transition: opacity 1s ease, transform 1s ease;
@@ -384,7 +386,7 @@ a {
 
 /* Ajustando o Dragon */
 #projetoDragon {
-    background-image: linear-gradient(to top, black, rgb(66, 66, 66));
+    background-image: linear-gradient(to top, black, rgb(72, 72, 72));
 }
 
 #projetoVicioGamer #titleVicioGamer {
