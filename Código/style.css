@@ -213,9 +213,8 @@ a {
 
 #minhafoto {
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    margin-left: 140%;
+    width: 55%;
+    margin-left: 110%;
     margin-top: 5%;
     display: block;
     /* Garante que o estilo seja aplicado corretamente */
@@ -304,7 +303,6 @@ a {
 }
 
 #projetoAndroid #titleAndroid {
-    margin-left: 10px;
     font-family: 'MinhaFonte', sans-serif;
     font-size: 32px;
     /* Ajuste o tamanho conforme necessário */
@@ -354,8 +352,8 @@ a {
     align-items: center;
     text-align: left;
     position: absolute;
-    bottom: 5px;
-    left: 90px;
+    bottom: 2%;
+    left: 19%;
 }
 
 #linkVicioGamer a,
@@ -371,13 +369,13 @@ a {
 #linkAndroid::before,
 #linkDragon::before {
     content: "•";
-    margin-right: 5px;
+    margin-right: 2%;
 }
 
 #titleDragon {
     font-family: 'Dragon', sans-serif;
     font-size: 60px;
-    margin-top: 15px;
+    margin-top: 1%;
 }
 
 #projetoDragon #linkDragon :hover {
@@ -387,10 +385,6 @@ a {
 /* Ajustando o Dragon */
 #projetoDragon {
     background-image: linear-gradient(to top, black, rgb(72, 72, 72));
-}
-
-#projetoVicioGamer #titleVicioGamer {
-    margin-left: 90px;
 }
 
 #projetoVicioGamer #linkVicioGamer a:hover {
@@ -412,23 +406,23 @@ a {
 }
 
 #Bugdroid {
-    width: 200px;
-    height: 125px;
+    width: 45%;
     margin: -10px -40px -10px 0;
     /* Adiciona margem direita */
 }
 
 #Dandroid {
-    width: 170px;
-    height: 130px;
+    width: 45%;
+    height: 125px;
     margin: -10px 0 -20px 90px;
     /* Adiciona margem esquerda */
 }
 
 #image-containerVicioGamer {
+    margin-top: 17px;
+    margin-bottom: 10px;
     margin-left: 55px;
-    width: 350px;
-    height: 100px;
+    width: 80%;
 }
 
 
@@ -436,7 +430,6 @@ a {
     text-align: center;
     font-size: 45px;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 20px;
 }
  #Habilidades-Container{
     display: flex;
