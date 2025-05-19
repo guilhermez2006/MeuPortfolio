@@ -12,9 +12,11 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <header>
         <nav>
             <ul>
@@ -26,29 +28,28 @@
         </nav>
     </header>
 
-    <div class="hero" id="home">
-        <h1 id="h1Frontend">FRONTEND</h1>
-        <h1 id="h1Developer">DEVELOPER</h1>
-        <a href="https://github.com/guilhermez2006" target="_blank" id="iconegithub" class="icon-social">
-            <i class="fab fa-github" style="color: #2c2b2b;"></i>
-        </a>
-        <a href="https://www.instagram.com/_guiszl7/" target="_blank" id="iconeInsta" class="icon-social">
-            <i class="fab fa-instagram" style="color: #ffffff;"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/guik1ng-3-3b27362b8/" target="_blank" id="iconelinkedin"
-            class="icon-social">
-            <i class="fab fa-linkedin" style="color: #ffffff;"></i>
-        </a>
-
-        <div class="sobre-container">
-            <img src="/Imagens/BATMAN.jpeg" alt="JinWoo" id="minhafoto">
-            <h1 id="h1nome">Guilherme Lima</h1>
-            <h2 id="devweb">Desenvolvedor Web</h2>
+    <div id="home">
+        <div id="designInicio">
+            <h1 id="Titulo1">Opa! Meu nome é</h1>
+            <h1 id="Titulo2">Guilherme Lima</h1>
         </div>
 
-        <!--   <h1 id="Sobremim">SOBRE MIM</h1> -->
+        <div class="icones-container">
+            <a href="https://github.com/guilhermez2006" target="_blank">
+                <i id="icone1" class="fab fa-github" style="color: #2c2b2b;"></i>
+            </a>
+            <a href="https://www.instagram.com/_guiszl7/" target="_blank">
+                <i id="icone2" class="fab fa-instagram" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/guik1ng-3-3b27362b8/" target="_blank">
+                <i id="icone3" class="fab fa-linkedin" style="color: #ffffff;"></i>
+            </a>
+        </div>
+
+        <!-- <h1 id="Sobremim">SOBRE MIM</h1> -->
         <main>
     </div>
+
     <section id="projetosSection" class="hidden">
         <h1 id="projetos">Projetos</h1>
         <div class="projetos-container"> <!-- Nova div para alinhar os projetos lado a lado -->
@@ -81,36 +82,44 @@
                     </picture>
                 </div>
                 <p>
-                    Desenvolvi este site sobre o mundo dos jogos com dois amigos, aprimorando minhas habilidades de trabalho em equipe,
-                    organização de tarefas e responsividade. Utilizamos GitHub para versionamento, garantindo uma colaboração eficiente
+                    Desenvolvi este site sobre o mundo dos jogos com dois amigos, aprimorando minhas habilidades de
+                    trabalho em equipe,
+                    organização de tarefas e responsividade. Utilizamos GitHub para versionamento, garantindo uma
+                    colaboração eficiente
                     de cada membro envolvido.
                 </p>
                 <div style="max-width: 240px; min-width: 240px; margin-left: 35px;">
                     <picture>
-                        <img src="/Imagens/103-1038039_new-used-games-game-controller-removebg-preview.png" alt="" style="width: 100%;">
+                        <img src="/Imagens/103-1038039_new-used-games-game-controller-removebg-preview.png" alt=""
+                            style="width: 100%;">
                     </picture>
                 </div>
                 <ul id="hoverrr">
                     <li id="linkVicioGamer">
-                        <a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o Site VicioGamer no Github</a>
+                        <a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o Site VicioGamer
+                            no Github</a>
                     </li>
                 </ul>
             </div>
             <div id="projetoDragon" class="hidden">
                 <h2 id="titleDragon">House Of The Dragon</h2>
                 <p>
-                    Desenvolvi um site interativo inspirado na série House Of The Dragon, criando páginas dedicadas a cada dragão.
-                    Trabalhei com JavaScript para manipular dados dinâmicos e melhorar a interatividade, aprimorando minhas habilidades
+                    Desenvolvi um site interativo inspirado na série House Of The Dragon, criando páginas dedicadas a
+                    cada dragão.
+                    Trabalhei com JavaScript para manipular dados dinâmicos e melhorar a interatividade, aprimorando
+                    minhas habilidades
                     em design responsivo e experiência do usuário.
                 </p>
                 <div style="max-width: 210px; min-width: 210px; margin-left: 60px; position: relative; bottom: 40px;">
                     <picture>
-                        <img src="/Imagens/pngtree-dragon-vector-icon-illustration-png-image_2325875-removebg-preview.png" alt="" style="width: 100%;">
+                        <img src="/Imagens/pngtree-dragon-vector-icon-illustration-png-image_2325875-removebg-preview.png"
+                            alt="" style="width: 100%;">
                     </picture>
                 </div>
                 <ul id="hoverrr">
                     <li id="linkDragon">
-                        <a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank">Acesse o House Of The Dragons no Github</a>
+                        <a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank">Acesse o House Of The
+                            Dragons no Github</a>
                     </li>
                 </ul>
             </div>
@@ -121,42 +130,53 @@
             <div id="Html" class="habilidade">
                 <i class="fab fa-html5"></i>
                 <h1>HTML</h1>
-                <p>Hoje posso considerar que estou em um nível intermediário de HTML. A maior parte da experiência que
-                    adquiri com a mesma, foi através do meu Curso Técnico no SENAI, do CursoemVideo e de projetos pessoais. Desenvolvendo
-                    aplicações que na época, pra mim eram extremamente complexos.</p>
+                <p>
+                    Possuo domínio avançado em HTML, adquirido por meio de estudos teóricos e práticos, como cursos
+                    online e projetos pessoais. Ao longo dessa jornada, desenvolvi aplicações que, na época,
+                    representavam grandes desafios e foram fundamentais para o meu crescimento técnico.
+                </p>
             </div>
             <div id="Css" class="habilidade">
                 <i class="fab fa-css3-alt"></i>
                 <h1>CSS</h1>
-                <p>Minha trajétoria com o CSS é similar ao HTML, tendo em vista que no início dos meus estudos quanto a
-                    programação, me dediquei completamente a aprender essas duas competências, hoje meu nível de CSS é
-                    intermediário</p>
+                <p>
+                    Minha trajetória com CSS se desenvolveu paralelamente ao HTML. No início dos meus estudos em
+                    programação, dediquei-me intensamente a essas duas tecnologias. Atualmente, considero meu nível de
+                    conhecimento em CSS como intermediário, com boas práticas em estilização responsiva e layouts
+                    modernos.
+                </p>
             </div>
             <div id="JavaScript" class="habilidade">
                 <i class="fab fa-js-square"></i>
-                <H1>JavaScript</H1>
-                <p>A maior parte da minha experiência com JavaScript foi através do CursoemVideo, aprendizados
-                    no curso técnico no SENAI e projetos pessoais, mas pude lidar com diversos desafios, que me fizeram
-                    concluir projetos complexos e ter um nível intermediário nessa linguagem atualmente.</p>
+                <h1>JavaScript</h1>
+                <p>
+                    Minha experiência com JavaScript foi construída por meio de cursos, atividades no curso técnico do
+                    SENAI e projetos pessoais. Enfrentei diversos desafios práticos que me permitiram desenvolver
+                    aplicações interativas e aprimorar meu raciocínio lógico, o que me proporciona hoje um nível
+                    intermediário na linguagem.
+                </p>
             </div>
-
             <div id="BancoDeDados" class="habilidade">
                 <i class="fas fa-database"></i>
-                <h1 id="GitGithubH1">Banco de Dados</h1>
+                <h1>Banco de Dados</h1>
                 <p>
-                    Adquiri minha experiência com Banco de Dados no curso técnico do SENAI e com cursos por fora, aplicando conceitos como consultas SQL e modelagem de dados.
+                    Adquiri conhecimentos em Banco de Dados durante o curso técnico no SENAI e por meio de formações
+                    complementares. Trabalho com modelagem de dados e consultas SQL, aplicando conceitos fundamentais
+                    para a organização e manipulação de dados em projetos reais.
                 </p>
             </div>
             <div id="GitGithub" class="habilidade">
                 <i class="fab fa-git-alt"></i>
-                <h1 id="BancoDeDadosH1">Git/GitHub</h1>
+                <h1>Git & GitHub</h1>
                 <p>
-                    Minha experiência com Git e GitHub foi adquirida através de Cursos e Projetos Pessoais. Aprimorei
-                    minhas habilidades em versionamento de código, colaboração em equipe e gestão de projetos.
+                    Desenvolvi habilidades em versionamento de código utilizando Git e GitHub, por meio de cursos e
+                    prática constante em projetos pessoais. Tenho experiência em controle de versões, colaboração em
+                    equipe e gerenciamento de repositórios de forma organizada e eficiente.
                 </p>
             </div>
         </div>
     </section>
+
 
     <section>
         <h1 id="Contato" align="center" class="hidden">Entre em Contato comigo!</h1>
@@ -170,4 +190,5 @@
     </section>
     </main>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body

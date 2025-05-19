@@ -20,74 +20,150 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.hero {
-    position: relative;
+.icones-container {
     display: flex;
     justify-content: center;
+    /* Centraliza horizontalmente */
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: black;
-    border-radius: 20px;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.hero h1 {
-    font-size: 60px;
-    color: #ffffff;
+#icone1,
+#icone2,
+#icone3 {
+    font-size: 2.4em;
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.icon-social {
-    font-size: 50px; /* Tamanho dos ícones */
-    margin: 1px; /* Espaçamento entre ícones */
-    color: white; /* Cor inicial */
-    transition: transform 0.3s, color 0.3s; /* Transição suave para animação */
+#icone1:hover,
+#icone2:hover,
+#icone3:hover {
+    transform: translateY(-5px);
 }
-.icon-social:hover {
-    transform: translateY(-10px); 
-}
+
 .habilidade:hover {
-    transform: translateY(-10px);  /* Leve animação ao passar o mouse */
+    transform: translateY(-10px);
+    /* Leve animação ao passar o mouse */
 }
 
 .habilidade {
-    border: 1px solid #4d4d4d; /* Borda cinza escura */
+    border: 1px solid #4d4d4d;
+    /* Borda cinza escura */
     box-shadow:
-    0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15; /* Sombra para efeito de profundidade */
+        0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15;
+    /* Sombra para efeito de profundidade */
     margin-top: 80px;
-    width: 22vw;  /* Largura relativa para ajustar conforme o tamanho da tela */
-    height: 22vw;  /* Altura proporcional */
-    max-width: 540px;  /* Largura máxima */
-    max-height: 500px;  /* Altura máxima */
+    width: 22vw;
+    /* Largura relativa para ajustar conforme o tamanho da tela */
+    height: 22vw;
+    /* Altura proporcional */
+    max-width: 540px;
+    /* Largura máxima */
+    max-height: 500px;
+    /* Altura máxima */
     display: flex;
-    flex-direction: column; /* Alinhamento vertical dos elementos */
-    justify-content: flex-start; /* Garante que os ícones fiquem no topo */
-    align-items: center; /* Centraliza horizontalmente */
-    background-color: #000000;  /* Cor de fundo */
-    border-radius: 15px; /* Cantos arredondados */
-    color: white; /* Cor do texto */
-    font-size: 18px; /* Tamanho do texto */
-    box-sizing: border-box; /* Inclui bordas no cálculo de tamanho */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Transições suaves */
-    opacity: 0; /* Inicialmente invisível */
-    transform: translateY(20px); /* Animação inicial */
-    transition: opacity 1s ease, transform 1s ease, background-color 0.3s; /* Transição de opacidade e transformação */
+    flex-direction: column;
+    /* Alinhamento vertical dos elementos */
+    justify-content: flex-start;
+    /* Garante que os ícones fiquem no topo */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    background-color: #000000;
+    /* Cor de fundo */
+    border-radius: 15px;
+    /* Cantos arredondados */
+    color: white;
+    /* Cor do texto */
+    font-size: 18px;
+    /* Tamanho do texto */
+    box-sizing: border-box;
+    /* Inclui bordas no cálculo de tamanho */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    /* Transições suaves */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transform: translateY(20px);
+    /* Animação inicial */
+    transition: opacity 1s ease, transform 1s ease, background-color 0.3s;
+    /* Transição de opacidade e transformação */
 }
+
 .habilidade i {
-    font-size: 50px; /* Tamanho dos ícones */
-    margin-bottom: 20px; /* Espaçamento entre ícones e texto */
+    font-size: 50px;
+    /* Tamanho dos ícones */
+    margin-bottom: 5%;
+    /* Espaçamento entre ícones e texto */
     margin-top: 10px;
     color: #F5F5F5;
     transition: color 0.3s ease-in-out;
 }
 
 .habilidade p {
-    margin: 0; /* Remove qualquer margem adicional */
-    text-align: center; /* Centraliza o texto */
-    padding: 0 10px; /* Adiciona um espaço interno para evitar contato com as bordas */
+    margin: 0;
+    /* Remove qualquer margem adicional */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 0 10px;
+    /* Adiciona um espaço interno para evitar contato com as bordas */
 }
+
+/* Partículas animadas (fundo) */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Garante que fique ATRÁS de todo conteúdo */
+    background: transparent;
+    /* Fundo transparente para não cobrir seu design */
+}
+
+#Titulo1 {
+    position: absolute;
+    top: 42%;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+#Titulo2 {
+    font: bolder;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    position: absolute;
+    top: 45%;
+    font-size: 5.5rem;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+}
+
+/* Garanta que o conteúdo principal tenha z-index maior */
+header,
+section,
+.sobre-container,
+.projetos-container {
+    position: relative;
+    z-index: 1;
+    /* Importante para ficar na frente das partículas */
+}
+
 #GitGithubH1 {
     margin-top: -60px;
 }
+
 #BancoDeDadosH1 {
     margin-top: -70px;
 }
@@ -166,64 +242,8 @@ a {
     text-decoration: none;
 }
 
-#h1Frontend {
-    position: absolute;
-    /* Agora trabalhamos com posicionamento absoluto */
-    top: 40%;
-    /* Ajusta a posição vertical */
-    left: 10%;
-    /* Posiciona horizontalmente */
-    font-size: 70px;
-    font-family: "Arial Black", Arial, sans-serif;
-    color: #ffffff;
-}
-
-#h1Developer {
-    position: absolute;
-    /* Mantém alinhamento em relação ao Frontend */
-    top: 50%;
-    /* Coloque logo abaixo de FRONTEND ajustando a porcentagem */
-    left: 10%;
-    /* Alinha com FRONTEND */
-    font-size: 70px;
-    font-family: "Arial Black", Arial, sans-serif;
-    color: #ffffff;
-}
-
-#h1nome {
-    position: absolute;
-    left: 67%;
-    top: 66%;
-    font-size: 55px;
-    color: #ffffff;
-    font-family: "Arial Black", Arial, sans-serif;
-}
-
-#devweb {
-    position: absolute;
-    /* Posiciona em relação ao elemento pai */
-    left: 68%;
-    /* Alinha com o h1nome */
-    top: 75%;
-    /* Ajuste para ficar logo abaixo do h1nome */
-    font-size: 40px;
-    color: #ffffff;
-    font-family: "Arial Black", Arial, sans-serif;
-}
-
-#minhafoto {
-    border-radius: 50%;
-    width: 55%;
-    margin-left: 110%;
-    margin-top: 5%;
-    display: block;
-    /* Garante que o estilo seja aplicado corretamente */
-    transition: transform 0.3s ease;
-    /* Suaviza o movimento */
-}
-
-#minhafoto:hover {
-    transform: translateY(-7px);
+#designInicio {
+    margin-bottom: 28%;
 }
 
 #Navprojetos a {
@@ -233,6 +253,7 @@ a {
     /* Transição suave */
     text-decoration: none;
 }
+
 #hoverrr {
     margin-top: 20px;
 }
@@ -299,7 +320,7 @@ a {
     text-align: center;
     font-size: 60px;
     font-family: "Roboto", sans-serif;
-    padding-top: 150px;
+    padding-top: 360px;
 }
 
 #projetoAndroid #titleAndroid {
@@ -431,15 +452,20 @@ a {
     font-size: 45px;
     font-family: "Roboto", sans-serif;
 }
- #Habilidades-Container{
+
+#Habilidades-Container {
     display: flex;
-    flex-wrap: wrap;  /* Para que os itens que não cabem na linha se movam para a próxima linha */
-    justify-content: center;  /* Alinha os itens horizontalmente no centro */
+    flex-wrap: wrap;
+    /* Para que os itens que não cabem na linha se movam para a próxima linha */
+    justify-content: center;
+    /* Alinha os itens horizontalmente no centro */
     gap: 72px;
 }
+
 #BancoDeDados,
 #GitGithub {
-    margin-top: -20px; /* Ajuste este valor até obter a posição ideal */
+    margin-top: -20px;
+    /* Ajuste este valor até obter a posição ideal */
     gap: 60px;
 }
 
@@ -452,22 +478,10 @@ section {
     margin-top: 70px;
 }
 
-#h1gradient {
-    color: #ffffff;
-
-    font-size: 40px;
-}
-
 h2 {
     color: #ffffff;
 
-    font-size: 30px;
-}
-
-#h2gradient {
-    color: #ffffff;
-
-    font-size: 35px;
+    font-size: 30%;
 }
 
 h3 {
