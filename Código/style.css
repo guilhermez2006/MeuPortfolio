@@ -25,9 +25,47 @@ body {
     justify-content: center;
     /* Centraliza horizontalmente */
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 30px;
 }
+.seta-baixo {
+    margin: 40px auto 0;
+    position: relative;
+top: 35px;
+}
+
+.seta-baixo::before,
+.seta-baixo::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    animation: moveDownTranslate 2s infinite ease-in-out;
+    animation-delay: 0s; /* MESMO DELAY PARA SINCRONIZAR */
+}
+
+.seta-baixo::before {
+    top: 8px;
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+
+.seta-baixo::after {
+    top: 20px;  /* distancia vertical entre as setas */
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+
+@keyframes moveDownTranslate {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px) rotate(45deg);
+  }
+}
+
 
 #icone1,
 #icone2,
@@ -124,31 +162,38 @@ body {
 }
 
 #Titulo1 {
+    font-family: 'Roboto', sans-serif;
     position: absolute;
     top: 42%;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: #ffffff;
     text-align: center;
     width: 100%;
     margin: 0;
 }
 
+
 #Titulo2 {
-    font: bolder;
-    text-shadow:
-        -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white;
-    position: absolute;
-    top: 45%;
-    font-size: 5.5rem;
-    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.9rem;
+    color: black;
     text-align: center;
     width: 100%;
+    position: absolute;
+    top: 45%;
     margin: 0;
-
+    /* Deixa o contorno mais definido */
+    text-shadow:
+        -2.5px -2.5px 0.5px white,
+        2.5px -2.5px 0.5px white,
+        -2.5px 2.5px 0.5px white,
+        2.5px 2.5px 0.5px white,
+        0px 0px 1px white;
+    letter-spacing: 0.5px;
+    /* Mais sutil */
 }
+
+
 
 /* Garanta que o conteúdo principal tenha z-index maior */
 header,
@@ -242,8 +287,8 @@ a {
     text-decoration: none;
 }
 
-#designInicio {
-    margin-bottom: 28%;
+#home {
+    min-height: 55vh;
 }
 
 #Navprojetos a {
