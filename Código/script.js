@@ -2,6 +2,7 @@
 const projetosSection = document.getElementById('projetosSection');
 const projetoAndroid = document.getElementById('projetoAndroid');
 const projetoVicioGamer = document.getElementById('projetoVicioGamer');
+const projetoSocial = document.getElementById('projetoSocial');
 const habilidades = document.getElementById('habilidades');
 const contato = document.getElementById('Contato');
 const Html = document.getElementById('Html');
@@ -10,6 +11,8 @@ const JavaScript = document.getElementById('JavaScript');
 const BancoDeDados = document.getElementById('BancoDeDados');
 const GitGithub = document.getElementById('GitGithub');
 
+// Tempo de delay para animações (em ms)
+const DELAY = 350;
 
 // Configuração do IntersectionObserver para projetosSection
 const observerProjetos = new IntersectionObserver((entries) => {
@@ -18,7 +21,7 @@ const observerProjetos = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 projetosSection.classList.remove('hidden');
                 projetosSection.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             projetosSection.classList.remove('visible');
             projetosSection.classList.add('hidden');
@@ -34,7 +37,7 @@ const observerAndroid = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 projetoAndroid.classList.remove('hidden');
                 projetoAndroid.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             projetoAndroid.classList.remove('visible');
             projetoAndroid.classList.add('hidden');
@@ -43,6 +46,38 @@ const observerAndroid = new IntersectionObserver((entries) => {
 });
 observerAndroid.observe(projetoAndroid);
 
+// Configuração do IntersectionObserver para projetoVicioGamer
+const observerVicioGamer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                projetoVicioGamer.classList.remove('hidden');
+                projetoVicioGamer.classList.add('visible');
+            }, DELAY);
+        } else {
+            projetoVicioGamer.classList.remove('visible');
+            projetoVicioGamer.classList.add('hidden');
+        }
+    });
+});
+observerVicioGamer.observe(projetoVicioGamer);
+
+// Configuração do IntersectionObserver para projetoSocial
+const observerProjetoSocial = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                projetoSocial.classList.remove('hidden');
+                projetoSocial.classList.add('visible');
+            }, DELAY);
+        } else {
+            projetoSocial.classList.remove('visible');
+            projetoSocial.classList.add('hidden');
+        }
+    });
+});
+observerProjetoSocial.observe(projetoSocial);
+
 // Configuração do IntersectionObserver para habilidades
 const observerHabilidades = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -50,7 +85,7 @@ const observerHabilidades = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 habilidades.classList.remove('hidden');
                 habilidades.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             habilidades.classList.remove('visible');
             habilidades.classList.add('hidden');
@@ -66,7 +101,7 @@ const observerContato = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 contato.classList.remove('hidden');
                 contato.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             contato.classList.remove('visible');
             contato.classList.add('hidden');
@@ -75,29 +110,13 @@ const observerContato = new IntersectionObserver((entries) => {
 });
 observerContato.observe(contato);
 
-// Configuração do IntersectionObserver para projetoVicioGamer
-const observerVicioGamer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetoVicioGamer.classList.remove('hidden');
-                projetoVicioGamer.classList.add('visible');
-            }, 300);
-        } else {
-            projetoVicioGamer.classList.remove('visible');
-            projetoVicioGamer.classList.add('hidden');
-        }
-    });
-});
-observerVicioGamer.observe(projetoVicioGamer);
-
 const observerprojetoDragon = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             setTimeout(() => {
                 projetoDragon.classList.remove('hidden');
                 projetoDragon.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             projetoDragon.classList.remove('visible');
             projetoDragon.classList.add('hidden');
@@ -112,7 +131,7 @@ const observerHtml = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 Html.classList.remove('hidden');
                 Html.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             Html.classList.remove('visible');
             Html.classList.add('hidden');
@@ -127,7 +146,7 @@ const observerCss = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 Css.classList.remove('hidden');
                 Css.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             Css.classList.remove('visible');
             Css.classList.add('hidden');
@@ -142,7 +161,7 @@ const observerJavaScript = new IntersectionObserver((entries) => {
             setTimeout(() => {
                 JavaScript.classList.remove('hidden');
                 JavaScript.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             JavaScript.classList.remove('visible');
             JavaScript.classList.add('hidden');
@@ -150,13 +169,14 @@ const observerJavaScript = new IntersectionObserver((entries) => {
     });
 });
 observerJavaScript.observe(JavaScript);
+
 const observerBancoDeDados = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             setTimeout(() => {
                 BancoDeDados.classList.remove('hidden');
                 BancoDeDados.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             BancoDeDados.classList.remove('visible');
             BancoDeDados.classList.add('hidden');
@@ -164,20 +184,20 @@ const observerBancoDeDados = new IntersectionObserver((entries) => {
     });
 });
 observerBancoDeDados.observe(BancoDeDados);
+
 const observerGitGithub = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             setTimeout(() => {
                 GitGithub.classList.remove('hidden');
                 GitGithub.classList.add('visible');
-            }, 300);
+            }, DELAY);
         } else {
             GitGithub.classList.remove('visible');
             GitGithub.classList.add('hidden');
         }
     });
 });
-
 observerGitGithub.observe(GitGithub);
 
 document.addEventListener('DOMContentLoaded', function () {

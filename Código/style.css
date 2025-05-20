@@ -28,10 +28,11 @@ body {
     gap: 15px;
     margin-top: 30px;
 }
+
 .seta-baixo {
     margin: 40px auto 0;
     position: relative;
-top: 35px;
+    top: 35px;
 }
 
 .seta-baixo::before,
@@ -44,7 +45,8 @@ top: 35px;
     border-bottom: 3px solid white;
     border-right: 3px solid white;
     animation: moveDownTranslate 2s infinite ease-in-out;
-    animation-delay: 0s; /* MESMO DELAY PARA SINCRONIZAR */
+    animation-delay: 0s;
+    /* MESMO DELAY PARA SINCRONIZAR */
 }
 
 .seta-baixo::before {
@@ -53,17 +55,21 @@ top: 35px;
 }
 
 .seta-baixo::after {
-    top: 20px;  /* distancia vertical entre as setas */
+    top: 20px;
+    /* distancia vertical entre as setas */
     transform: translateX(-50%) translateY(0) rotate(45deg);
 }
 
 @keyframes moveDownTranslate {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0) rotate(45deg);
-  }
-  50% {
-    transform: translateX(-50%) translateY(5px) rotate(45deg);
-  }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0) rotate(45deg);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(5px) rotate(45deg);
+    }
 }
 
 
@@ -216,7 +222,7 @@ section,
 .hidden {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 3s ease, transform 3s ease;
 }
 
 .visible {
@@ -227,12 +233,13 @@ section,
 /* Adicionando um contêiner para alinhar os projetos lado a lado */
 .projetos-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 120px;
     /* Espaço entre os projetos */
     margin: 20px 0;
     /* Espaço ao redor do contêiner */
-    margin-bottom: 210px;
+    margin-bottom: 5%;
 }
 
 /* Ajustando os containers das imagens */
@@ -365,7 +372,7 @@ a {
     text-align: center;
     font-size: 60px;
     font-family: "Roboto", sans-serif;
-    padding-top: 360px;
+    padding-top: 23%;
 }
 
 #projetoAndroid #titleAndroid {
@@ -379,7 +386,8 @@ a {
 
 #projetoVicioGamer,
 #projetoAndroid,
-#projetoDragon {
+#projetoDragon,
+#projetoSocial {
     position: relative;
     width: 25vw;
     height: 25vw;
@@ -391,20 +399,22 @@ a {
     overflow-y: hidden;
     /* Barra de rolagem vertical apenas quando necessário */
     padding: 5px;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 3s ease, transform 3s ease;
 }
 
 /* Ajuste de hover para os projetos */
 #projetoVicioGamer:hover,
 #projetoAndroid:hover,
-#projetoDragon:hover {
+#projetoDragon:hover,
+#projetoSocial {
     transform: translateY(-16px);
 }
 
 /* Ajustando o título de cada projeto */
 #titleVicioGamer,
 #titleAndroid,
-#titleDragon {
+#titleDragon,
+#titleSocial {
     text-align: center;
     font-size: 24px;
     color: white;
@@ -413,7 +423,8 @@ a {
 /* Ajustando os links de cada projeto */
 #linkVicioGamer,
 #linkAndroid,
-#linkDragon {
+#linkDragon,
+#linkSocial {
     display: flex;
     align-items: center;
     text-align: left;
@@ -424,7 +435,8 @@ a {
 
 #linkVicioGamer a,
 #linkAndroid a,
-#linkDragon a {
+#linkDragon a,
+#linkSocial a {
     white-space: nowrap;
     font-weight: bold;
     padding: 0;
@@ -433,9 +445,23 @@ a {
 
 #linkVicioGamer::before,
 #linkAndroid::before,
-#linkDragon::before {
+#linkDragon::before,
+#linkSocial::before {
     content: "•";
     margin-right: 2%;
+}
+
+#projetoSocial {
+    background-image: linear-gradient(to top, rgb(187, 151, 106),rgb(197, 148, 88));
+}
+
+#titleSocial {
+    font-size: 50px;
+    margin-top: 1%;
+}
+
+#projetoSocial #linkSocial a:hover {
+    color: rgb(255, 204, 143);
 }
 
 #titleDragon {
@@ -454,7 +480,18 @@ a {
 }
 
 #projetoVicioGamer #linkVicioGamer a:hover {
+    text-decoration: underline;
     color: #ff0000;
+}
+
+#projetoVicioGamer #linkVicioGamer2 :hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+#projetoSocial #linkSocial2:hover {
+       color: rgb(255, 204, 143);
+    text-decoration: underline;
 }
 
 /* Ajustando o VicioGamer */
