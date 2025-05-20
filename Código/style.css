@@ -101,9 +101,6 @@ body {
     /* Sombra para efeito de profundidade */
     margin-top: 80px;
     width: 22vw;
-    /* Largura relativa para ajustar conforme o tamanho da tela */
-    height: 22vw;
-    /* Altura proporcional */
     max-width: 540px;
     /* Largura máxima */
     max-height: 500px;
@@ -132,27 +129,17 @@ body {
     transform: translateY(20px);
     /* Animação inicial */
     transition: opacity 1s ease, transform 1s ease, background-color 0.3s;
-    /* Transição de opacidade e transformação */
+    padding: 20px;
+    height: auto !important; 
+    min-height: 300px;
 }
 
 .habilidade i {
     font-size: 50px;
-    /* Tamanho dos ícones */
-    margin-bottom: 5%;
-    /* Espaçamento entre ícones e texto */
-    margin-top: 10px;
     color: #F5F5F5;
     transition: color 0.3s ease-in-out;
 }
 
-.habilidade p {
-    margin: 0;
-    /* Remove qualquer margem adicional */
-    text-align: center;
-    /* Centraliza o texto */
-    padding: 0 10px;
-    /* Adiciona um espaço interno para evitar contato com as bordas */
-}
 
 /* Partículas animadas (fundo) */
 #particles-js {
@@ -452,7 +439,7 @@ a {
 }
 
 #projetoSocial {
-    background-image: linear-gradient(to top, rgb(187, 151, 106),rgb(197, 148, 88));
+    background-image: linear-gradient(to top, rgb(187, 151, 106), rgb(197, 148, 88));
 }
 
 #titleSocial {
@@ -490,7 +477,7 @@ a {
 }
 
 #projetoSocial #linkSocial2:hover {
-       color: rgb(255, 204, 143);
+    color: rgb(255, 204, 143);
     text-decoration: underline;
 }
 
@@ -542,6 +529,7 @@ a {
     justify-content: center;
     /* Alinha os itens horizontalmente no centro */
     gap: 72px;
+    margin-bottom: 220px;
 }
 
 #BancoDeDados,
@@ -551,9 +539,156 @@ a {
     gap: 60px;
 }
 
+/* Container principal */
+#contato-section {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
 #Contato {
-    font-size: 35px;
+    font-size: 2.5rem;
     font-family: "Roboto", sans-serif;
+    color: white;
+    margin-bottom: 140px;
+    text-align: center;
+    width: 100%;
+}
+
+.contato-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sobre-mim {
+    width: 400px !important;
+    /* Força a largura */
+    max-width: 100%;
+    /* Garante responsividade */
+    margin: 0 50px;
+    /* Espaçamento lateral */
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+    box-sizing: border-box;
+    /* Corrige cálculo de largura */
+    flex-shrink: 0;
+    /* Impede que reduza */
+    border: 1px solid #4d4d4d;
+    /* Borda cinza escura */
+    box-shadow:
+        0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15;
+    /* Sombra para efeito de profundidade */
+}
+
+/* Remove qualquer flex-grow que possa estar interferindo */
+.contato-container>*:not(.sobre-mim) {
+    flex-grow: 0 !important;
+}
+
+.sobre-mim h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.sobre-mim p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo da foto */
+#minhafoto {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 50px;
+    margin-bottom: 50PX;
+    transition: transform 0.3s ease;
+}
+
+#minhafoto:hover {
+    transform: translateY(-7px);
+}
+
+/* Wrapper das redes sociais */
+.redes-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    /* mesma altura da foto */
+}
+
+/* Estilos das redes sociais */
+#redesSocias {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* Espaço entre os itens */
+}
+
+.rede-social-item a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.rede-social-item a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.rede-social-item i {
+    font-size: 28px;
+}
+
+.fa-github {
+    color: #2c2b2b;
+}
+
+.fa-instagram {
+    color: #ffffff;
+}
+
+.fa-linkedin {
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #minhafoto {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #redesSocias {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #Contato {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
 }
 
 section {
