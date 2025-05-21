@@ -130,7 +130,7 @@ body {
     /* Animação inicial */
     transition: opacity 1s ease, transform 1s ease, background-color 0.3s;
     padding: 20px;
-    height: auto !important; 
+    height: auto !important;
     min-height: 300px;
 }
 
@@ -440,11 +440,25 @@ a {
 
 #projetoSocial {
     background-image: linear-gradient(to top, rgb(187, 151, 106), rgb(197, 148, 88));
+    background-image: url('/Imagens/image.png');
+    background-size: cover;
+    /* Faz a imagem cobrir toda a div */
+    background-position: 653% center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
 }
 
 #titleSocial {
     font-size: 50px;
     margin-top: 1%;
+}
+
+#imagemSocial {
+    border-radius: 5px;
+    height: 140px;
+    margin-top: 25px;
+    margin-left: -50px;
 }
 
 #projetoSocial #linkSocial a:hover {
@@ -503,7 +517,7 @@ a {
 
 #Dandroid {
     width: 45%;
-    height: 125px;
+    height: 135px;
     margin: -10px 0 -20px 90px;
     /* Adiciona margem esquerda */
 }
