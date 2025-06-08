@@ -88,56 +88,50 @@ body {
     transform: translateY(-5px);
 }
 
-.habilidade:hover {
-    transform: translateY(-10px);
-    /* Leve animação ao passar o mouse */
-}
-
 .habilidade {
-    border: 1px solid #4d4d4d;
-    /* Borda cinza escura */
-    box-shadow:
-        0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15;
-    /* Sombra para efeito de profundidade */
-    margin-top: 80px;
-    width: 22vw;
-    max-width: 540px;
-    /* Largura máxima */
-    max-height: 500px;
-    /* Altura máxima */
+    background: #000;
+    border-radius: 8px;
+    padding: 10px 8px;
+    /* Reduzi o padding horizontal */
     display: flex;
     flex-direction: column;
-    /* Alinhamento vertical dos elementos */
-    justify-content: flex-start;
-    /* Garante que os ícones fiquem no topo */
     align-items: center;
-    /* Centraliza horizontalmente */
-    background-color: #000000;
-    /* Cor de fundo */
-    border-radius: 15px;
-    /* Cantos arredondados */
-    color: white;
-    /* Cor do texto */
-    font-size: 18px;
-    /* Tamanho do texto */
-    box-sizing: border-box;
-    /* Inclui bordas no cálculo de tamanho */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-    /* Transições suaves */
-    opacity: 0;
-    /* Inicialmente invisível */
-    transform: translateY(20px);
-    /* Animação inicial */
-    transition: opacity 1s ease, transform 1s ease, background-color 0.3s;
-    padding: 20px;
-    height: auto !important;
-    min-height: 300px;
+    justify-content: center;
+    border: 1px solid #333;
+    transition: all 0.2s ease;
+    width: 100px;
+    /* Largura fixa para todos */
 }
 
 .habilidade i {
-    font-size: 50px;
-    color: #F5F5F5;
-    transition: color 0.3s ease-in-out;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.habilidade:hover {
+    background: #1a1a1a;
+    border-color: #666;
+}
+
+
+.habilidade h1 {
+    font-size: 0.9rem;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #Habilidades-Container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -196,14 +190,6 @@ section,
     position: relative;
     z-index: 1;
     /* Importante para ficar na frente das partículas */
-}
-
-#GitGithubH1 {
-    margin-top: -60px;
-}
-
-#BancoDeDadosH1 {
-    margin-top: -70px;
 }
 
 .hidden {
@@ -376,10 +362,10 @@ a {
 #projetoDragon,
 #projetoSocial {
     position: relative;
-    width: 25vw;
-    height: 25vw;
-    max-width: 500px;
-    max-height: 500px;
+    width: 24vw;
+    height: 23vw;
+    max-width: 450px;
+    max-height: 450px;
     margin: 20px 0;
     box-sizing: border-box;
     border-radius: 20px;
@@ -403,7 +389,6 @@ a {
 #titleDragon,
 #titleSocial {
     text-align: center;
-    font-size: 24px;
     color: white;
 }
 
@@ -439,14 +424,12 @@ a {
 }
 
 #projetoSocial {
-    background-image: linear-gradient(to top, rgb(187, 151, 106), rgb(197, 148, 88));
-    background-image: url('/Imagens/image.png');
-    background-size: cover;
-    /* Faz a imagem cobrir toda a div */
-    background-position: 653% center;
-    /* Centraliza a imagem */
-    background-repeat: no-repeat;
-    /* Não repete a imagem */
+    /* Primeiro o gradiente, depois a imagem */
+    background-image: 
+      url('/Imagens/image.png');
+    background-size: cover; /* Faz a imagem cobrir toda a div */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
 }
 
 #titleSocial {
@@ -460,6 +443,9 @@ a {
     margin-top: 25px;
     margin-left: -50px;
 }
+#pTitulo{
+    margin-bottom: 4%;
+}
 
 #projetoSocial #linkSocial a:hover {
     color: rgb(255, 204, 143);
@@ -467,7 +453,7 @@ a {
 
 #titleDragon {
     font-family: 'Dragon', sans-serif;
-    font-size: 60px;
+    font-size: 55px;
     margin-top: 1%;
 }
 
@@ -479,7 +465,9 @@ a {
 #projetoDragon {
     background-image: linear-gradient(to top, black, rgb(72, 72, 72));
 }
-
+#projetoDragon p{
+    margin-top: -8%;
+}
 #projetoVicioGamer #linkVicioGamer a:hover {
     text-decoration: underline;
     color: #ff0000;
@@ -506,20 +494,13 @@ a {
 
 /* Ajustando o Android */
 #projetoAndroid {
-    background-image: linear-gradient(to bottom, #2eda7e, #0c351e);
+    background-image: linear-gradient(to bottom, #2cd179, #05180d);
 }
 
 #Bugdroid {
-    width: 45%;
-    margin: -10px -40px -10px 0;
+    width: 48%;
+   margin-top: 3%;
     /* Adiciona margem direita */
-}
-
-#Dandroid {
-    width: 45%;
-    height: 135px;
-    margin: -10px 0 -20px 90px;
-    /* Adiciona margem esquerda */
 }
 
 #image-containerVicioGamer {
@@ -543,14 +524,8 @@ a {
     justify-content: center;
     /* Alinha os itens horizontalmente no centro */
     gap: 72px;
-    margin-bottom: 220px;
-}
-
-#BancoDeDados,
-#GitGithub {
-    margin-top: -20px;
-    /* Ajuste este valor até obter a posição ideal */
-    gap: 60px;
+    margin-bottom: 120px;
+    margin-top: 120px;
 }
 
 /* Container principal */
@@ -564,7 +539,7 @@ a {
     font-size: 2.5rem;
     font-family: "Roboto", sans-serif;
     color: white;
-    margin-bottom: 140px;
+    margin-bottom: 100px;
     text-align: center;
     width: 100%;
 }

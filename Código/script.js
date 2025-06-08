@@ -8,7 +8,6 @@ const contato = document.getElementById('Contato');
 const Html = document.getElementById('Html');
 const Css = document.getElementById('Css');
 const JavaScript = document.getElementById('JavaScript');
-const BancoDeDados = document.getElementById('BancoDeDados');
 const GitGithub = document.getElementById('GitGithub');
 
 // Tempo de delay para animações (em ms)
@@ -169,21 +168,6 @@ const observerJavaScript = new IntersectionObserver((entries) => {
     });
 });
 observerJavaScript.observe(JavaScript);
-
-const observerBancoDeDados = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                BancoDeDados.classList.remove('hidden');
-                BancoDeDados.classList.add('visible');
-            }, DELAY);
-        } else {
-            BancoDeDados.classList.remove('visible');
-            BancoDeDados.classList.add('hidden');
-        }
-    });
-});
-observerBancoDeDados.observe(BancoDeDados);
 
 const observerGitGithub = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
