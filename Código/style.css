@@ -309,12 +309,14 @@ a {
     background-color: #ffffff;
     color: #0F172A;
 }
+
 #projetos {
     text-align: center;
     font-size: 55px;
     font-family: "Roboto", sans-serif;
     padding-top: 23%;
 }
+
 #NavTecnologias a {
     padding: 5px 10px;
     border-radius: 5px;
@@ -542,177 +544,266 @@ h3 {
 
 p {
     text-align: justify;
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-indent: 20px;
-    max-width: 850px;
 }
 
-/* Animação para fazer o texto aparecer */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        /* Torna o título visível */
-    }
-}
-
-/* Container geral dos projetos */
+/* =========================
+   ÁREA DE PROJETOS (CARDS)
+   ========================= */
 .projetos-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    padding: 20px;
-    max-width: 1200px;
+    gap: 3rem;
+    max-width: 1800px;
     margin: 0 auto;
+    padding: 2.5rem 1rem 4rem 1rem;
+    flex-wrap: wrap;
 }
 
-/* Cards de projetos */
 .projeto-card {
-    background-color:  #232323; /* cinza escuro */;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    width: 250px;
-    cursor: pointer;
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(180deg, rgba(38, 42, 49, 0.98) 55%, rgba(30, 33, 44, 1) 100%);
+    border-radius: 20px;
+    border: 1.6px solid rgba(180, 190, 210, 0.13);
+    box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    width: 540px;
+    min-height: 370px;
+    max-width: 98vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    transition: transform 0.22s, box-shadow 0.22s;
+    position: relative;
 }
 
 .projeto-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px) scale(1.018);
+    box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.26);
+    border-color: #444857;
 }
 
+/* ======== AJUSTE DO TAMANHO DAS IMAGENS DOS PROJETOS ======== */
+.img-projeto-card {
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background: #181b21;
+    display: block;
+    margin: 0;
+    /* tira qualquer espaçamento extra */
+    padding: 0;
+}
+
+/* Título e descrição centralizados */
 .projeto-card h2 {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
-    font-weight: 900;
-    font-size: 1.3rem;
-}
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;        /* nunca use 100vw! */
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  overflow-y: auto;
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f5f7fa;
+    margin: 2.2rem 0 0.5rem 0;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 1.12;
 }
 
-.modal-content {
-  background: #1e1e2f;
-  border-radius: 14px;
-  width: 90%;
-  max-width: 700px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 30px 40px;
-  color: #eee;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-  margin: 0;
+.projeto-card p,
+.projeto-card .descricao-projeto {
+    color: #cfd6e2;
+    font-size: 1.13rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 2.2rem 0;
+    line-height: 1.45;
 }
 
-.close {
-  position: absolute;
-  top: 18px;
-  right: 22px;
-  font-size: 28px;
-  color: #aaa;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.close:hover {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-    width: 90%;
-    padding: 20px;
-    margin: 20px auto;
-  }
-}
-/* Botão fechar e responsividade mantidos como estão */
-
-/* Remova qualquer display: flex repetido em .modal! */
-/* Botão fechar */
-.close {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    font-size: 28px;
-    color: #aaa;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover {
-    color: #fff;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .modal-content {
-        width: 90%;
-        padding: 20px;
-        margin: 20px auto;
-    }
-}
-
-.close:hover {
-    color: #fff;
-}
-
-/* Título dentro do modal */
-.modal-content h2 {
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #4b6cb7;
-}
-
-/* Parágrafos dentro do modal */
-.modal-content p {
-    line-height: 1.5;
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-/* Links dentro do modal */
-.modal-content a {
-    color: #82aaff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.modal-content a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .projetos-container {
-        flex-direction: column;
-        align-items: center;
+        gap: 1.2rem;
     }
 
     .projeto-card {
-        width: 90%;
+        width: 98vw;
+        min-width: 320px;
+        max-width: 99vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .projetos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.1rem;
+        padding: 1.3rem 0.2rem 2rem 0.2rem;
     }
 
-    .modal-content {
-        width: 90%;
-        padding: 20px;
-        margin: 20px auto;
+    .projeto-card {
+        width: 99vw;
+        min-width: 0;
+        padding: 0;
+    }
+
+    .img-projeto-card {
+        height: 130px;
+        max-height: 130px;
+    }
+}
+
+/* =========================
+   MODAL DOS PROJETOS
+   ========================= */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 12, 0.88);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: #222328;
+    border-radius: 18px;
+    border: 1.5px solid #333;
+    padding: 2.1rem 2.1rem 1.4rem 2.1rem;
+    width: 95%;
+    max-width: 420px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    color: #f3f3f3;
+    position: relative;
+    text-align: center;
+    animation: modal-entrada 0.23s;
+}
+
+@keyframes modal-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #bbb;
+    position: absolute;
+    top: 17px;
+    right: 24px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.12s;
+    z-index: 10;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.modal-content h2,
+.modal-content .titleCard {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    font-size: 1.65rem;
+    margin-bottom: 1.1rem;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+.project-image,
+.img-modal-projeto {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 17px auto;
+    display: block;
+    box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.16);
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 1.1rem;
+    line-height: 1.6;
+}
+
+#linkModel {
+    display: inline-block;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    border: 1px solid #333;
+}
+
+.modal-content a {
+    display: inline-block;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 7px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    border: 1px solid #333;
+}
+
+.modal-content a:hover {
+    background: #fff;
+    color: #232323;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* --------- RESPONSIVO --------- */
+@media (max-width: 1200px) {
+    .caixa-projetos {
+        gap: 1.7rem;
+    }
+
+    .item {
+        width: 95vw;
+        min-width: 320px;
+        max-width: 99vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .caixa-projetos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.2rem 0.5rem 2rem 0.5rem;
+    }
+
+    .item {
+        width: 98vw;
+        min-width: 0;
+        padding: 0;
+    }
+
+    .img-projetos {
+        height: 130px;
+    }
+
+    .text-projects {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
     }
 }
