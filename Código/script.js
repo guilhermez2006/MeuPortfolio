@@ -1,190 +1,105 @@
 // Seleciona as seções
 const projetosSection = document.getElementById('projetosSection');
-const projetoAndroid = document.getElementById('projetoAndroid');
-const projetoVicioGamer = document.getElementById('projetoVicioGamer');
-const projetoSocial = document.getElementById('projetoSocial');
+const projetoAndroid = document.getElementById('modalAndroid'); // Usar modal para animação (se preferir pode mudar)
+const projetoVicioGamer = document.getElementById('modalVicioGamer');
+const projetoSocial = document.getElementById('modalSocial');
 const habilidades = document.getElementById('habilidades');
 const contato = document.getElementById('Contato');
+const projetoDragon = document.getElementById('modalDragon');
 const Html = document.getElementById('Html');
 const Css = document.getElementById('Css');
 const JavaScript = document.getElementById('JavaScript');
-const GitGithub = document.getElementById('GitGithub');
+const Git = document.getElementById('Git');
+const Github = document.getElementById('Github');
 
 // Tempo de delay para animações (em ms)
 const DELAY = 350;
 
-// Configuração do IntersectionObserver para projetosSection
-const observerProjetos = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetosSection.classList.remove('hidden');
-                projetosSection.classList.add('visible');
-            }, DELAY);
-        } else {
-            projetosSection.classList.remove('visible');
-            projetosSection.classList.add('hidden');
+// Função que cria observer genérico
+function criarObserver(element) {
+    if (!element) return; // Evita erro se elemento não existe
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    element.classList.remove('hidden');
+                    element.classList.add('visible');
+                }, DELAY);
+            } else {
+                element.classList.remove('visible');
+                element.classList.add('hidden');
+            }
+        });
+    });
+    observer.observe(element);
+}
+
+// Criar observer para cada elemento que precisa da animação
+[
+    projetosSection,
+    projetoAndroid,
+    projetoVicioGamer,
+    projetoSocial,
+    habilidades,
+    contato,
+    projetoDragon,
+    Html,
+    Css,
+    JavaScript,
+    Git,
+    Github
+].forEach(criarObserver);
+const cards = document.querySelectorAll(".projeto-card");
+const modais = document.querySelectorAll(".modal");
+const botoesFechar = document.querySelectorAll(".close");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const modalId = card.getAttribute("data-modal");
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "flex";
+            // Ajustar a posição interna conforme scroll
+            const scrollY = window.scrollY || window.pageYOffset;
+            const modalContent = modal.querySelector(".modal-content");
+            modalContent.style.marginTop = scrollY + "px";
         }
     });
 });
-observerProjetos.observe(projetosSection);
 
-// Configuração do IntersectionObserver para projetoAndroid
-const observerAndroid = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetoAndroid.classList.remove('hidden');
-                projetoAndroid.classList.add('visible');
-            }, DELAY);
-        } else {
-            projetoAndroid.classList.remove('visible');
-            projetoAndroid.classList.add('hidden');
+botoesFechar.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const modal = btn.closest(".modal");
+        modal.style.display = "none";
+        // Resetar margin do conteúdo ao fechar
+        const modalContent = modal.querySelector(".modal-content");
+        modalContent.style.marginTop = "0";
+    });
+});
+
+window.addEventListener("click", e => {
+    modais.forEach(modal => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            const modalContent = modal.querySelector(".modal-content");
+            modalContent.style.marginTop = "0";
         }
     });
 });
-observerAndroid.observe(projetoAndroid);
 
-// Configuração do IntersectionObserver para projetoVicioGamer
-const observerVicioGamer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetoVicioGamer.classList.remove('hidden');
-                projetoVicioGamer.classList.add('visible');
-            }, DELAY);
-        } else {
-            projetoVicioGamer.classList.remove('visible');
-            projetoVicioGamer.classList.add('hidden');
+// Atualiza marginTop do conteúdo quando rolar a página, se modal aberto
+window.addEventListener("scroll", () => {
+    modais.forEach(modal => {
+        if (modal.style.display === "flex") {
+            const scrollY = window.scrollY || window.pageYOffset;
+            const modalContent = modal.querySelector(".modal-content");
+            modalContent.style.marginTop = scrollY + "px";
         }
     });
 });
-observerVicioGamer.observe(projetoVicioGamer);
 
-// Configuração do IntersectionObserver para projetoSocial
-const observerProjetoSocial = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetoSocial.classList.remove('hidden');
-                projetoSocial.classList.add('visible');
-            }, DELAY);
-        } else {
-            projetoSocial.classList.remove('visible');
-            projetoSocial.classList.add('hidden');
-        }
-    });
-});
-observerProjetoSocial.observe(projetoSocial);
-
-// Configuração do IntersectionObserver para habilidades
-const observerHabilidades = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                habilidades.classList.remove('hidden');
-                habilidades.classList.add('visible');
-            }, DELAY);
-        } else {
-            habilidades.classList.remove('visible');
-            habilidades.classList.add('hidden');
-        }
-    });
-});
-observerHabilidades.observe(habilidades);
-
-// Configuração do IntersectionObserver para Contato
-const observerContato = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                contato.classList.remove('hidden');
-                contato.classList.add('visible');
-            }, DELAY);
-        } else {
-            contato.classList.remove('visible');
-            contato.classList.add('hidden');
-        }
-    });
-});
-observerContato.observe(contato);
-
-const observerprojetoDragon = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                projetoDragon.classList.remove('hidden');
-                projetoDragon.classList.add('visible');
-            }, DELAY);
-        } else {
-            projetoDragon.classList.remove('visible');
-            projetoDragon.classList.add('hidden');
-        }
-    });
-});
-observerprojetoDragon.observe(projetoDragon);
-
-const observerHtml = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                Html.classList.remove('hidden');
-                Html.classList.add('visible');
-            }, DELAY);
-        } else {
-            Html.classList.remove('visible');
-            Html.classList.add('hidden');
-        }
-    });
-});
-observerHtml.observe(Html);
-
-const observerCss = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                Css.classList.remove('hidden');
-                Css.classList.add('visible');
-            }, DELAY);
-        } else {
-            Css.classList.remove('visible');
-            Css.classList.add('hidden');
-        }
-    });
-});
-observerCss.observe(Css);
-
-const observerJavaScript = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                JavaScript.classList.remove('hidden');
-                JavaScript.classList.add('visible');
-            }, DELAY);
-        } else {
-            JavaScript.classList.remove('visible');
-            JavaScript.classList.add('hidden');
-        }
-    });
-});
-observerJavaScript.observe(JavaScript);
-
-const observerGitGithub = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                GitGithub.classList.remove('hidden');
-                GitGithub.classList.add('visible');
-            }, DELAY);
-        } else {
-            GitGithub.classList.remove('visible');
-            GitGithub.classList.add('hidden');
-        }
-    });
-});
-observerGitGithub.observe(GitGithub);
-
-document.addEventListener('DOMContentLoaded', function () {
+// Inicializa particlesJS após o DOM estar carregado
+document.addEventListener('DOMContentLoaded', () => {
     particlesJS('particles-js', {
         particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },

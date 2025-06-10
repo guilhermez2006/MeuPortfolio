@@ -2,18 +2,17 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Portfólio</title>
-    <link rel="shortcut icon" href="imagens/favicon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/Imagens/favicon.jpg" type="image/x-icon">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/Imagens/favicon.jpg" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -21,7 +20,7 @@
     <header>
         <nav>
             <ul>
-                <li id="Navhome"><a href="#home">Home</a></li> <!-- Link atualizado para a seção -->
+                <li id="Navhome"><a href="#home">Home</a></li>
                 <li id="Navprojetos"><a href="#projetos">Projetos</a></li>
                 <li id="NavTecnologias"><a href="#habilidades">Habilidades</a></li>
                 <li id="NavContato"><a href="#Contato">Contato</a></li>
@@ -50,115 +49,94 @@
     </div>
 
     <main>
-        <section id="projetosSection" class="hidden">
+        <section id="projetosSection">
             <h1 id="projetos">Projetos</h1>
             <div class="projetos-container">
-                <div id="projetoAndroid" class="hidden">
-                    <h2 id="titleAndroid">Projeto <strong>Android</strong></h2>
-                    <p>
-                        Neste projeto explorei a evolução do <strong>Bugdroid</strong>, criando uma apresentação
-                        interativa com:
-                        <br>
-                        - História das versões
-                        <br>
-                        - Impacto no mercado mobile
-                        <br>
-                        - Dados técnicos
-                        <br>
-                    </p>
-                    <div class="image-container">
-                        <img src="/Imagens/bugdroid.png" alt="Bugdroid" id="Bugdroid">
-                    </div>
-                    <ul id="hoverrr">
-                        <li id="linkAndroid">
-                            <a href="https://guilhermez2006.github.io/projeto-android/index.html" target="_blank">Acesse
-                                o Projeto <strong>Android</strong> no <strong>GitHub</strong></a>
-                        </li>
-                    </ul>
+
+                <!-- Cards sem imagens -->
+                <div class="projeto-card" data-modal="modalAndroid">
+                    <h2>Projeto <strong>Android</strong></h2>
                 </div>
 
-                <div id="projetoVicioGamer" class="hidden">
-                    <div>
-                        <picture>
-                            <img src="/Imagens/LogoB.svg" alt="Logo VicioGamer" id="image-containerVicioGamer">
-                        </picture>
-                    </div>
-                    <p>
-                        Neste projeto explorei o mundo dos jogos com dois amigos, focando em:
-                        <br>
-                        - Trabalho em equipe<br>
-                        - Organização de tarefas<br>
-                        - Uso do <a href="https://github.com/guilhermez2006" target="_blank"
-                            id="linkVicioGamer2"><strong>GitHub</strong></a> para versionamento<br>
-                        - Colaboração eficiente<br>
-                        - Adaptação para diversos dispositivos
-                    </p>
-
-                    <div style="max-width: 240px; min-width: 240px; margin-left: 35px;">
-                        <picture>
-                            <img src="/Imagens/103-1038039_new-used-games-game-controller-removebg-preview.png"
-                                alt="Img Controle" style="width: 85%;">
-                        </picture>
-                    </div>
-                    <ul id="hoverrr">
-                        <li id="linkVicioGamer">
-                            <a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o site
-                                <strong>VicioGamer</strong> no <strong>GitHub</strong></a>
-                        </li>
-                    </ul>
+                <div class="projeto-card" data-modal="modalVicioGamer">
+                    <h2>Projeto <strong>VicioGamer</strong></h2>
                 </div>
 
-                <div id="projetoDragon" class="hidden">
-                    <h2 id="titleDragon"><strong>House Of The Dragon</strong></h2>
-                    <p>
-                    <p id="pTitulo">
-                        Neste projeto desenvolvi um site interativo inspirado na série, focando em:</p>
-                    <p><br>
-                        - Páginas dedicadas a cada dragão<br>
-                        - Manipulação de dados dinâmicos com JavaScript<br>
-                        - Design responsivo<br>
-                        - Melhoria da experiência do usuário
-                    </p>
-                    <div
-                        style="max-width: 210px; min-width: 210px; margin-left: 60px; position: relative; bottom: 40px;">
-                        <picture>
-                            <img src="/Imagens/pngtree-dragon-vector-icon-illustration-png-image_2325875-removebg-preview.png"
-                                alt="" style="width: 100%;">
-                        </picture>
-                    </div>
-                    <ul id="hoverrr">
-                        <li id="linkDragon">
-                            <a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank">Acesse o
-                                <strong>House Of The Dragon</strong> no <strong>GitHub</strong></a>
-                        </li>
-                    </ul>
+                <div class="projeto-card" data-modal="modalDragon">
+                    <h2><strong>House Of The Dragon</strong></h2>
                 </div>
 
+                <div class="projeto-card" data-modal="modalSocial">
+                    <h2><strong>Cordel Moderno</strong></h2>
+                </div>
 
-                <div id="projetoSocial" class="hidden">
-                    <h2 id="titleSocial">Cordel Moderno</h2>
+            </div>
+
+            <!-- MODAIS -->
+
+            <div id="modalAndroid" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal-close="modalAndroid">&times;</span>
+                    <h2 class="titleCard">Projeto <strong>Android</strong></h2>
                     <p>
-                        Desenvolvi um site sobre o <strong>Cordel Moderno</strong> de <a
-                            href="https://www.recantodasletras.com.br/poesias/3186743" id="linkSocial2"><strong>Milton
-                                Duarte</strong><a />, com:
-                            <br>
-                            - Efeito parallax e tipografia temática
-                            <br>
-                            - Cores sofisticadas
-                            <br>
-                            - Design 100% responsivo
-                            <br>
-                            - Adaptação para diversos dispositivos
+                        Neste projeto explorei a evolução do <strong>Bugdroid</strong>, criando uma apresentação interativa
+                        com:<br />
+                        - História das versões<br />
+                        - Impacto no mercado mobile<br />
+                        - Dados técnicos<br />
                     </p>
-                    <ul id="hoverrr">
-                        <li id="linkSocial">
-                            <a href="https://guilhermez2006.github.io/Projeto-Social/" target="_blank">Acesse o
-                                <strong>Projeto Social</strong> no <strong>GitHub</strong></a>
-                        </li>
-                    </ul>
+                    <p><a href="https://guilhermez2006.github.io/projeto-android/index.html" target="_blank">Acesse o Projeto Android no GitHub</a></p>
                 </div>
             </div>
-            <!-- HTML -->
+
+            <div id="modalVicioGamer" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal-close="modalVicioGamer">&times;</span>
+                    <h2 class="titleCard">Projeto <strong>VicioGamer</strong></h2>
+                    <p>
+                        Neste projeto explorei o mundo dos jogos com dois amigos, focando em:<br />
+                        - Trabalho em equipe<br />
+                        - Organização de tarefas<br />
+                        - Uso do <a href="https://github.com/guilhermez2006" target="_blank"><strong>GitHub</strong></a> para
+                        versionamento<br />
+                        - Colaboração eficiente<br />
+                        - Adaptação para diversos dispositivos
+                    </p>
+                    <p><a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o site VicioGamer no GitHub</a></p>
+                </div>
+            </div>
+
+            <div id="modalDragon" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal-close="modalDragon">&times;</span>
+                    <h2 class="titleCard"><strong>House Of The Dragon</strong></h2>
+                    <p>
+                        Neste projeto desenvolvi um site interativo inspirado na série, focando em:<br />
+                        - Páginas dedicadas a cada dragão<br />
+                        - Manipulação de dados dinâmicos com JavaScript<br />
+                        - Design responsivo<br />
+                        - Melhoria da experiência do usuário
+                    </p>
+                    <p><a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank">Acesse o House Of The Dragon no GitHub</a></p>
+                </div>
+            </div>
+
+            <div id="modalSocial" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal-close="modalSocial">&times;</span>
+                    <h2 class="titleCard"><strong>Cordel Moderno</strong></h2>
+                    <p>
+                        Desenvolvi um site sobre o <strong>Cordel Moderno</strong> de <a
+                            href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank"><strong>Milton Duarte</strong></a>,
+                        com:<br />
+                        - Efeito parallax e tipografia temática<br />
+                        - Cores sofisticadas<br />
+                        - Design 100% responsivo<br />
+                        - Adaptação para diversos dispositivos
+                    </p>
+                    <p><a href="https://guilhermez2006.github.io/Projeto-Social/" target="_blank">Acesse o Projeto Social no GitHub</a></p>
+                </div>
+            </div>
 
         </section>
 
@@ -177,7 +155,7 @@
                     <i class="fab fa-js-square"></i>
                     <h1>JavaScript</h1>
                 </div>
-                <div id="GitGithub" class="habilidade">
+                <div id="Git" class="habilidade">
                     <i class="fab fa-git-alt"></i>
                     <h1>Git</h1>
                 </div>
@@ -185,20 +163,20 @@
                     <i class="fab fa-github"></i>
                     <h1>GitHub</h1>
                 </div>
-
             </div>
         </section>
+
         <section id="contato-section">
             <h1 id="Contato">Entre em contato comigo!</h1>
 
             <div class="contato-container">
-                <img src="/Imagens/BATMAN.jpeg" alt="Minha foto" id="minhafoto">
+                <img src="/Imagens/BATMAN.jpeg" alt="Minha foto" id="minhafoto" />
                 <div class="sobre-mim">
                     <h3>Guilherme Lima</h3>
                     <p>
                         Estudante de Análise e Desenvolvimento de Sistemas (3º semestre) com conhecimentos em
-                        <strong>HTML, CSS e JavaScript</strong>. Atualmente focado no estudo de <strong>Node.js</strong>
-                        para expandir minhas habilidades em back-end.
+                        <strong>HTML, CSS e JavaScript</strong>. Atualmente focado no estudo de <strong>Node.js</strong> para
+                        expandir minhas habilidades em back-end.
                     </p>
                 </div>
 
@@ -226,8 +204,9 @@
                 </div>
             </div>
         </section>
-
     </main>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-</body
+</body>
+
+</html>

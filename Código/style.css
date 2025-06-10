@@ -309,7 +309,12 @@ a {
     background-color: #ffffff;
     color: #0F172A;
 }
-
+#projetos {
+    text-align: center;
+    font-size: 55px;
+    font-family: "Roboto", sans-serif;
+    padding-top: 23%;
+}
 #NavTecnologias a {
     padding: 5px 10px;
     border-radius: 5px;
@@ -341,167 +346,7 @@ a {
     text-decoration: underline;
 }
 
-#projetos {
-    text-align: center;
-    font-size: 60px;
-    font-family: "Roboto", sans-serif;
-    padding-top: 23%;
-}
 
-#projetoAndroid #titleAndroid {
-    font-family: 'MinhaFonte', sans-serif;
-    font-size: 32px;
-    /* Ajuste o tamanho conforme necessário */
-    color: #016b31;
-    font-weight: normal;
-    /* Certifique-se de que está como normal */
-}
-
-#projetoVicioGamer,
-#projetoAndroid,
-#projetoDragon,
-#projetoSocial {
-    position: relative;
-    width: 24vw;
-    height: 23vw;
-    max-width: 450px;
-    max-height: 450px;
-    margin: 20px 0;
-    box-sizing: border-box;
-    border-radius: 20px;
-    overflow-y: hidden;
-    /* Barra de rolagem vertical apenas quando necessário */
-    padding: 5px;
-    transition: opacity 3s ease, transform 3s ease;
-}
-
-/* Ajuste de hover para os projetos */
-#projetoVicioGamer:hover,
-#projetoAndroid:hover,
-#projetoDragon:hover,
-#projetoSocial {
-    transform: translateY(-16px);
-}
-
-/* Ajustando o título de cada projeto */
-#titleVicioGamer,
-#titleAndroid,
-#titleDragon,
-#titleSocial {
-    text-align: center;
-    color: white;
-}
-
-/* Ajustando os links de cada projeto */
-#linkVicioGamer,
-#linkAndroid,
-#linkDragon,
-#linkSocial {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    position: absolute;
-    bottom: 2%;
-    left: 19%;
-}
-
-#linkVicioGamer a,
-#linkAndroid a,
-#linkDragon a,
-#linkSocial a {
-    white-space: nowrap;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-}
-
-#linkVicioGamer::before,
-#linkAndroid::before,
-#linkDragon::before,
-#linkSocial::before {
-    content: "•";
-    margin-right: 2%;
-}
-
-#projetoSocial {
-    /* Primeiro o gradiente, depois a imagem */
-    background-image: 
-      url('/Imagens/image.png');
-    background-size: cover; /* Faz a imagem cobrir toda a div */
-    background-position: center center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-}
-
-#titleSocial {
-    font-size: 50px;
-    margin-top: 1%;
-}
-
-#imagemSocial {
-    border-radius: 5px;
-    height: 140px;
-    margin-top: 25px;
-    margin-left: -50px;
-}
-#pTitulo{
-    margin-bottom: 4%;
-}
-
-#projetoSocial #linkSocial a:hover {
-    color: rgb(255, 204, 143);
-}
-
-#titleDragon {
-    font-family: 'Dragon', sans-serif;
-    font-size: 55px;
-    margin-top: 1%;
-}
-
-#projetoDragon #linkDragon :hover {
-    color: rgb(58, 58, 58);
-}
-
-/* Ajustando o Dragon */
-#projetoDragon {
-    background-image: linear-gradient(to top, black, rgb(72, 72, 72));
-}
-#projetoDragon p{
-    margin-top: -8%;
-}
-#projetoVicioGamer #linkVicioGamer a:hover {
-    text-decoration: underline;
-    color: #ff0000;
-}
-
-#projetoVicioGamer #linkVicioGamer2 :hover {
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-#projetoSocial #linkSocial2:hover {
-    color: rgb(255, 204, 143);
-    text-decoration: underline;
-}
-
-/* Ajustando o VicioGamer */
-#projetoVicioGamer {
-    background-image: linear-gradient(to bottom, #ff0000, #000000);
-}
-
-#projetoAndroid #linkAndroid a:hover {
-    color: #3dd384;
-}
-
-/* Ajustando o Android */
-#projetoAndroid {
-    background-image: linear-gradient(to bottom, #2cd179, #05180d);
-}
-
-#Bugdroid {
-    width: 48%;
-   margin-top: 3%;
-    /* Adiciona margem direita */
-}
 
 #image-containerVicioGamer {
     margin-top: 17px;
@@ -708,5 +553,135 @@ p {
     to {
         opacity: 1;
         /* Torna o título visível */
+    }
+}
+
+/* Container geral dos projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards de projetos */
+.projeto-card {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    cursor: pointer;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.projeto-card h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;   /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 9999;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Conteúdo do modal — agora dentro de flex, sem position:absolute */
+.modal-content {
+  background: #1e1e2f;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;            /* scroll só dentro do conteúdo se ultrapassar 80% da altura */
+  padding: 30px 40px;
+  color: #eee;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+  font-family: 'Roboto', sans-serif;
+  position: relative;          /* manter relativo para o botão de fechar */
+}
+
+/* (o restante permanece igual) */
+
+/* Botão fechar */
+.close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+/* Título dentro do modal */
+.modal-content h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4b6cb7;
+}
+
+/* Parágrafos dentro do modal */
+.modal-content p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Links dentro do modal */
+.modal-content a {
+    color: #82aaff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projetos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto-card {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
     }
 }
