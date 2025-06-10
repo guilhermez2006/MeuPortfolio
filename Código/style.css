@@ -234,7 +234,7 @@ main {
 }
 
 header {
-    background-color: #000000;
+    background-color: #0000008a;
     position: fixed;
     width: 100%;
     padding: 10px;
@@ -569,7 +569,7 @@ p {
 
 /* Cards de projetos */
 .projeto-card {
-    background: linear-gradient(135deg, #4b6cb7, #182848);
+    background-color:  #232323; /* cinza escuro */;
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
