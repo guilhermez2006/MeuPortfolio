@@ -416,9 +416,8 @@ a {
     /* Impede que reduza */
     border: 1px solid #4d4d4d;
     /* Borda cinza escura */
-    box-shadow:
-        0 10px 20px rgba(255, 255, 255, 0.15), 0 5px 15;
-    /* Sombra para efeito de profundidade */
+    box-shadow: 0 10px 30px rgba(90, 90, 90, 0.18);
+    /* Sombra cinza discreta */
 }
 
 /* Remove qualquer flex-grow que possa estar interferindo */
@@ -436,6 +435,26 @@ a {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+#Html.habilidade i {
+    color: #e65100; /* laranja HTML */
+}
+
+#Css.habilidade i {
+    color: #0277bd; /* azul CSS */
+}
+
+#JavaScript.habilidade i {
+    color: #ffd600; /* amarelo JS */
+}
+
+#Git.habilidade i {
+    color: #d84315; /* laranja Git */
+}
+
+#Github.habilidade i {
+    color: #24292e; /* preto GitHub */
 }
 
 /* Estilo da foto */
