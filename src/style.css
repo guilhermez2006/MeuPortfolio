@@ -449,6 +449,10 @@ a {
     color: #ffd600; /* amarelo JS */
 }
 
+#NodeJs.habilidade i {
+    color: #539e43; /* verde Node.js */
+     font-size: 43px; /* ou outro valor */
+}
 #Git.habilidade i {
     color: #d84315; /* laranja Git */
 }
