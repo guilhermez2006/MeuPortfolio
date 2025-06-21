@@ -438,27 +438,33 @@ a {
 }
 
 #Html.habilidade i {
-    color: #e65100; /* laranja HTML */
+    color: #e65100;
 }
 
 #Css.habilidade i {
-    color: #0277bd; /* azul CSS */
+    color: #0277bd;
 }
 
 #JavaScript.habilidade i {
-    color: #ffd600; /* amarelo JS */
+    color: #ffd600;
 }
 
 #NodeJs.habilidade i {
-    color: #539e43; /* verde Node.js */
-     font-size: 43px; /* ou outro valor */
+    color: #539e43;
+    font-size: 43px;
 }
+
+#MongoDB.habilidade i {
+    color: #47A248;
+    font-size: 37px;
+}
+
 #Git.habilidade i {
-    color: #d84315; /* laranja Git */
+    color: #d84315;
 }
 
 #Github.habilidade i {
-    color: #24292e; /* preto GitHub */
+    color: #24292e;
 }
 
 /* Estilo da foto */
