@@ -52,6 +52,20 @@
             <h1 id="projetos">Meus Projetos</h1>
             <div class="projetos-container">
 
+                <div class="projeto-card" data-modal="modalApiCadastro">
+                    <img src="Imagens/ApiCadastro.png" alt="Preview API de Cadastro" class="img-projeto-card" />
+                    <h2>API de Cadastro</h2>
+                    <p>API RESTful com cadastro, listagem e exclusão de usuários, usando Node.js, Express, Prisma e
+                        MongoDB.
+                    </p>
+                </div>
+
+                <div class="projeto-card" data-modal="modalQuiz">
+                    <img src="Imagens/SiteQuiz.png" alt="Preview Quiz de Programação" class="img-projeto-card" />
+                    <h2>Quiz de Programação</h2>
+                    <p>Quiz online com perguntas sobre lógica e programação feito em HTML, CSS e JavaScript.</p>
+                </div>
+
                 <div class="projeto-card" data-modal="modalAndroid">
                     <img src="Imagens/SiteAndroid.png" alt="Preview Projeto Android" class="img-projeto-card" />
                     <h2>Projeto Android</h2>
@@ -77,11 +91,6 @@
                     <p>Site com efeito parallax e tipografia temática inspirado em poema de Milton Duarte.</p>
                 </div>
 
-                <div class="projeto-card" data-modal="modalQuiz">
-                    <img src="Imagens/SiteQuiz.png" alt="Preview Quiz de Programação" class="img-projeto-card" />
-                    <h2>Quiz de Programação</h2>
-                    <p>Quiz online com perguntas sobre lógica e programação feito em HTML, CSS e JavaScript.</p>
-                </div>
             </div>
         </section>
 
@@ -161,6 +170,43 @@
     </main>
 
     <!-- MODAIS -->
+    <div id="modalApiCadastro" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal-close="modalApiCadastro">&times;</span>
+            <h2 class="titleCard">API de Cadastro</h2>
+            <img src="Imagens/ApiCadastro.png" alt="Preview API de Cadastro" class="img-modal-projeto" />
+            <p>
+                Projeto de backend com:<br />
+                - Cadastro, listagem e exclusão de usuários<br />
+                - Node.js, Express, Prisma e MongoDB<br />
+                - Validação de e-mail único<br />
+                - Respostas em JSON<br />
+                - Código limpo e organizado
+            </p>
+            <p>
+                <a href="https://guilhermez2006.github.io/CadastroDeUsuarios/" target="_blank">
+                    Acesse a interface da API de Cadastro no GitHub
+                </a>
+            </p>
+        </div>
+    </div>
+    <div id="modalQuiz" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal-close="modalQuiz">&times;</span>
+            <h2 class="titleCard">Quiz de Programação</h2>
+            <img src="Imagens/SiteQuiz.png" alt="Preview Quiz de Programação" class="img-modal-projeto" />
+            <p>
+                Quiz online interativo desenvolvido em HTML, CSS e JavaScript, com perguntas de lógica e programação. O
+                usuário recebe o resultado ao final.<br />
+                - Perguntas de múltipla escolha<br />
+                - Feedback imediato<br />
+                - Layout responsivo<br />
+                - Pontuação final exibida ao usuário
+            </p>
+            <p><a href="https://guilhermez2006.github.io/Quiz-Programacao/" target="_blank">Acesse o Quiz de Programação
+                    no GitHub</a></p>
+        </div>
+    </div>
     <div id="modalAndroid" class="modal">
         <div class="modal-content">
             <span class="close" data-modal-close="modalAndroid">&times;</span>
@@ -228,23 +274,6 @@
             </p>
             <p><a href="https://guilhermez2006.github.io/Projeto-Cordel/" target="_blank">Acesse o Projeto Cordel no
                     GitHub</a></p>
-        </div>
-    </div>
-    <div id="modalQuiz" class="modal">
-        <div class="modal-content">
-            <span class="close" data-modal-close="modalQuiz">&times;</span>
-            <h2 class="titleCard">Quiz de Programação</h2>
-            <img src="Imagens/SiteQuiz.png" alt="Preview Quiz de Programação" class="img-modal-projeto" />
-            <p>
-                Quiz online interativo desenvolvido em HTML, CSS e JavaScript, com perguntas de lógica e programação. O
-                usuário recebe o resultado ao final.<br />
-                - Perguntas de múltipla escolha<br />
-                - Feedback imediato<br />
-                - Layout responsivo<br />
-                - Pontuação final exibida ao usuário
-            </p>
-            <p><a href="https://guilhermez2006.github.io/Quiz-Programacao/" target="_blank">Acesse o Quiz de Programação
-                    no GitHub</a></p>
         </div>
     </div>
     <script src="src/script.js"></script>
