@@ -40,7 +40,7 @@
             <a href="https://www.instagram.com/_guiszl7/" target="_blank">
                 <i id="icone2" class="fab fa-instagram" style="color: #ffffff;"></i>
             </a>
-            <a href="https://www.linkedin.com/in/guik1ng-3-3b27362b8/" target="_blank">
+            <a href="https://www.linkedin.com/in/guilhermelima7/" target="_blank">
                 <i id="icone3" class="fab fa-linkedin" style="color: #ffffff;"></i>
             </a>
         </div>
@@ -51,7 +51,11 @@
         <section id="projetosSection">
             <h1 id="projetos">Meus Projetos</h1>
             <div class="projetos-container">
-
+<div class="projeto-card" data-modal="modalInfoPrime">
+                    <img src="Imagens/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-projeto-card" />
+                    <h2>InfoPrime</h2>
+                    <p>Modernização da interface institucional com foco em UX, responsividade e captação de clientes.</p>
+                </div>
                 <div class="projeto-card" data-modal="modalApiCadastro">
                     <img src="Imagens/apiCadastro.png" alt="Preview API de Cadastro" class="img-projeto-card" />
                     <h2>API de Cadastro</h2>
@@ -72,12 +76,6 @@
                     <p>Site estático sobre a evolução do mascote Bugdroid, com curiosidades e história do Android.</p>
                 </div>
 
-                <div class="projeto-card" data-modal="modalVicioGamer">
-                    <img src="Imagens/SiteVicioGamer.png" alt="Preview Projeto VicioGamer" class="img-projeto-card" />
-                    <h2>Vício Gamer</h2>
-                    <p>Landing page de games feita em equipe, com organização de tarefas e colaboração via GitHub.</p>
-                </div>
-
                 <div class="projeto-card" data-modal="modalDragon">
                     <img src="Imagens/SiteDragons.png" alt="Preview House Of The Dragon" class="img-projeto-card" />
                     <h2>House Of The Dragon</h2>
@@ -90,44 +88,54 @@
                     <h2>Cordel Moderno</h2>
                     <p>Site com efeito parallax e tipografia temática inspirado em poema de Milton Duarte.</p>
                 </div>
-
-            </div>
-        </section>
-
-        <section id="habilidadesSection">
-            <h2 id="habilidades" class="hidden">Habilidades</h2>
-            <div id="Habilidades-Container">
-                <div id="Html" class="habilidade">
-                    <i class="fab fa-html5"></i>
-                    <h1>HTML</h1>
-                </div>
-                <div id="Css" class="habilidade">
-                    <i class="fab fa-css3-alt"></i>
-                    <h1>CSS</h1>
-                </div>
-                <div id="JavaScript" class="habilidade">
-                    <i class="fab fa-js-square"></i>
-                    <h1>JavaScript</h1>
-                </div>
-                <div id="NodeJs" class="habilidade">
-                    <i class="fab fa-node-js"></i>
-                    <h1>Node.js</h1>
-                </div>
-                <div id="MongoDB" class="habilidade">
-                    <i class="fas fa-database"></i> <!-- ícone alternativo para MongoDB -->
-                    <h1>MongoDB</h1>
-                </div>
-
-                <div id="Git" class="habilidade">
-                    <i class="fab fa-git-alt"></i>
-                    <h1>Git</h1>
-                </div>
-                <div id="Github" class="habilidade">
-                    <i class="fab fa-github"></i>
-                    <h1>GitHub</h1>
+                <div class="projeto-card" data-modal="modalVicioGamer">
+                    <img src="Imagens/SiteVicioGamer.png" alt="Preview Projeto VicioGamer" class="img-projeto-card" />
+                    <h2>Vício Gamer</h2>
+                    <p>Landing page de games feita em equipe, com organização de tarefas e colaboração via GitHub.</p>
                 </div>
             </div>
         </section>
+
+<section id="habilidadesSection">
+    <h2 id="habilidades" class="hidden">Habilidades</h2>
+    <div id="Habilidades-Container">
+        <div id="Html" class="habilidade">
+            <i class="fab fa-html5"></i>
+            <h1>HTML5</h1>
+        </div>
+        <div id="Css" class="habilidade">
+            <i class="fab fa-css3-alt"></i>
+            <h1>CSS</h1>
+        </div>
+        <div id="JavaScript" class="habilidade">
+            <i class="fab fa-js-square"></i>
+            <h1>JavaScript</h1>
+        </div>
+        <div id="NodeJs" class="habilidade">
+            <i class="fab fa-node-js"></i>
+            <h1>Node.js</h1>
+        </div>
+        
+     <div id="Express" class="habilidade">
+    <span class="icon-express">ex</span>
+    <h1>Express</h1>
+</div>
+
+        <div id="MongoDB" class="habilidade">
+            <i class="fas fa-database"></i> 
+            <h1>MongoDB</h1>
+        </div>
+
+        <div id="Git" class="habilidade">
+            <i class="fab fa-git-alt"></i>
+            <h1>Git</h1>
+        </div>
+        <div id="Github" class="habilidade">
+            <i class="fab fa-github"></i>
+            <h1>GitHub</h1>
+        </div>
+    </div>
+</section>
 
         <section id="contato-section">
             <h1 id="Contato">Entre em contato comigo!</h1>
@@ -170,6 +178,25 @@
     </main>
 
     <!-- MODAIS -->
+     <div id="modalInfoPrime" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal-close="modalInfoPrime">&times;</span>
+            <h2 class="titleCard">InfoPrime – Soluções e Tecnologia</h2>
+            <img src="Imagens/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-modal-projeto" />
+            <p>
+                Projeto desenvolvido por iniciativa própria para a <strong>InfoPrime</strong>, onde atuo atualmente. 
+                O objetivo principal foi a reconstrução total da interface institucional, focando em:<br />
+                - <strong>Modernização de Estrutura:</strong> Substituição da interface antiga por uma solução moderna e limpa.<br />
+                - <strong>Foco em UX/UI:</strong> Melhoria da experiência do usuário para facilitar a navegação pelos serviços de TI.<br />
+                - <strong>Captação de Clientes:</strong> Estruturação de seções estratégicas para suporte, infraestrutura e segurança.<br />
+                - <strong>Tecnologias:</strong> JavaScript, HTML5 e CSS3 (com foco em responsividade).
+            </p>
+            <p>
+                <a href="https://guilhermez2006.github.io/InfoPrime-page/" target="_blank">Acesse o site da InfoPrime</a>
+                <a href="https://github.com/guilhermez2006/InfoPrime-page" target="_blank">Acesse o repositório</a>
+            </p>
+        </div>
+    </div>
     <div id="modalApiCadastro" class="modal">
         <div class="modal-content">
             <span class="close" data-modal-close="modalApiCadastro">&times;</span>
@@ -188,7 +215,7 @@
                 <a href="https://guilhermez2006.github.io/CadastroDeUsuarios/" target="_blank">
                     Acesse a interface da API de Cadastro no GitHub
                 </a>
-                <a href="https://github.com/guilhermez2006/CadastroDeUsuarios">Acesse o código da API</a>
+                <a href="https://github.com/guilhermez2006/CadastroDeUsuarios">Acesse o repositório da API</a>
             </p>
         </div>
     </div>
@@ -226,24 +253,6 @@
                     Android no GitHub</a></p>
         </div>
     </div>
-    <div id="modalVicioGamer" class="modal">
-        <div class="modal-content">
-            <span class="close" data-modal-close="modalVicioGamer">&times;</span>
-            <h2 class="titleCard">Vício Gamer</h2>
-            <img src="Imagens/SiteVicioGamer.png" alt="Preview Projeto VicioGamer" class="img-modal-projeto" />
-            <p>
-                Neste projeto explorei o mundo dos jogos com dois amigos, focando em:<br />
-                - Trabalho em equipe<br />
-                - Organização de tarefas<br />
-                - Uso do <a href="https://github.com/guilhermez2006" target="_blank"><strong>GitHub</strong></a> para
-                versionamento<br />
-                - Colaboração eficiente<br />
-                - Adaptação para diversos dispositivos
-            </p>
-            <p><a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o site VicioGamer no
-                    GitHub</a></p>
-        </div>
-    </div>
     <div id="modalDragon" class="modal">
         <div class="modal-content">
             <span class="close" data-modal-close="modalDragon">&times;</span>
@@ -277,6 +286,24 @@
             <p><a href="https://guilhermez2006.github.io/Projeto-Cordel/" target="_blank">Acesse o Projeto Cordel no
                     GitHub</a></p>
         </div>
+            <div id="modalVicioGamer" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal-close="modalVicioGamer">&times;</span>
+            <h2 class="titleCard">Vício Gamer</h2>
+            <img src="Imagens/SiteVicioGamer.png" alt="Preview Projeto VicioGamer" class="img-modal-projeto" />
+            <p>
+                Neste projeto explorei o mundo dos jogos com dois amigos, focando em:<br />
+                - Trabalho em equipe<br />
+                - Organização de tarefas<br />
+                - Uso do <a href="https://github.com/guilhermez2006" target="_blank"><strong>GitHub</strong></a> para
+                versionamento<br />
+                - Colaboração eficiente<br />
+                - Adaptação para diversos dispositivos
+            </p>
+            <p><a href="https://guilhermez2006.github.io/VicioGamer/" target="_blank">Acesse o site VicioGamer no
+                    GitHub</a></p>
+        </div>
+    </div>
     </div>
     <script src="src/script.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

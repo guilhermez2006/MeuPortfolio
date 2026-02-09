@@ -88,6 +88,22 @@ body {
     transform: translateY(-5px);
 }
 
+/* Estilização do ícone customizado "ex" */
+.icon-express {
+    font-family: 'Arial', sans-serif; /* Fonte limpa */
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #000000;
+    background-color: #ffffff; /* Verde combinando com Node/Mongo */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+}
 .habilidade {
     background: #000;
     border-radius: 8px;
