@@ -142,7 +142,21 @@ body {
     margin: 0;
     text-align: center;
 }
-
+/* ========================================
+   ESTILO PARA ÍCONES DE IMAGEM (PRISMA)
+   ======================================== */
+.habilidade-icon-img {
+    /* Define uma altura inicial para combinar com o font-size: 3rem dos outros ícones */
+    height: 3rem;
+    width: auto; /* Mantém a proporção do triângulo */
+    margin-bottom: 10px; /* O mesmo espaçamento que os ícones <i> têm */
+    
+    /* O TRUQUE MÁGICO: Inverte a cor da imagem (preto vira branco) */
+    filter: invert(1) brightness(1.5);
+    
+    /* Garante que a animação de hover funcione também na imagem */
+    transition: transform 0.3s ease;
+}
 /* Responsividade */
 @media (max-width: 600px) {
     #Habilidades-Container {
@@ -381,14 +395,11 @@ a {
 }
 
 #Habilidades-Container {
-    display: flex;
-    flex-wrap: wrap;
-    /* Para que os itens que não cabem na linha se movam para a próxima linha */
-    justify-content: center;
-    /* Alinha os itens horizontalmente no centro */
-    gap: 72px;
-    margin-bottom: 120px;
-    margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  gap: 40px;
+  margin: 80px auto;
 }
 
 /* Container principal */
