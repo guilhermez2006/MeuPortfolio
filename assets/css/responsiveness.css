@@ -164,7 +164,6 @@ section[id],
     padding: 8px 4px;
   }
 }
-
 /* LAPTOP (1200–1599px) */
 @media (min-width: 1200px) and (max-width: 1599px) {
   #Titulo2 {
@@ -178,6 +177,40 @@ section[id],
 
   .projeto-card {
     width: 480px;
+  }
+
+  /* AJUSTE DO CONTATO PARA NÃO VAZAR */
+  .contato-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Mudamos de space-between para center para evitar que os ícones fujam */
+    justify-content: center !important; 
+    /* Reduzimos o gap para caber na tela de 1200px */
+    gap: 60px !important; 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .sobre-mim {
+    flex: 0 1 500px; /* Permite que a bio diminua se necessário */
+    text-align: left;
+  }
+
+  #redesSocias {
+    flex-shrink: 0; /* Impede que os ícones sejam esmagados */
+  }
+}
+
+/* FOOTER GERAL (Ajuste da largura para telas grandes) */
+@media (min-width: 1600px) {
+  .contato-container {
+    display: flex;
+    justify-content: space-between !important;
+    gap: 120px;
+    max-width: 1400px; /* Limita a expansão em telas gigantes */
+    margin: 0 auto;
   }
 }
 

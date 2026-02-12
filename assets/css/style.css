@@ -835,22 +835,25 @@ cursor: pointer;
     color: #232323;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.14);
 }
-
 /* COPYRIGHT – RODAPÉ FINAL */
 .copyright {
     text-align: center;
     font-size: 0.9rem;
-    color: #555;
+    color: #555; /* Cor do texto "Desenvolvido por" */
     padding: 20px 0 30px;
     margin-top: 20px;
     width: 100%;
 }
 
-.copyright span {
-    font-weight: 500;
+/* Estilo do link dentro do copyright */
+.copyright a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit;        /* Faz o link herdar o #555 do pai */
+    transition: color 0.3s ease; /* Deixa a mudança de cor suave */
 }
 
-.copyright span:hover {
+/* Efeito exclusivo para o nome no hover */
+.copyright a:hover #GuilhermeLima {
     color: white;
     cursor: pointer;
 }
