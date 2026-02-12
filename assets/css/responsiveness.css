@@ -9,208 +9,170 @@ section[id],
 #Contato {
   scroll-margin-top: 80px;
 }
+/* ==========================================================================
+   SEÇÃO HABILIDADES – VERSÃO SIMPLES E DEFINITIVA
+   Ícones com mesmo tamanho visual (usando 1em) | Gaps ajustados
+   ========================================================================== */
 
-/* ========================================
-   DESKTOP 1800px+ – 9 ÍCONES EM UMA LINHA (SEM CORTE)
-   ======================================== */
-@media (min-width: 1800px) {
-  #Habilidades-Container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 45px;
-    max-width: 1700px;        /* FÔLEGO PARA BARRA DE ROLAGEM */
-    margin: 80px auto;
-  }
+/* --- PADRONIZAÇÃO GLOBAL (NÃO MUDA O TAMANHO, SÓ A CAIXA) --- */
+#Habilidades-Container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
 
-  .habilidade {
-    width: 120px;
-    padding: 21px 10px;
-    flex-shrink: 0;
-  }
+.habilidade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* TODOS OS ÍCONES (FontAwesome e SVG) TERÃO UMA CAIXA QUADRADA DO TAMANHO DO FONTE */
+.habilidade i,
+.habilidade svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;      /* ← MESMO TAMANHO DO font-size */
+  height: 1em;     /* ← CAIXA PERFEITAMENTE QUADRADA */
+  line-height: 1;
+  flex-shrink: 0;
+}
 
 .habilidade i {
-  font-size: 2.2rem; /* antes 2.5 */
+  font-style: normal;  /* remove itálico padrão */
 }
 
 .habilidade svg {
-  width: 2.2rem;
-  height: 2.2rem;
-}
+  fill: currentColor;  /* herda a cor do texto */
 }
 
-/* ========================================
-   DESKTOP MÉDIO (1600px – 1799px) – QUEBRA 7+2 (SEM CORTE)
-   ======================================== */
-@media (min-width: 1600px) and (max-width: 1799px) {
+/* --------------------------------------------------------------------------
+   EXTRA LARGE (≥1800px) – 9 ÍCONES EM LINHA ÚNICA
+   -------------------------------------------------------------------------- */
+@media (min-width: 1800px) {
   #Habilidades-Container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    /* 7 ícones * 160px + 6 gaps * 40px = 1360px */
-    max-width: 1360px;
+    flex-wrap: nowrap;
+    gap: 45px;
+    max-width: 1700px;
     margin: 80px auto;
   }
+  .habilidade {
+    width: 120px;
+    padding: 21px 10px;
+  }
+}
 
+/* --------------------------------------------------------------------------
+   DESKTOP MÉDIO (1600px – 1799px) – QUEBRA 7+2 (SEM OVERFLOW)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1600px) and (max-width: 1799px) {
+  #Habilidades-Container {
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1220px;    /* 7*140 + 6*40 = 1220 */
+    margin: 80px auto;
+  }
   .habilidade {
     width: 140px;
     padding: 21px 10px;
   }
-
-  .habilidade i {
-    font-size: 2.5rem;
-  }
-
-  .habilidade svg {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 }
 
-/* ----------------------------------------
+/* --------------------------------------------------------------------------
    LAPTOP (1200px – 1599px) – QUEBRA SIMÉTRICA
-   ---------------------------------------- */
+   -------------------------------------------------------------------------- */
 @media (min-width: 1200px) and (max-width: 1599px) {
   #Habilidades-Container {
-    display: flex;
-    flex-wrap: wrap; /* QUEBRA CONTROLADA */
-    justify-content: center; /* CENTRALIZA ÓRFÃOS */
+    flex-wrap: wrap;
     gap: 40px;
-    max-width: 1000px; /* 5+4 ou 3x3 */
+    max-width: 1000px;
     margin: 80px auto;
   }
-
   .habilidade {
     width: 130px;
+    padding: 18px 10px;
   }
 
-  .habilidade i {
-    font-size: 2.3rem;
-  }
-
-  .habilidade svg {
-    width: 2.3rem;
-    height: 2.3rem;
-  }
 }
 
-/* ----------------------------------------
-   TABLET (769px – 1199px)
-   ---------------------------------------- */
+/* --------------------------------------------------------------------------
+   TABLET (769px – 1199px) – 3 COLUNAS FIXAS COM ESPAÇAMENTO GENEROSO
+   → GAP AUMENTADO, MAX-WIDTH CALCULADO PARA 3 COLUNAS
+   -------------------------------------------------------------------------- */
 @media (min-width: 769px) and (max-width: 1199px) {
   #Habilidades-Container {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 600px; /* 3-4 ÍCONES POR LINHA */
+    gap: 45px;                    /* ← MAIS ESPAÇO ENTRE COLUNAS */
+    max-width: 420px;            /* 3*110 + 2*45 = 420 */
     margin: 60px auto;
   }
-
   .habilidade {
     width: 110px;
     padding: 15px 8px;
-  }
-
-  .habilidade i {
-    font-size: 2rem;
-  }
-
-  .habilidade svg {
-    width: 2rem;
-    height: 2rem;
   }
 
   .habilidade h1 {
     font-size: 0.9rem;
   }
 }
-
-/* ----------------------------------------
-   MOBILE (481px – 768px)
-   ---------------------------------------- */
+/* --------------------------------------------------------------------------
+   MOBILE MÉDIO (481px – 768px) – LAYOUT FLEXÍVEL
+   → Mexa no max-width até conseguir 4-3-2 na sua resolução alvo
+   -------------------------------------------------------------------------- */
 @media (min-width: 481px) and (max-width: 768px) {
   #Habilidades-Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    max-width: 500px;
+    max-width: 420px;        /* ← MUDE ESTE VALOR PARA AJUSTAR */
     margin: 50px auto;
   }
-
   .habilidade {
     width: 95px;
     padding: 12px 6px;
   }
-
-  .habilidade i {
-    font-size: 1.8rem;
-  }
-
-  .habilidade svg {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-
   .habilidade h1 {
     font-size: 0.8rem;
   }
 }
 
-/* ----------------------------------------
-   MOBILE PEQUENO (≤480px)
-   ---------------------------------------- */
+/* --------------------------------------------------------------------------
+   MOBILE PEQUENO (≤480px) – LAYOUT 3x3 (9 itens em 3 colunas)
+   -------------------------------------------------------------------------- */
 @media (max-width: 480px) {
   #Habilidades-Container {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
-    max-width: 320px;
+    max-width: 295px;        /* 3*85 + 2*20 = 295 – cabe 3 colunas */
     margin: 40px auto 50px;
   }
-
   .habilidade {
     width: 85px;
     padding: 10px 5px;
   }
-
-  .habilidade i {
-    font-size: 1.6rem;
-  }
-
-  .habilidade svg {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
   .habilidade h1 {
     font-size: 0.75rem;
   }
 }
 
-/* ----------------------------------------
-   MOBILE EXTRA PEQUENO (≤360px)
-   ---------------------------------------- */
+/* --------------------------------------------------------------------------
+   MOBILE EXTRA (≤360px) – 3x3 COM TAMANHOS MENORES
+   -------------------------------------------------------------------------- */
 @media (max-width: 360px) {
   #Habilidades-Container {
     gap: 15px;
-    max-width: 260px;
+    max-width: 255px;        /* 3*75 + 2*15 = 255 */
   }
-
   .habilidade {
     width: 75px;
-  }
-
-  .habilidade i {
-    font-size: 1.4rem;
-  }
-
-  .habilidade svg {
-    width: 1.4rem;
-    height: 1.4rem;
+    padding: 8px 4px;
   }
 }
 
@@ -235,10 +197,11 @@ section[id],
     width: 480px;
   }
 
-  /* REGRA ANTIGA DE GRID FOI REMOVIDA – AGORA USA SÓ FLEXBOX ACIMA */
-  .contato-container {
-    /* seus estilos */
+   /* REGRA ANTIGA DE GRID FOI REMOVIDA – AGORA USA SÓ FLEXBOX ACIMA */
+ /*  .contato-container {
+
   }
+     seus estilos */
 }
 
 /* ========================================
