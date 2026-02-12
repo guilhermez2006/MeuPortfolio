@@ -9,12 +9,8 @@ section[id],
 #Contato {
   scroll-margin-top: 80px;
 }
-/* ==========================================================================
-   SEÇÃO HABILIDADES – VERSÃO SIMPLES E DEFINITIVA
-   Ícones com mesmo tamanho visual (usando 1em) | Gaps ajustados
-   ========================================================================== */
 
-/* --- PADRONIZAÇÃO GLOBAL (NÃO MUDA O TAMANHO, SÓ A CAIXA) --- */
+/* HABILIDADES – FLEXBOX */
 #Habilidades-Container {
   display: flex;
   flex-wrap: wrap;
@@ -32,29 +28,27 @@ section[id],
   box-sizing: border-box;
 }
 
-/* TODOS OS ÍCONES (FontAwesome e SVG) TERÃO UMA CAIXA QUADRADA DO TAMANHO DO FONTE */
+/* ÍCONES – CAIXA QUADRADA = 1em */
 .habilidade i,
 .habilidade svg {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1em;      /* ← MESMO TAMANHO DO font-size */
-  height: 1em;     /* ← CAIXA PERFEITAMENTE QUADRADA */
+  width: 1em;
+  height: 1em;
   line-height: 1;
   flex-shrink: 0;
 }
 
 .habilidade i {
-  font-style: normal;  /* remove itálico padrão */
+  font-style: normal;
 }
 
 .habilidade svg {
-  fill: currentColor;  /* herda a cor do texto */
+  fill: currentColor;
 }
 
-/* --------------------------------------------------------------------------
-   EXTRA LARGE (≥1800px) – 9 ÍCONES EM LINHA ÚNICA
-   -------------------------------------------------------------------------- */
+/* ≥1800px – 9 em linha */
 @media (min-width: 1800px) {
   #Habilidades-Container {
     flex-wrap: nowrap;
@@ -62,31 +56,29 @@ section[id],
     max-width: 1700px;
     margin: 80px auto;
   }
+
   .habilidade {
     width: 120px;
     padding: 21px 10px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   DESKTOP MÉDIO (1600px – 1799px) – QUEBRA 7+2 (SEM OVERFLOW)
-   -------------------------------------------------------------------------- */
+/* 1600–1799px – 7+2 (7*140 + 6*40 = 1220) */
 @media (min-width: 1600px) and (max-width: 1799px) {
   #Habilidades-Container {
     flex-wrap: wrap;
     gap: 40px;
-    max-width: 1220px;    /* 7*140 + 6*40 = 1220 */
+    max-width: 1220px;
     margin: 80px auto;
   }
+
   .habilidade {
     width: 140px;
     padding: 21px 10px;
   }
 }
 
-/* --------------------------------------------------------------------------
-   LAPTOP (1200px – 1599px) – QUEBRA SIMÉTRICA
-   -------------------------------------------------------------------------- */
+/* 1200–1599px – quebra livre */
 @media (min-width: 1200px) and (max-width: 1599px) {
   #Habilidades-Container {
     flex-wrap: wrap;
@@ -94,24 +86,22 @@ section[id],
     max-width: 1000px;
     margin: 80px auto;
   }
+
   .habilidade {
     width: 130px;
     padding: 18px 10px;
   }
-
 }
 
-/* --------------------------------------------------------------------------
-   TABLET (769px – 1199px) – 3 COLUNAS FIXAS COM ESPAÇAMENTO GENEROSO
-   → GAP AUMENTADO, MAX-WIDTH CALCULADO PARA 3 COLUNAS
-   -------------------------------------------------------------------------- */
+/* 769–1199px – 3 colunas fixas (3*110 + 2*45 = 420) */
 @media (min-width: 769px) and (max-width: 1199px) {
   #Habilidades-Container {
     flex-wrap: wrap;
-    gap: 45px;                    /* ← MAIS ESPAÇO ENTRE COLUNAS */
-    max-width: 420px;            /* 3*110 + 2*45 = 420 */
+    gap: 45px;
+    max-width: 420px;
     margin: 60px auto;
   }
+
   .habilidade {
     width: 110px;
     padding: 15px 8px;
@@ -121,68 +111,61 @@ section[id],
     font-size: 0.9rem;
   }
 }
-/* --------------------------------------------------------------------------
-   MOBILE MÉDIO (481px – 768px) – LAYOUT FLEXÍVEL
-   → Mexa no max-width até conseguir 4-3-2 na sua resolução alvo
-   -------------------------------------------------------------------------- */
+
+/* 481–768px – 4-3-2 (ajuste max-width) */
 @media (min-width: 481px) and (max-width: 768px) {
   #Habilidades-Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    max-width: 420px;        /* ← MUDE ESTE VALOR PARA AJUSTAR */
+    max-width: 420px;
     margin: 50px auto;
   }
+
   .habilidade {
     width: 95px;
     padding: 12px 6px;
   }
+
   .habilidade h1 {
     font-size: 0.8rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   MOBILE PEQUENO (≤480px) – LAYOUT 3x3 (9 itens em 3 colunas)
-   -------------------------------------------------------------------------- */
+/* ≤480px – 3x3 */
 @media (max-width: 480px) {
   #Habilidades-Container {
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 295px;        /* 3*85 + 2*20 = 295 – cabe 3 colunas */
+    max-width: 295px;
     margin: 40px auto 50px;
   }
+
   .habilidade {
     width: 85px;
     padding: 10px 5px;
   }
+
   .habilidade h1 {
     font-size: 0.75rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   MOBILE EXTRA (≤360px) – 3x3 COM TAMANHOS MENORES
-   -------------------------------------------------------------------------- */
+/* ≤360px – 3x3 compacto */
 @media (max-width: 360px) {
   #Habilidades-Container {
     gap: 15px;
-    max-width: 255px;        /* 3*75 + 2*15 = 255 */
+    max-width: 255px;
   }
+
   .habilidade {
     width: 75px;
     padding: 8px 4px;
   }
 }
 
-/* ========================================
-   OUTROS ESTILOS (TÍTULOS, PROJETOS, CONTATO...)
-
-   ======================================== */
-/* ========================================
-   LAPTOP (1200px - 1599px) – SEUS ESTILOS GLOBAIS
-   ======================================== */
+/* LAPTOP (1200–1599px) */
 @media (min-width: 1200px) and (max-width: 1599px) {
   #Titulo2 {
     font-size: 4.5rem;
@@ -196,17 +179,9 @@ section[id],
   .projeto-card {
     width: 480px;
   }
-
-   /* REGRA ANTIGA DE GRID FOI REMOVIDA – AGORA USA SÓ FLEXBOX ACIMA */
- /*  .contato-container {
-
-  }
-     seus estilos */
 }
 
-/* ========================================
-   LAPTOP PEQUENO (1024px - 1199px)
-   ======================================== */
+/* LAPTOP PEQUENO (1024–1199px) – FOOTER CENTRALIZADO */
 @media (min-width: 1024px) and (max-width: 1199px) {
   #Titulo2 {
     font-size: 4rem;
@@ -222,17 +197,39 @@ section[id],
   }
 
   .contato-container {
-    padding: 0 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   #redesSocias {
-    margin-left: 60px;
+    margin-left: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #minhafoto {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+
+  .sobre-mim {
+    text-align: left;
+    width: auto;
+  }
+
+  .sobre-mim h3 {
+    text-align: center;
   }
 }
 
-/* ========================================
-   TABLET (769px - 1023px)
-   ======================================== */
+/* TABLET (769–1023px) – FOOTER COMPACTO */
 @media (min-width: 769px) and (max-width: 1023px) {
   nav ul {
     padding: 15px;
@@ -252,7 +249,7 @@ section[id],
   }
 
   #Titulo1 {
-    font-size: 1.5rem;
+   font-size: 1.8rem;
     top: 38%;
   }
 
@@ -262,7 +259,7 @@ section[id],
   }
 
   .icones-container {
-    margin-top: 20px;
+    margin-top: 80px;
   }
 
   #projetos {
@@ -300,40 +297,59 @@ section[id],
   }
 
   #Contato {
-    font-size: 2rem;
-    margin-bottom: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
   }
 
   .contato-container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   #minhafoto {
-    width: 200px;
-    height: 200px;
-    margin-right: 0;
-    margin-bottom: 20px;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    flex-shrink: 0;
   }
 
   .sobre-mim {
-    width: 90% !important;
-    margin: 0 auto;
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    width: auto;
+  }
+
+  .sobre-mim h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     text-align: center;
   }
 
+  .sobre-mim p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0.5rem 0 1rem 0;
+  }
+
   #redesSocias {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
     margin-left: 0;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
+    margin-top: 10px;
   }
 
   .redes-wrapper {
-    height: auto;
     width: 100%;
-    align-items: center;
   }
 
   .modal-content {
@@ -342,9 +358,7 @@ section[id],
   }
 }
 
-/* ========================================
-   MOBILE (481px - 768px)
-   ======================================== */
+/* MOBILE (481–768px) – EMPILHADO */
 @media (max-width: 768px) {
   header {
     padding: 5px;
@@ -369,7 +383,7 @@ section[id],
   }
 
   #Titulo1 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     top: 35%;
   }
 
@@ -390,8 +404,9 @@ section[id],
     font-size: 2em;
   }
 
+
   .icones-container {
-    margin-top: 15px;
+    margin-top: 45px;
   }
 
   #projetos {
@@ -508,9 +523,7 @@ section[id],
   }
 }
 
-/* ========================================
-   MOBILE PEQUENO (<480px)
-   ======================================== */
+/* MOBILE PEQUENO (≤480px) */
 @media (max-width: 480px) {
   nav ul {
     padding: 10px 2px;
@@ -620,8 +633,7 @@ section[id],
   }
 
   .modal-content p {
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-size: 0.85rem; 
   }
 
   .close {
@@ -636,9 +648,7 @@ section[id],
   }
 }
 
-/* ========================================
-   MOBILE MUITO PEQUENO (<360px)
-   ======================================== */
+/* MOBILE EXTRA (≤360px) */
 @media (max-width: 360px) {
   nav ul li {
     margin: 0 3px;
@@ -672,4 +682,13 @@ section[id],
     width: 130px;
     height: 130px;
   }
+}
+
+/*  FOOTER – ESPAÇAMENTO EXPANDIDO (ADICIONADO)
+ DESKTOP (≥1200px) – ASSUMINDO QUE ESTÁ NO style.css */
+@media (min-width: 1200px) {
+  .contato-container {
+    justify-content: space-between !important; /* ESPALHA OS BLOCOS */
+    gap: 120px;
+}
 }

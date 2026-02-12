@@ -90,11 +90,13 @@ body {
 
 /* Estilização do ícone customizado "ex" */
 .icon-express {
-    font-family: 'Arial', sans-serif; /* Fonte limpa */
+    font-family: 'Arial', sans-serif;
+    /* Fonte limpa */
     font-weight: bold;
     font-size: 1.8rem;
     color: #000000;
-    background-color: #ffffff; /* Verde combinando com Node/Mongo */
+    background-color: #ffffff;
+    /* Verde combinando com Node/Mongo */
     width: 40px;
     height: 40px;
     display: flex;
@@ -104,6 +106,7 @@ body {
     margin-bottom: 10px;
     transition: all 0.4s ease;
 }
+
 .habilidade {
     background: #000;
     border-radius: 8px;
@@ -142,21 +145,25 @@ body {
     margin: 0;
     text-align: center;
 }
+
 /* ========================================
    ESTILO PARA ÍCONES DE IMAGEM (PRISMA)
    ======================================== */
 .habilidade-icon-img {
     /* Define uma altura inicial para combinar com o font-size: 3rem dos outros ícones */
     height: 3rem;
-    width: auto; /* Mantém a proporção do triângulo */
-    margin-bottom: 10px; /* O mesmo espaçamento que os ícones <i> têm */
-    
+    width: auto;
+    /* Mantém a proporção do triângulo */
+    margin-bottom: 10px;
+    /* O mesmo espaçamento que os ícones <i> têm */
+
     /* O TRUQUE MÁGICO: Inverte a cor da imagem (preto vira branco) */
     filter: invert(1) brightness(1.5);
-    
+
     /* Garante que a animação de hover funcione também na imagem */
     transition: transform 0.3s ease;
 }
+
 /* Responsividade */
 @media (max-width: 600px) {
     #Habilidades-Container {
@@ -395,11 +402,11 @@ a {
 }
 
 #Habilidades-Container {
-  display: grid;
-  grid-template-columns: repeat(9, auto);
-  justify-content: center;
-  gap: 40px;
-  margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    justify-content: center;
+    gap: 40px;
+    margin: 80px auto;
 }
 
 /* Container principal */
@@ -613,6 +620,7 @@ p {
     margin: 0 auto;
     padding: 2.5rem 1rem 4rem 1rem;
     flex-wrap: wrap;
+cursor: pointer;
 }
 
 .projeto-card {
@@ -828,6 +836,32 @@ p {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.14);
 }
 
+/* COPYRIGHT – RODAPÉ FINAL */
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 20px 0 30px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.copyright span {
+    font-weight: 500;
+}
+
+.copyright span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .copyright {
+        font-size: 0.8rem;
+        padding: 15px 0 20px;
+    }
+}
+
 /* --------- RESPONSIVO --------- */
 @media (max-width: 1200px) {
     .caixa-projetos {
@@ -862,4 +896,43 @@ p {
     .text-projects {
         padding: 1.2rem 0.7rem 1.2rem 0.7rem;
     }
+}
+/* ========================================
+   MODAL – ESPAÇAMENTO RESPONSIVO 
+   Garante que o modal nunca fique colado nas bordas
+   ======================================== */
+@media (max-width: 600px) {
+  .modal {
+    padding: 20px;                /* RESPIRAÇÃO NAS LATERAIS E TOPO/FUNDO */
+    box-sizing: border-box;       /* INCLUI PADDING NA ALTURA/LARGURA */
+  }
+
+  .modal-content {
+    max-width: 400px;            /* LIMITA LARGURA MÁXIMA */
+    width: 100%;                /* OCUPA O ESPAÇO COM PADDING DO MODAL */
+    padding: 1.8rem 1.5rem;    /* AJUSTE FINO DO INTERNO */
+    margin: auto;              /* GARANTE CENTRALIZAÇÃO */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 16px;             /* REDUZ UM POUCO, MAS AINDA VISÍVEL */
+  }
+
+  .modal-content {
+    padding: 1.5rem 1.2rem;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal {
+    padding: 12px;
+  }
+
+  .modal-content {
+    padding: 1.2rem 1rem;
+    max-width: 100%;           /* APROVEITA O PADDING DO MODAL */
+  }
 }
