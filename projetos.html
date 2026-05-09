@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos | Guilherme Lima</title>
+  <link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="home.html" class="logo">Guilherme Lima<span>.dev</span></a>
+      <nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu">
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="projetos.html" class="nav-active">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="projetosSection">
+      <h1 id="projetos" class="section-title">Meus Projetos</h1>
+      <div class="projetos-container">
+
+        <div class="projeto-card" data-modal="modalInfoPrime">
+          <img src="assets/img/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-projeto-card" />
+          <h2>InfoPrime</h2>
+          <p>Modernização da interface institucional com foco em UX, responsividade e captação de clientes.</p>
+        </div>
+
+        <div class="projeto-card" data-modal="modalGameTracker">
+          <img src="assets/img/siteGameTracker.png" alt="Preview GameTracker" class="img-projeto-card" />
+          <h2>GameTracker</h2>
+          <p>Plataforma Full Stack para gerenciar seu backlog de games, com autenticação JWT e controle total da sua biblioteca.</p>
+        </div>
+
+        <div class="projeto-card" data-modal="modalApiCadastro">
+          <img src="assets/img/apiCadastro.png" alt="Preview API de Cadastro" class="img-projeto-card" />
+          <h2>API de Cadastro</h2>
+          <p>API RESTful com cadastro, listagem e exclusão de usuários usando Node.js, Express, Prisma e MongoDB.</p>
+        </div>
+
+        <div class="projeto-card" data-modal="modalQuiz">
+          <img src="assets/img/SiteQuiz.png" alt="Preview Quiz de Programação" class="img-projeto-card" />
+          <h2>Quiz de Programação</h2>
+          <p>Quiz online com perguntas sobre lógica e programação feito em HTML, CSS e JavaScript.</p>
+        </div>
+
+        <div class="projeto-card" data-modal="modalDragon">
+          <img src="assets/img/SiteDragons.png" alt="Preview House Of The Dragon" class="img-projeto-card" />
+          <h2>House Of The Dragon</h2>
+          <p>Site interativo inspirado na série, com páginas dinâmicas para cada dragão e conteúdo responsivo.</p>
+        </div>
+
+        <div class="projeto-card" data-modal="modalSocial">
+          <img src="assets/img/SiteCordel.png" alt="Preview Cordel Moderno" class="img-projeto-card" />
+          <h2>Cordel Moderno</h2>
+          <p>Site com efeito parallax e tipografia temática inspirado em poema de Milton Duarte.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAIS -->
+  <div id="modalInfoPrime" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">InfoPrime – Soluções e Tecnologia</h2>
+      <img src="assets/img/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-modal-projeto" />
+      <p>
+        Projeto desenvolvido por iniciativa própria para a <strong>InfoPrime</strong>.<br/>
+        - <strong>Modernização:</strong> Interface antiga substituída por solução moderna.<br/>
+        - <strong>UX/UI:</strong> Navegação facilitada pelos serviços de TI.<br/>
+        - <strong>Captação:</strong> Seções estratégicas para suporte e infraestrutura.<br/>
+        - <strong>Tecnologias:</strong> HTML5, CSS3, JavaScript.
+      </p>
+      <a href="https://guilhermez2006.github.io/InfoPrime-page/" target="_blank">Ver site</a>
+      <a href="https://github.com/guilhermez2006/InfoPrime-page" target="_blank">Repositório</a>
+    </div>
+  </div>
+
+  <div id="modalGameTracker" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">GameTracker – Gerencie seu Backlog</h2>
+      <img src="assets/img/siteGameTracker.png" alt="Preview GameTracker" class="img-modal-projeto" />
+      <p>
+        - <strong>Autenticação:</strong> Login com Bcrypt + JWT.<br/>
+        - <strong>CRUD completo:</strong> Criar, ler, atualizar e deletar games.<br/>
+        - <strong>Tecnologias:</strong> Node.js, Express, Prisma ORM, MongoDB Atlas.<br/>
+        - <strong>Interface:</strong> Controle de progresso (Jogando, Zerado, etc).
+      </p>
+      <a href="https://github.com/guilhermez2006/GameTracker-API" target="_blank">Repositório</a>
+    </div>
+  </div>
+
+  <div id="modalApiCadastro" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">API de Cadastro</h2>
+      <img src="assets/img/apiCadastro.png" alt="Preview API de Cadastro" class="img-modal-projeto" />
+      <p>
+        ⚠️ Servidor não hospedado.<br/>
+        - Cadastro, listagem e exclusão de usuários<br/>
+        - Node.js, Express, Prisma e MongoDB<br/>
+        - Validação de e-mail único<br/>
+        - Respostas em JSON
+      </p>
+      <a href="https://guilhermez2006.github.io/CadastroDeUsuarios/" target="_blank">Ver interface</a>
+      <a href="https://github.com/guilhermez2006/CadastroDeUsuarios" target="_blank">Repositório</a>
+    </div>
+  </div>
+
+  <div id="modalQuiz" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">Quiz de Programação</h2>
+      <img src="assets/img/SiteQuiz.png" alt="Preview Quiz" class="img-modal-projeto" />
+      <p>
+        - Perguntas de múltipla escolha<br/>
+        - Feedback imediato<br/>
+        - Layout responsivo<br/>
+        - Pontuação final exibida
+      </p>
+      <a href="https://guilhermez2006.github.io/Quiz-Programacao/" target="_blank">Acessar Quiz</a>
+    </div>
+  </div>
+
+  <div id="modalDragon" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">House Of The Dragon</h2>
+      <img src="assets/img/SiteDragons.png" alt="Preview House Of The Dragon" class="img-modal-projeto" />
+      <p>
+        - Páginas dedicadas a cada dragão<br/>
+        - Dados dinâmicos com JavaScript<br/>
+        - Design responsivo
+      </p>
+      <a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank">Ver site</a>
+    </div>
+  </div>
+
+  <div id="modalSocial" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="titleCard">Cordel Moderno</h2>
+      <img src="assets/img/SiteCordel.png" alt="Preview Cordel" class="img-modal-projeto" />
+      <p>
+        - Efeito parallax e tipografia temática<br/>
+        - Cores sofisticadas<br/>
+        - Design 100% responsivo
+      </p>
+      <a href="https://guilhermez2006.github.io/Projeto-Cordel/" target="_blank">Ver site</a>
+    </div>
+  </div>
+
+  <footer class="copyright">
+    <b>© 2026 Desenvolvido por </b>
+    <a href="https://www.linkedin.com/in/guilhermelima7/" target="_blank">
+      <span id="GuilhermeLima">Guilherme Lima</span>
+    </a>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>

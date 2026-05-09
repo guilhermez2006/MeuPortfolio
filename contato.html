@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato | Guilherme Lima</title>
+  <link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsiveness.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="home.html" class="logo">Guilherme Lima<span>.dev</span></a>
+      <nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu">
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html" class="nav-active">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="contato-section">
+
+      <div class="contato-hero">
+        <h1 class="section-title">Entre em Contato</h1>
+        <p class="contato-subtitulo">
+          Tem um projeto em mente ou quer trocar uma ideia? Me manda uma mensagem.
+        </p>
+      </div>
+
+      <div class="contato-wrapper">
+
+        <!-- FORMULÁRIO -->
+        <div class="form-card">
+          <form id="contato-form" novalidate>
+
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar" id="btn-enviar">
+              <span id="btn-texto">Enviar mensagem</span>
+              <i class="fas fa-paper-plane" id="btn-icon"></i>
+            </button>
+
+            <p id="form-feedback" class="form-feedback"></p>
+
+          </form>
+        </div>
+
+        <!-- REDES SOCIAIS -->
+        <div class="contato-redes">
+          <h3>Ou me encontre em</h3>
+          <div class="redes-lista">
+            <a href="https://github.com/guilhermez2006" target="_blank" class="rede-card">
+              <i class="fab fa-github"></i>
+              <div>
+                <span class="rede-nome">GitHub</span>
+                <span class="rede-user">@guilhermez2006</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/guilhermelima7" target="_blank" class="rede-card">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <span class="rede-nome">LinkedIn</span>
+                <span class="rede-user">guilhermelima7</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/_guiszl7/" target="_blank" class="rede-card">
+              <i class="fab fa-instagram"></i>
+              <div>
+                <span class="rede-nome">Instagram</span>
+                <span class="rede-user">@_guiszl7</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="copyright">
+    <b>© 2026 Desenvolvido por </b>
+    <a href="https://www.linkedin.com/in/guilhermelima7/" target="_blank">
+      <span id="GuilhermeLima">Guilherme Lima</span>
+    </a>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // ── EMAILJS ──────────────────────────────────────
+    // 1. Crie conta em https://www.emailjs.com (gratuito)
+    // 2. Crie um Service e um Template
+    // 3. Substitua os valores abaixo pelos seus
+    emailjs.init("SEU_PUBLIC_KEY"); // <-- cole sua Public Key aqui
+
+    const form = document.getElementById('contato-form');
+    const btnTexto = document.getElementById('btn-texto');
+    const btnIcon = document.getElementById('btn-icon');
+    const feedback = document.getElementById('form-feedback');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Validação básica
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !email || !mensagem) {
+        feedback.textContent = 'Por favor, preencha todos os campos.';
+        feedback.className = 'form-feedback erro';
+        return;
+      }
+
+      // Loading
+      btnTexto.textContent = 'Enviando...';
+      btnIcon.className = 'fas fa-spinner fa-spin';
+
+      emailjs.sendForm(
+        'SEU_SERVICE_ID',   // <-- cole seu Service ID aqui
+        'SEU_TEMPLATE_ID',  // <-- cole seu Template ID aqui
+        form
+      ).then(() => {
+        feedback.textContent = 'Mensagem enviada com sucesso! Em breve entrarei em contato.';
+        feedback.className = 'form-feedback sucesso';
+        btnTexto.textContent = 'Enviado!';
+        btnIcon.className = 'fas fa-check';
+        form.reset();
+      }).catch(() => {
+        feedback.textContent = 'Erro ao enviar. Tente novamente ou me contate pelo LinkedIn.';
+        feedback.className = 'form-feedback erro';
+        btnTexto.textContent = 'Enviar mensagem';
+        btnIcon.className = 'fas fa-paper-plane';
+      });
+    });
+  </script>
+</body>
+</html>
