@@ -11,9 +11,9 @@ const Github = document.getElementById('Github');
 const DELAY = 350;
 
 // ── MENU HAMBURGUER
-const hamburger   = document.getElementById('hamburger');
-const navMenu     = document.getElementById('nav-menu');
-const navLinks    = navMenu.querySelectorAll('a');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = navMenu.querySelectorAll('a');
 
 // Cria overlay dinamicamente
 const overlay = document.createElement('div');
@@ -21,23 +21,23 @@ overlay.classList.add('nav-overlay');
 document.body.appendChild(overlay);
 
 function abrirMenu() {
-  hamburger.classList.add('open');
-  navMenu.classList.add('open');
-  overlay.classList.add('active');
-  hamburger.setAttribute('aria-expanded', 'true');
-  document.body.style.overflow = 'hidden'; // Trava scroll enquanto menu está aberto
+    hamburger.classList.add('open');
+    navMenu.classList.add('open');
+    overlay.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Trava scroll enquanto menu está aberto
 }
 
 function fecharMenu() {
-  hamburger.classList.remove('open');
-  navMenu.classList.remove('open');
-  overlay.classList.remove('active');
-  hamburger.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
+    hamburger.classList.remove('open');
+    navMenu.classList.remove('open');
+    overlay.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
 }
 
 hamburger.addEventListener('click', () => {
-  navMenu.classList.contains('open') ? fecharMenu() : abrirMenu();
+    navMenu.classList.contains('open') ? fecharMenu() : abrirMenu();
 });
 
 // Fecha ao clicar em qualquer link do menu
@@ -48,7 +48,7 @@ overlay.addEventListener('click', fecharMenu);
 
 // Fecha ao pressionar ESC
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') fecharMenu();
+    if (e.key === 'Escape') fecharMenu();
 });
 
 function criarObserver(element) {
@@ -77,7 +77,9 @@ function criarObserver(element) {
     Css,
     JavaScript,
     Git,
-    Github
+    Github,
+    document.querySelector('.sobre-mim-container'),
+    document.getElementById('sobre-titulo')
 ].forEach(criarObserver);
 
 const cards = document.querySelectorAll(".projeto-card");
