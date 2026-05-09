@@ -164,6 +164,7 @@ section[id],
     padding: 8px 4px;
   }
 }
+
 /* LAPTOP (1200–1599px) */
 @media (min-width: 1200px) and (max-width: 1599px) {
   #Titulo2 {
@@ -185,21 +186,23 @@ section[id],
     flex-direction: row;
     align-items: center;
     /* Mudamos de space-between para center para evitar que os ícones fujam */
-    justify-content: center !important; 
+    justify-content: center !important;
     /* Reduzimos o gap para caber na tela de 1200px */
-    gap: 60px !important; 
+    gap: 60px !important;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .sobre-mim {
-    flex: 0 1 500px; /* Permite que a bio diminua se necessário */
+    flex: 0 1 500px;
+    /* Permite que a bio diminua se necessário */
     text-align: left;
   }
 
   #redesSocias {
-    flex-shrink: 0; /* Impede que os ícones sejam esmagados */
+    flex-shrink: 0;
+    /* Impede que os ícones sejam esmagados */
   }
 }
 
@@ -209,7 +212,8 @@ section[id],
     display: flex;
     justify-content: space-between !important;
     gap: 120px;
-    max-width: 1400px; /* Limita a expansão em telas gigantes */
+    max-width: 1400px;
+    /* Limita a expansão em telas gigantes */
     margin: 0 auto;
   }
 }
@@ -282,7 +286,7 @@ section[id],
   }
 
   #Titulo1 {
-   font-size: 1.8rem;
+    font-size: 1.8rem;
     top: 38%;
   }
 
@@ -666,7 +670,7 @@ section[id],
   }
 
   .modal-content p {
-    font-size: 0.85rem; 
+    font-size: 0.85rem;
   }
 
   .close {
@@ -721,7 +725,127 @@ section[id],
  DESKTOP (≥1200px) – ASSUMINDO QUE ESTÁ NO style.css */
 @media (min-width: 1200px) {
   .contato-container {
-    justify-content: space-between !important; /* ESPALHA OS BLOCOS */
+    justify-content: space-between !important;
+    /* ESPALHA OS BLOCOS */
     gap: 120px;
+  }
 }
+
+/* ========================================
+   MENU HAMBURGUER – MOBILE (≤1024px)
+   ======================================== */
+@media (max-width: 800px) {
+
+  /* Esconde o menu horizontal e mostra o botão */
+  nav {
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu dropdown oculto por padrão */
+  nav ul#nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Fora da tela à direita */
+    width: min(75vw, 280px);
+    height: 100vh;
+    background: rgba(8, 8, 10, 0.55);
+    backdrop-filter: blur(15px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border-left: 1px solid rgba(255, 255, 255, 0.07);
+    z-index: 1000;
+    padding: 80px 0 40px;
+    margin: 0;
+    box-sizing: border-box;
+    transition: right 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+  }
+
+  nav ul#nav-menu.open {
+    right: 0;
+  }
+
+  nav ul#nav-menu li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul#nav-menu li a {
+    display: block;
+    padding: 18px 32px;
+    font-size: 1.05rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.04em;
+    color: #d0d0d0;
+    transition: color 0.2s ease, background 0.2s ease, padding-left 0.2s ease;
+    border-radius: 0;
+  }
+
+  nav ul#nav-menu li a:hover,
+  nav ul#nav-menu li a:focus {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+    padding-left: 42px;
+    /* Desloca o texto levemente no hover */
+  }
+
+  /* Linha divisória sutil entre itens */
+  nav ul#nav-menu li+li {
+    border-top: 1px solid #1e1e1e;
+  }
+
+  /* Remove o hover com background branco do desktop nos itens do mobile */
+  #Navhome a:hover,
+  #Navprojetos a:hover,
+  #NavTecnologias a:hover,
+  #NavContato a:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+/* ≤480px – menu ainda mais compacto */
+@media (max-width: 480px) {
+  nav ul#nav-menu {
+    width: 100vw;
+    border-left: none;
+  }
+
+  nav ul#nav-menu li a {
+    font-size: 1rem;
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .header-inner {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .logo {
+    font-size: 1.20rem;
+  }
+
+  .hamburger span {
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+  }
 }
