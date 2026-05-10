@@ -7,6 +7,7 @@
   font-family: 'MinhaFonte';
   src: url('/fonts/Android.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Dragon';
   src: url(/fonts/Dragonlord_PERSONAL_USE_ONLY.otf);
@@ -15,7 +16,9 @@
 /* =============================================
    BASE
    ============================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -40,7 +43,10 @@ p {
 }
 
 /* z-index base para ficar na frente das partículas */
-header, section, main, footer {
+header,
+section,
+main,
+footer {
   position: relative;
   z-index: 1;
 }
@@ -62,6 +68,7 @@ header, section, main, footer {
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
 .visible {
   opacity: 1;
   transform: translateY(0);
@@ -100,7 +107,11 @@ header {
   white-space: nowrap;
   transition: opacity 0.2s ease;
 }
-.logo:hover { opacity: 0.75; }
+
+.logo:hover {
+  opacity: 0.75;
+}
+
 .logo span {
   color: #9ca3af;
   font-weight: 400;
@@ -121,7 +132,9 @@ nav ul {
   margin: 0;
 }
 
-nav ul li { margin: 0; }
+nav ul li {
+  margin: 0;
+}
 
 #Navhome a,
 #Navprojetos a,
@@ -170,9 +183,18 @@ nav ul li { margin: 0; }
   transform-origin: center;
 }
 
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* Overlay */
 .nav-overlay {
@@ -186,6 +208,7 @@ nav ul li { margin: 0; }
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 .nav-overlay.active {
   display: block;
   opacity: 1;
@@ -200,7 +223,8 @@ nav ul li { margin: 0; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 64px; /* compensa o header fixo */
+  padding-top: 64px;
+  /* compensa o header fixo */
   text-align: center;
 }
 
@@ -235,13 +259,18 @@ nav ul li { margin: 0; }
   margin-top: 8px;
 }
 
-#icone1, #icone2, #icone3 {
+#icone1,
+#icone2,
+#icone3 {
   font-size: 2.4em;
   color: white;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-#icone1:hover, #icone2:hover, #icone3:hover {
+
+#icone1:hover,
+#icone2:hover,
+#icone3:hover {
   transform: translateY(-5px);
 }
 
@@ -269,14 +298,22 @@ nav ul li { margin: 0; }
   top: 0;
   transform: translateX(-50%) rotate(45deg);
 }
+
 .seta-baixo::after {
   top: 12px;
   transform: translateX(-50%) rotate(45deg);
 }
 
 @keyframes moveDownTranslate {
-  0%, 100% { transform: translateX(-50%) translateY(0) rotate(45deg); }
-  50%       { transform: translateX(-50%) translateY(5px) rotate(45deg); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(5px) rotate(45deg);
+  }
 }
 
 /* =============================================
@@ -306,7 +343,8 @@ nav ul li { margin: 0; }
    SOBRE MIM 
    ============================================= */
 #sobre-section {
-  padding: 80px 20px; /* Reduzido levemente para não ficar gigante */
+  padding: 80px 20px;
+  /* Reduzido levemente para não ficar gigante */
 }
 
 .sobre-mim-container {
@@ -319,7 +357,8 @@ nav ul li { margin: 0; }
 }
 
 #minhafoto {
-  width: 260px; /* Tamanho equilibrado */
+  width: 260px;
+  /* Tamanho equilibrado */
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
@@ -335,7 +374,8 @@ nav ul li { margin: 0; }
 
 .sobre-mim-texto {
   background-color: #000000cb;
-  padding: 30px 40px; /* Padding otimizado para reduzir a altura total */
+  padding: 30px 40px;
+  /* Padding otimizado para reduzir a altura total */
   border-radius: 15px;
   border: 1px solid #333;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
@@ -352,7 +392,8 @@ nav ul li { margin: 0; }
 }
 
 .sobre-mim-texto p {
-  font-size: 0.95rem; /* Fonte levemente menor para um ar mais elegante */
+  font-size: 0.95rem;
+  /* Fonte levemente menor para um ar mais elegante */
   color: #d1d5db;
   line-height: 1.6;
   text-align: justify;
@@ -363,7 +404,8 @@ nav ul li { margin: 0; }
 #redesSocias {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Espaço generoso entre os ícones */
+  gap: 30px;
+  /* Espaço generoso entre os ícones */
   margin-top: 25px;
 }
 
@@ -373,15 +415,18 @@ nav ul li { margin: 0; }
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #9ca3af; /* Cor neutra inicial */
+  color: #9ca3af;
+  /* Cor neutra inicial */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
 
 /* Efeito de Hover nos Ícones */
 .rede-social-item a:hover {
-  color: #fff; /* Fica branco no hover */
-  transform: translateY(-3px); /* Leve subida */
+  color: #fff;
+  /* Fica branco no hover */
+  transform: translateY(-3px);
+  /* Leve subida */
 }
 
 .rede-social-item i {
@@ -394,7 +439,7 @@ nav ul li { margin: 0; }
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .sobre-mim-texto {
     padding: 30px 25px;
   }
@@ -434,6 +479,7 @@ nav ul li { margin: 0; }
   text-align: center;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
+
 .habilidade:hover {
   background: #1a1a1a;
   border-color: #666;
@@ -483,13 +529,33 @@ nav ul li { margin: 0; }
 }
 
 /* Cores dos ícones por tecnologia */
-#Html i   { color: #e65100; }
-#Css i    { color: #0277bd; }
-#JavaScript i { color: #ffd600; }
-#NodeJs i { color: #539e43; }
-#MongoDB i { color: #47A248; }
-#Git i    { color: #d84315; }
-#Github i { color: #ffffff; }
+#Html i {
+  color: #e65100;
+}
+
+#Css i {
+  color: #0277bd;
+}
+
+#JavaScript i {
+  color: #ffd600;
+}
+
+#NodeJs i {
+  color: #539e43;
+}
+
+#MongoDB i {
+  color: #47A248;
+}
+
+#Git i {
+  color: #d84315;
+}
+
+#Github i {
+  color: #ffffff;
+}
 
 /* =============================================
    PROJETOS
@@ -521,6 +587,7 @@ nav ul li { margin: 0; }
   flex-direction: column;
   transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
 }
+
 .projeto-card:hover {
   transform: translateY(-8px) scale(1.018);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.26);
@@ -581,8 +648,15 @@ nav ul li { margin: 0; }
 }
 
 @keyframes modal-entrada {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .close {
@@ -595,7 +669,10 @@ nav ul li { margin: 0; }
   cursor: pointer;
   transition: color 0.15s;
 }
-.close:hover { color: #fff; }
+
+.close:hover {
+  color: #fff;
+}
 
 .modal-content h2,
 .modal-content .titleCard {
@@ -636,6 +713,7 @@ nav ul li { margin: 0; }
   font-size: 0.9rem;
   transition: background 0.18s, color 0.18s;
 }
+
 .modal-content a:hover {
   background: #fff;
   color: #232323;
@@ -656,6 +734,7 @@ nav ul li { margin: 0; }
   color: inherit;
   transition: color 0.3s ease;
 }
+
 .copyright a:hover #GuilhermeLima {
   color: white;
 }
@@ -665,6 +744,7 @@ nav ul li { margin: 0; }
   color: #ffffff !important;
   position: relative;
 }
+
 .nav-active::after {
   content: '';
   position: absolute;
@@ -790,8 +870,13 @@ nav ul li { margin: 0; }
   min-height: 20px;
 }
 
-.form-feedback.sucesso { color: #4ade80; }
-.form-feedback.erro    { color: #f87171; }
+.form-feedback.sucesso {
+  color: #4ade80;
+}
+
+.form-feedback.erro {
+  color: #f87171;
+}
 
 /* Redes sociais lado direito */
 .contato-redes {
@@ -855,19 +940,205 @@ nav ul li { margin: 0; }
   color: #6b7280;
 }
 
-/* Responsivo contato */
-@media (max-width: 768px) {
-  .contato-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
+/* =============================================
+   CARDS DE PROJETOS — VERSÃO PREMIUM
+   ============================================= */
 
-  .contato-redes {
-    width: 100%;
-  }
-
-  .form-card {
-    padding: 24px 20px;
-  }
+/* Tag de tecnologia */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  padding: 0 1rem 1.4rem;
+  margin-top: auto;
 }
 
+.card-tag {
+  font-size: 0.7rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Linha de destaque no topo do card — aparece no hover */
+.projeto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projeto-card:hover::before {
+  opacity: 1;
+}
+
+/* Overlay sutil na imagem do card */
+.img-projeto-card {
+  position: relative;
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(30, 33, 44, 0.6) 100%);
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.projeto-card:hover .card-img-wrapper img {
+  transform: scale(1.04);
+}
+
+/* =============================================
+   TIMELINE — EXPERIÊNCIAS
+   ============================================= */
+#experiencias-section {
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+.exp-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.exp-subtitulo {
+  color: #959daa;
+  font-size: 1rem;
+  margin: -30px auto 20px;
+  text-align: center;
+}
+
+.exp-divider {
+  width: 40px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Container da timeline */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+/* Linha vertical */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(255, 255, 255) 10%,
+      rgba(255, 255, 255, 0.404) 90%,
+      transparent);
+}
+
+/* Item individual */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Ponto na linha */
+.timeline-dot {
+  position: absolute;
+  left: -37px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+}
+
+/* Card */
+.timeline-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 28px 32px;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.timeline-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(6px);
+}
+
+.timeline-ano {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.timeline-titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f5f5f5;
+  margin: 0 0 6px 0;
+}
+
+.timeline-empresa {
+  display: block;
+  font-size: 0.88rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.timeline-desc {
+  font-size: 0.93rem;
+  color: #9ca3af;
+  line-height: 1.7;
+  text-align: left;
+  margin: 0;
+}
