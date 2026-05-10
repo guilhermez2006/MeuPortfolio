@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
@@ -18,13 +17,14 @@
 
   <header>
     <div class="header-inner">
-      <a href="home.html" class="logo">Guilherme Lima<span>.dev</span></a>
+      <a href="inicio.html" class="logo">Guilherme Lima<span>.dev</span></a>
       <nav>
         <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-menu">
           <li><a href="inicio.html">Início</a></li>
+          <li><a href="carreira.html">Carreira</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="contato.html" class="nav-active">Contato</a></li>
         </ul>
@@ -47,36 +47,37 @@
         <!-- FORMULÁRIO -->
         <div class="form-card">
           <form id="contato-form" novalidate>
-
             <div class="form-group">
               <label for="nome">Nome</label>
               <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
             </div>
-
             <div class="form-group">
               <label for="email">E-mail</label>
               <input type="email" id="email" name="email" placeholder="seu@email.com" required />
             </div>
-
             <div class="form-group">
               <label for="mensagem">Mensagem</label>
               <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
             </div>
-
             <button type="submit" class="btn-enviar" id="btn-enviar">
               <span id="btn-texto">Enviar mensagem</span>
               <i class="fas fa-paper-plane" id="btn-icon"></i>
             </button>
-
             <p id="form-feedback" class="form-feedback"></p>
-
           </form>
         </div>
 
-        <!-- REDES SOCIAIS -->
+        <!-- REDES + EMAIL DIRETO -->
         <div class="contato-redes">
           <h3>Ou me encontre em</h3>
           <div class="redes-lista">
+            <a href="mailto:guilhermefk123@gmail.com" class="rede-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="rede-nome">E-mail</span>
+                <span class="rede-user">guilhermefk123@gmail.com</span>
+              </div>
+            </a>
             <a href="https://github.com/guilhermez2006" target="_blank" class="rede-card">
               <i class="fab fa-github"></i>
               <div>
@@ -115,51 +116,42 @@
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    // ── EMAILJS ──────────────────────────────────────
-    // 1. Crie conta em https://www.emailjs.com (gratuito)
-    // 2. Crie um Service e um Template
-    // 3. Substitua os valores abaixo pelos seus
-    emailjs.init("SEU_PUBLIC_KEY"); // <-- cole sua Public Key aqui
+    emailjs.init("SEU_PUBLIC_KEY"); // → substitua após criar conta no emailjs.com
 
-    const form = document.getElementById('contato-form');
+    const form     = document.getElementById('contato-form');
     const btnTexto = document.getElementById('btn-texto');
-    const btnIcon = document.getElementById('btn-icon');
+    const btnIcon  = document.getElementById('btn-icon');
     const feedback = document.getElementById('form-feedback');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Validação básica
-      const nome = document.getElementById('nome').value.trim();
-      const email = document.getElementById('email').value.trim();
+      const nome     = document.getElementById('nome').value.trim();
+      const email    = document.getElementById('email').value.trim();
       const mensagem = document.getElementById('mensagem').value.trim();
 
       if (!nome || !email || !mensagem) {
-        feedback.textContent = 'Por favor, preencha todos os campos.';
+        feedback.textContent = 'Preencha todos os campos antes de enviar.';
         feedback.className = 'form-feedback erro';
         return;
       }
 
-      // Loading
       btnTexto.textContent = 'Enviando...';
       btnIcon.className = 'fas fa-spinner fa-spin';
 
-      emailjs.sendForm(
-        'SEU_SERVICE_ID',   // <-- cole seu Service ID aqui
-        'SEU_TEMPLATE_ID',  // <-- cole seu Template ID aqui
-        form
-      ).then(() => {
-        feedback.textContent = 'Mensagem enviada com sucesso! Em breve entrarei em contato.';
-        feedback.className = 'form-feedback sucesso';
-        btnTexto.textContent = 'Enviado!';
-        btnIcon.className = 'fas fa-check';
-        form.reset();
-      }).catch(() => {
-        feedback.textContent = 'Erro ao enviar. Tente novamente ou me contate pelo LinkedIn.';
-        feedback.className = 'form-feedback erro';
-        btnTexto.textContent = 'Enviar mensagem';
-        btnIcon.className = 'fas fa-paper-plane';
-      });
+      emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', form)
+        .then(() => {
+          feedback.textContent = 'Mensagem enviada! Retornarei em breve.';
+          feedback.className = 'form-feedback sucesso';
+          btnTexto.textContent = 'Enviado!';
+          btnIcon.className = 'fas fa-check';
+          form.reset();
+        })
+        .catch(() => {
+          // Fallback: abre cliente de e-mail do usuário
+          const corpo = encodeURIComponent(`Nome: ${nome}\nE-mail: ${email}\n\n${mensagem}`);
+          window.location.href = `mailto:guilhermefk123@gmail.com?subject=Contato via portfólio&body=${corpo}`;
+        });
     });
   </script>
 </body>
