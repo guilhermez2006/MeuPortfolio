@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
+
 <body>
   <div id="particles-js"></div>
 
@@ -34,7 +36,6 @@
 
   <main>
     <section id="contato-section">
-
       <div class="contato-hero">
         <h1 class="section-title">Entre em Contato</h1>
         <p class="contato-subtitulo">
@@ -43,8 +44,6 @@
       </div>
 
       <div class="contato-wrapper">
-
-        <!-- FORMULÁRIO -->
         <div class="form-card">
           <form id="contato-form" novalidate>
             <div class="form-group">
@@ -67,7 +66,6 @@
           </form>
         </div>
 
-        <!-- REDES + EMAIL DIRETO -->
         <div class="contato-redes">
           <h3>Ou me encontre em</h3>
           <div class="redes-lista">
@@ -101,7 +99,6 @@
             </a>
           </div>
         </div>
-
       </div>
     </section>
   </main>
@@ -116,18 +113,18 @@
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    emailjs.init("SEU_PUBLIC_KEY"); // → substitua após criar conta no emailjs.com
+    emailjs.init("1ZiqZ4a_WmoXFCZIS");
 
-    const form     = document.getElementById('contato-form');
+    const form = document.getElementById('contato-form');
     const btnTexto = document.getElementById('btn-texto');
-    const btnIcon  = document.getElementById('btn-icon');
+    const btnIcon = document.getElementById('btn-icon');
     const feedback = document.getElementById('form-feedback');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const nome     = document.getElementById('nome').value.trim();
-      const email    = document.getElementById('email').value.trim();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
       const mensagem = document.getElementById('mensagem').value.trim();
 
       if (!nome || !email || !mensagem) {
@@ -139,7 +136,18 @@
       btnTexto.textContent = 'Enviando...';
       btnIcon.className = 'fas fa-spinner fa-spin';
 
-      emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', form)
+      // CORREÇÃO: Usando ID 'template_22usysc' e chaves 'name'/'message' conforme o painel
+      const envio = emailjs.send('service_77it66n', 'template_22usysc', {
+        name: nome,
+        email: email,
+        message: mensagem
+      });
+
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('timeout')), 8000)
+      );
+
+      Promise.race([envio, timeout])
         .then(() => {
           feedback.textContent = 'Mensagem enviada! Retornarei em breve.';
           feedback.className = 'form-feedback sucesso';
@@ -147,8 +155,12 @@
           btnIcon.className = 'fas fa-check';
           form.reset();
         })
-        .catch(() => {
-          // Fallback: abre cliente de e-mail do usuário
+        .catch((error) => {
+          console.error("Erro no envio:", error);
+          btnTexto.textContent = 'Enviar mensagem';
+          btnIcon.className = 'fas fa-paper-plane';
+          
+          // Fallback para e-mail direto
           const corpo = encodeURIComponent(`Nome: ${nome}\nE-mail: ${email}\n\n${mensagem}`);
           window.location.href = `mailto:guilhermefk123@gmail.com?subject=Contato via portfólio&body=${corpo}`;
         });

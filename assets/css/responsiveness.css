@@ -489,3 +489,62 @@ section[id] {
     transform: translateX(2px);
   }
 }
+
+/* =============================================
+   CONTATO — MOBILE
+   ============================================= */
+@media (max-width: 768px) {
+  #contato-section {
+    padding: 100px 16px 60px;
+    min-height: auto;
+  }
+
+  .contato-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .form-card {
+    padding: 24px 18px;
+    width: 100%;
+  }
+
+  .contato-redes {
+    width: 100%;
+  }
+
+  /* Impede o e-mail longo de vazar */
+  .rede-user {
+    word-break: break-all;
+    font-size: 0.72rem;
+  }
+
+  .rede-card {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .rede-card i {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  #contato-section {
+    padding: 90px 12px 50px;
+  }
+
+  .form-card {
+    padding: 20px 14px;
+  }
+
+  .contato-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .btn-enviar {
+    font-size: 0.88rem;
+  }
+}

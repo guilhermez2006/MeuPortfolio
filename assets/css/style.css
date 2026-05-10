@@ -230,7 +230,7 @@ nav ul li {
 
 #Titulo1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   color: #ffffff;
   margin: 0 0 10px 0;
   width: 100%;
@@ -274,12 +274,15 @@ nav ul li {
   transform: translateY(-5px);
 }
 
-/* Seta animada */
+/* Seta animada - Versão Corrigida e Rápida */
 .seta-baixo {
   margin-top: 40px;
   position: relative;
   width: 20px;
   height: 30px;
+  display: block; /* Garante que o container apareça */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .seta-baixo::before,
@@ -291,7 +294,8 @@ nav ul li {
   height: 14px;
   border-bottom: 3px solid white;
   border-right: 3px solid white;
-  animation: moveDownTranslate 2s infinite ease-in-out;
+  /* Aumenta esse 1.2s para 2s ou 2.5s para ficar mais lenta */
+  animation: moveDownTranslate 1.5s infinite ease-in-out; 
 }
 
 .seta-baixo::before {
@@ -300,19 +304,20 @@ nav ul li {
 }
 
 .seta-baixo::after {
-  top: 12px;
+  top: 10px; /* Juntas para ficar harmônico */
   transform: translateX(-50%) rotate(45deg);
 }
 
 @keyframes moveDownTranslate {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateX(-50%) translateY(0) rotate(45deg);
+    opacity: 0.8;
   }
 
   50% {
-    transform: translateX(-50%) translateY(5px) rotate(45deg);
+    /* Percurso mais longo (15px) para dar o destaque que você quer */
+    transform: translateX(-50%) translateY(15px) rotate(45deg);
+    opacity: 1;
   }
 }
 
@@ -1103,7 +1108,7 @@ nav ul li {
 }
 
 .timeline-card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 254, 254, 0.521);
   background: rgba(255, 255, 255, 0.05);
   transform: translateX(6px);
 }
