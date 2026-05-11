@@ -19,13 +19,13 @@
 
   <header>
     <div class="header-inner">
-      <a href="inicio.html" class="logo">Guilherme Lima<span>.dev</span></a>
+      <a href="index.html" class="logo">Guilherme Lima<span>.dev</span></a>
       <nav>
         <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
         <ul id="nav-menu">
-          <li><a href="inicio.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="carreira.html">Carreira</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="contato.html" class="nav-active">Contato</a></li>
@@ -159,8 +159,7 @@
           console.error("Erro no envio:", error);
           btnTexto.textContent = 'Enviar mensagem';
           btnIcon.className = 'fas fa-paper-plane';
-          
-          // Fallback para e-mail direto
+
           const corpo = encodeURIComponent(`Nome: ${nome}\nE-mail: ${email}\n\n${mensagem}`);
           window.location.href = `mailto:guilhermefk123@gmail.com?subject=Contato via portfólio&body=${corpo}`;
         });
