@@ -4,12 +4,12 @@
    FONTES
    ============================================= */
 @font-face {
-  font-family: 'MinhaFonte';
-  src: url('/fonts/Android.ttf') format('truetype');
+  font-family: "MinhaFonte";
+  src: url("/fonts/Android.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Dragon';
+  font-family: "Dragon";
   src: url(/fonts/Dragonlord_PERSONAL_USE_ONLY.otf);
 }
 
@@ -25,8 +25,8 @@
 body {
   margin: 0;
   background-color: #000;
-  color: #F5F5F5;
-  font-family: 'Roboto', sans-serif;
+  color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -66,7 +66,9 @@ footer {
 .hidden {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .visible {
@@ -99,7 +101,7 @@ header {
 
 /* Logo */
 .logo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   color: #ffffff;
@@ -143,9 +145,11 @@ nav ul li {
   padding: 6px 14px;
   border-radius: 5px;
   font-size: 1.05rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #d1d5db;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
 
 #Navhome a:hover,
@@ -179,7 +183,10 @@ nav ul li {
   height: 2px;
   background-color: #fff;
   border-radius: 2px;
-  transition: transform 0.35s ease, opacity 0.25s ease, width 0.3s ease;
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease,
+    width 0.3s ease;
   transform-origin: center;
 }
 
@@ -229,7 +236,7 @@ nav ul li {
 }
 
 #Titulo1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   color: #ffffff;
   margin: 0 0 10px 0;
@@ -237,7 +244,7 @@ nav ul li {
 }
 
 #Titulo2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 4.9rem;
   color: black;
   margin: 0 0 28px 0;
@@ -295,7 +302,7 @@ nav ul li {
   border-bottom: 3px solid white;
   border-right: 3px solid white;
   /* Aumenta esse 1.2s para 2s ou 2.5s para ficar mais lenta */
-  animation: moveDownTranslate 1.5s infinite ease-in-out; 
+  animation: moveDownTranslate 1.5s infinite ease-in-out;
 }
 
 .seta-baixo::before {
@@ -309,7 +316,8 @@ nav ul li {
 }
 
 @keyframes moveDownTranslate {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0) rotate(45deg);
     opacity: 0.8;
   }
@@ -344,6 +352,15 @@ nav ul li {
   margin: 0 0 50px 0;
 }
 
+.badge-estudando {
+  font-size: 0.6rem;
+  color: #f0a500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
 /* =============================================
    SOBRE MIM 
    ============================================= */
@@ -369,7 +386,9 @@ nav ul li {
   object-fit: cover;
   flex-shrink: 0;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 #minhafoto:hover {
@@ -387,7 +406,7 @@ nav ul li {
 }
 
 .sobre-mim-texto h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 1.8rem;
   color: #fff;
@@ -471,6 +490,7 @@ nav ul li {
 }
 
 .habilidade {
+  position: relative;
   background: #000;
   border: 1px solid #333;
   border-radius: 8px;
@@ -481,7 +501,9 @@ nav ul li {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .habilidade:hover {
@@ -510,7 +532,7 @@ nav ul li {
 
 /* Ícone Express */
 .icon-express {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
   color: #000;
@@ -550,7 +572,7 @@ nav ul li {
 }
 
 #MongoDB i {
-  color: #47A248;
+  color: #47a248;
 }
 
 #Git i {
@@ -561,6 +583,18 @@ nav ul li {
   color: #ffffff;
 }
 
+#Docker i {
+  color: #2496ed;
+}
+
+#Docker,
+#PostgreSQL {
+  border-bottom: 2px solid #f0a500;
+}
+/* Impede o invert(1) em ícones que já têm cor própria */
+.habilidade-icon-img--colorida {
+  filter: none;
+}
 /* =============================================
    PROJETOS
    ============================================= */
@@ -579,7 +613,11 @@ nav ul li {
 }
 
 .projeto-card {
-  background: linear-gradient(180deg, rgba(38, 42, 49, 0.98) 55%, rgba(30, 33, 44, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(38, 42, 49, 0.98) 55%,
+    rgba(30, 33, 44, 1) 100%
+  );
   border-radius: 20px;
   border: 1.6px solid rgba(180, 190, 210, 0.13);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.14);
@@ -589,7 +627,10 @@ nav ul li {
   min-height: 370px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s,
+    border-color 0.22s;
 }
 
 .projeto-card:hover {
@@ -607,7 +648,7 @@ nav ul li {
 }
 
 .projeto-card h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: #f5f7fa;
@@ -680,7 +721,7 @@ nav ul li {
 
 .modal-content h2,
 .modal-content .titleCard {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
@@ -713,9 +754,11 @@ nav ul li {
   font-weight: 600;
   margin: 6px 4px 0;
   border: 1px solid #333;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
-  transition: background 0.18s, color 0.18s;
+  transition:
+    background 0.18s,
+    color 0.18s;
 }
 
 .modal-content a:hover {
@@ -750,7 +793,7 @@ nav ul li {
 }
 
 .nav-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 14px;
@@ -813,7 +856,7 @@ nav ul li {
 .form-group label {
   font-size: 0.85rem;
   color: #9ca3af;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -825,10 +868,12 @@ nav ul li {
   border-radius: 8px;
   padding: 12px 16px;
   color: #f5f5f5;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
   resize: none;
 }
 
@@ -850,7 +895,7 @@ nav ul li {
   color: #000;
   border: none;
   border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   cursor: pointer;
@@ -858,7 +903,9 @@ nav ul li {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
   margin-top: 8px;
 }
 
@@ -912,7 +959,10 @@ nav ul li {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   color: #d1d5db;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .rede-card:hover {
@@ -960,7 +1010,7 @@ nav ul li {
 
 .card-tag {
   font-size: 0.7rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #9ca3af;
   background: rgba(255, 255, 255, 0.06);
@@ -973,13 +1023,18 @@ nav ul li {
 
 /* Linha de destaque no topo do card — aparece no hover */
 .projeto-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -999,10 +1054,14 @@ nav ul li {
 }
 
 .card-img-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(30, 33, 44, 0.6) 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(30, 33, 44, 0.6) 100%
+  );
 }
 
 .card-img-wrapper img {
@@ -1056,17 +1115,19 @@ nav ul li {
 
 /* Linha vertical */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 7px;
   top: 8px;
   bottom: 8px;
   width: 1px;
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(255, 255, 255) 10%,
-      rgba(255, 255, 255, 0.404) 90%,
-      transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(255, 255, 255) 10%,
+    rgba(255, 255, 255, 0.404) 90%,
+    transparent
+  );
 }
 
 /* Item individual */
@@ -1103,7 +1164,10 @@ nav ul li {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 28px 32px;
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .timeline-card:hover {
@@ -1115,7 +1179,7 @@ nav ul li {
 .timeline-ano {
   display: inline-block;
   font-size: 0.72rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1124,7 +1188,7 @@ nav ul li {
 }
 
 .timeline-titulo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   color: #f5f5f5;
