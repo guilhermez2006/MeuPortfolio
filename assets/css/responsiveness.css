@@ -237,13 +237,13 @@ section[id] {
   }
 
   #minhafoto {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
 
   #Habilidades-Container {
     gap: 16px;
-   max-width: 448px; 
+    max-width: 448px;
   }
 
   .habilidade {
@@ -294,19 +294,33 @@ section[id] {
     font-size: 2em;
   }
 
-  /* Sobre mim */
   .sobre-mim-container {
     flex-direction: column;
     align-items: center;
     gap: 24px;
     text-align: center;
+    padding: 0 12px; /* ← margem lateral igual dos dois lados */
+    width: 100%;
+    box-sizing: border-box;
   }
-
+  .sobre-mim-texto {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+  }
   #minhafoto {
-    width: 180px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
   }
-
+  #redesSocias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; /* ← isso alinha o botão na mesma linha */
+    justify-content: center;
+    gap: 24px;
+    margin: 24px 0 0 0;
+  }
   .sobre-mim-texto p {
     text-align: center;
   }
