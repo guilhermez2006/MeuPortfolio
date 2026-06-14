@@ -1237,3 +1237,118 @@ nav ul li {
   text-align: left;
   margin: 0;
 }
+
+/* =============================================
+   BADGE DOS CARDS
+   ============================================= */
+.card-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin: 1.2rem 0 0 1rem;
+  align-self: flex-start;
+}
+
+.card-badge--destaque {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =============================================
+   MODAL — MÉTRICAS E SEÇÕES
+   ============================================= */
+.modal-metricas {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 16px 0 24px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+}
+
+.metrica-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.metrica-valor {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.metrica-label {
+  font-size: 0.7rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.modal-secao {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.modal-secao h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 8px 0;
+}
+
+.modal-secao p {
+  font-size: 0.9rem;
+  color: #c8cdd6;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+.modal-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-lista li {
+  font-size: 0.88rem;
+  color: #9ca3af;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.modal-lista li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #4b5563;
+}
+
+.modal-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
