@@ -1,385 +1,596 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos | Guilherme Lima</title>
-  <link rel="shortcut icon" href="assets/img/favicon.jpg" type="image/x-icon" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsiveness.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap" rel="stylesheet" />
-</head>
-<body>
-  <div id="particles-js"></div>
+  <!doctype html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Projetos | Guilherme Lima</title>
+      <link
+        rel="shortcut icon"
+        href="assets/img/favicon.jpg"
+        type="image/x-icon"
+      />
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/responsiveness.css" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700;800&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+      <div id="particles-js"></div>
 
-  <header>
-    <div class="header-inner">
-      <a href="index.html" class="logo">Guilherme Lima<span>.dev</span></a>
-      <nav>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <ul id="nav-menu">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="carreira.html">Carreira</a></li>
-          <li><a href="projetos.html" class="nav-active">Projetos</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <header>
+        <div class="header-inner">
+          <a href="index.html" class="logo">Guilherme Lima<span>.dev</span></a>
+          <nav>
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Abrir menu"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-menu">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="carreira.html">Carreira</a></li>
+              <li><a href="projetos.html" class="nav-active">Projetos</a></li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-  <main>
-    <section id="projetosSection">
-      <h1 id="projetos" class="section-title">Meus Projetos</h1>
-      <div class="projetos-container">
+      <main>
+        <section id="projetosSection">
+          <h1 id="projetos" class="section-title">Meus Projetos</h1>
+          <div class="projetos-container">
+            <div class="projeto-card" data-modal="modalGameTracker">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/siteGameTracker.png"
+                  alt="Preview GameTracker"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge card-badge--destaque">Full Stack</div>
+              <h2>GameTracker</h2>
+              <p>
+                Sistema de gerenciamento de jogos com autenticação JWT, CRUD
+                completo e arquitetura MVC.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Node.js</span>
+                <span class="card-tag">Express</span>
+                <span class="card-tag">Prisma</span>
+                <span class="card-tag">MongoDB</span>
+                <span class="card-tag">JWT</span>
+              </div>
+            </div>
 
-        <div class="projeto-card" data-modal="modalGameTracker">
-          <div class="card-img-wrapper">
-            <img src="assets/img/siteGameTracker.png" alt="Preview GameTracker" class="img-projeto-card" />
+            <div class="projeto-card" data-modal="modalInfoPrime">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/SiteInfoPrime.png"
+                  alt="Preview InfoPrime"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge">Corporativo</div>
+              <h2>InfoPrime</h2>
+            <p>
+    Desenvolvimento de uma nova interface para a Info Prime, empresa em que atuei, com foco em experiência do usuário e responsividade.
+  </p>
+              <div class="card-tags">
+                <span class="card-tag">HTML5</span>
+                <span class="card-tag">CSS3</span>
+                <span class="card-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="projeto-card" data-modal="modalApiCadastro">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/apiCadastro.png"
+                  alt="Preview API de Cadastro"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge">Full Stack</div>
+              <h2>API de Cadastro</h2>
+              <p>
+                Sistema de cadastro de usuários com autenticação JWT, CRUD completo,
+                validações e arquitetura MVC.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">Node.js</span>
+                <span class="card-tag">Express</span>
+                <span class="card-tag">Prisma</span>
+                <span class="card-tag">MongoDB</span>
+                <span class="card-tag">JWT</span>
+              </div>
+            </div>
+
+            <div class="projeto-card" data-modal="modalQuiz">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/SiteQuiz.png"
+                  alt="Preview Quiz"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge">Front-End</div>
+              <h2>Quiz de Programação</h2>
+              <p>
+                Quiz interativo feito com JavaScript Vanilla. Foco em lógica e
+                manipulação direta do DOM.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">HTML</span>
+                <span class="card-tag">CSS</span>
+                <span class="card-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="projeto-card" data-modal="modalDragon">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/SiteDragons.png"
+                  alt="Preview House Of The Dragon"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge">Front-End</div>
+              <h2>House Of The Dragon</h2>
+              <p>
+                Interface dinâmica (SPA-like). Dados injetados via iteração de
+                arrays no JavaScript sem reload.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">HTML</span>
+                <span class="card-tag">CSS</span>
+                <span class="card-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="projeto-card" data-modal="modalSocial">
+              <div class="card-img-wrapper">
+                <img
+                  src="assets/img/SiteCordel.png"
+                  alt="Preview Cordel Moderno"
+                  class="img-projeto-card"
+                />
+              </div>
+              <div class="card-badge">Front-End</div>
+              <h2>Cordel Moderno</h2>
+              <p>
+                Exploração visual com CSS3 puro. Efeitos parallax e tipografia
+                otimizada para leitura.
+              </p>
+              <div class="card-tags">
+                <span class="card-tag">HTML</span>
+                <span class="card-tag">CSS</span>
+              </div>
+            </div>
           </div>
-          <div class="card-badge card-badge--destaque">Full Stack</div>
-          <h2>GameTracker</h2>
-          <p>API Full Stack com autenticação JWT e banco em nuvem. CRUD completo e rotas 100% protegidas.</p>
-          <div class="card-tags">
-            <span class="card-tag">Node.js</span>
-            <span class="card-tag">Prisma</span>
-            <span class="card-tag">MongoDB</span>
-            <span class="card-tag">JWT</span>
+        </section>
+      </main>
+
+      <div id="modalGameTracker" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="titleCard">GameTracker – Gerencie seu Backlog</h2>
+          <img
+            src="assets/img/siteGameTracker.png"
+            alt="Preview GameTracker"
+            class="img-modal-projeto"
+          />
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">100%</span>
+              <span class="metrica-label">Rotas Protegidas</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">JWT</span>
+              <span class="metrica-label">Autenticação</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">MVC</span>
+              <span class="metrica-label">Arquitetura</span>
+            </div>
+          </div>
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+            <p>
+              API RESTful projetada para gerenciar um catálogo de jogos com
+              segurança e escalabilidade.
+            </p>
+          </div>
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+            <ul class="modal-lista">
+              <li>
+                <strong>Segurança:</strong> Senhas hasheadas (bcrypt) e rotas
+                bloqueadas por JWT.
+              </li>
+              <li>
+                <strong>Back-end:</strong> Estruturado com Prisma ORM e banco
+                MongoDB Atlas.
+              </li>
+              <li>
+                <strong>Integração:</strong> Front-end consumindo a API com
+                controle de sessão (localStorage).
+              </li>
+            </ul>
+          </div>
+          <div class="modal-secao">
+            <h4>Stack</h4>
+            <div
+              class="card-tags"
+              style="justify-content: center; margin-top: 8px"
+            >
+              <span class="card-tag">Node.js</span>
+              <span class="card-tag">Express</span>
+              <span class="card-tag">Prisma ORM</span>
+              <span class="card-tag">MongoDB</span>
+              <span class="card-tag">JWT</span>
+            </div>
+          </div>
+          <div class="modal-links">
+            <a
+              href="https://github.com/guilhermez2006/GameTracker-API"
+              target="_blank"
+              ><i class="fab fa-github"></i> Repositório</a
+            >
           </div>
         </div>
+      </div>
 
-        <div class="projeto-card" data-modal="modalInfoPrime">
-          <div class="card-img-wrapper">
-            <img src="assets/img/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-projeto-card" />
+      <div id="modalInfoPrime" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="titleCard">InfoPrime – Soluções e Tecnologia</h2>
+          <img
+            src="assets/img/SiteInfoPrime.png"
+            alt="Preview InfoPrime"
+            class="img-modal-projeto"
+          />
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">100%</span>
+              <span class="metrica-label">Responsivo</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">UI/UX</span>
+              <span class="metrica-label">Otimizada</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">Zero</span>
+              <span class="metrica-label">Frameworks</span>
+            </div>
           </div>
-          <div class="card-badge">Corporativo</div>
-          <h2>InfoPrime</h2>
-          <p>Redesign de site institucional focado em UI/UX, 100% responsivo e otimizado para captação de clientes.</p>
-          <div class="card-tags">
-            <span class="card-tag">HTML5</span>
-            <span class="card-tag">CSS3</span>
-            <span class="card-tag">JavaScript</span>
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+            <p>
+              Iniciativa própria para modernizar o site da empresa (focada em
+              suporte de TI), melhorando usabilidade e captação de clientes.
+            </p>
+          </div>
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+            <ul class="modal-lista">
+              <li>
+                <strong>Performance:</strong> Carregamento instantâneo usando
+                HTML/CSS/JS puros.
+              </li>
+              <li>
+                <strong>UI/UX:</strong> Navegação âncora suave e animações de
+                retenção visual.
+              </li>
+              <li>
+                <strong>Responsividade:</strong> Design fluido perfeito em mobile
+                e desktop.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-secao">
+            <h4>Stack</h4>
+            <div
+              class="card-tags"
+              style="justify-content: center; margin-top: 8px"
+            >
+              <span class="card-tag">HTML5</span>
+              <span class="card-tag">CSS3</span>
+              <span class="card-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="modal-links">
+            <a
+              href="https://guilhermez2006.github.io/InfoPrime-page/"
+              target="_blank"
+              ><i class="fas fa-external-link-alt"></i> Ver site</a
+            >
+            <a
+              href="https://github.com/guilhermez2006/InfoPrime-page"
+              target="_blank"
+              ><i class="fab fa-github"></i> Repositório</a
+            >
           </div>
         </div>
+      </div>
 
-        <div class="projeto-card" data-modal="modalApiCadastro">
-          <div class="card-img-wrapper">
-            <img src="assets/img/apiCadastro.png" alt="Preview API de Cadastro" class="img-projeto-card" />
+      <div id="modalApiCadastro" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <h2 class="titleCard">API de Cadastro</h2>
+
+          <img
+            src="assets/img/apiCadastro.png"
+            alt="Preview API de Cadastro"
+            class="img-modal-projeto"
+          />
+
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">100%</span>
+              <span class="metrica-label">Rotas Protegidas</span>
+            </div>
+
+            <div class="metrica-item">
+              <span class="metrica-valor">JWT</span>
+              <span class="metrica-label">Autenticação</span>
+            </div>
+
+            <div class="metrica-item">
+              <span class="metrica-valor">MVC</span>
+              <span class="metrica-label">Arquitetura</span>
+            </div>
           </div>
-          <div class="card-badge">Back-End</div>
-          <h2>API de Cadastro</h2>
-          <p>API RESTful em Node.js aplicando padrão MVC, validações robustas e tratamento de erros (HTTP 409).</p>
-          <div class="card-tags">
-            <span class="card-tag">Node.js</span>
-            <span class="card-tag">Express</span>
-            <span class="card-tag">MongoDB</span>
+
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+
+            <p>
+              Sistema completo para gerenciamento de usuários desenvolvido para
+              consolidar conceitos de arquitetura MVC, autenticação JWT,
+              integração entre front-end e back-end e boas práticas de
+              desenvolvimento.
+            </p>
+          </div>
+
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+
+            <ul class="modal-lista">
+              <li>
+                <strong>Segurança:</strong> Senhas protegidas com bcrypt,
+                autenticação JWT e todas as rotas de gerenciamento protegidas.
+              </li>
+
+              <li>
+                <strong>Back-end:</strong> API REST estruturada em MVC utilizando
+                Prisma ORM e MongoDB para persistência dos dados.
+              </li>
+
+              <li>
+                <strong>Experiência:</strong> CRUD completo com validações,
+                tratamento de erros, pesquisa de usuários, edição em modal e
+                notificações visuais (Toast).
+              </li>
+            </ul>
+          </div>
+
+          <div class="modal-secao">
+            <h4>Stack</h4>
+
+            <div
+              class="card-tags"
+              style="justify-content: center; margin-top: 8px"
+            >
+              <span class="card-tag">Node.js</span>
+              <span class="card-tag">Express</span>
+              <span class="card-tag">Prisma ORM</span>
+              <span class="card-tag">MongoDB</span>
+              <span class="card-tag">JWT</span>
+            </div>
+          </div>
+
+          <div class="modal-links">
+            <a
+              href="https://guilhermez2006.github.io/CadastroDeUsuarios/"
+              target="_blank"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              Ver Interface
+            </a>
+
+            <a
+              href="https://github.com/guilhermez2006/CadastroDeUsuarios"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+              Repositório
+            </a>
           </div>
         </div>
+      </div>
 
-        <div class="projeto-card" data-modal="modalQuiz">
-          <div class="card-img-wrapper">
-            <img src="assets/img/SiteQuiz.png" alt="Preview Quiz" class="img-projeto-card" />
+      <div id="modalQuiz" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="titleCard">Quiz de Programação</h2>
+          <img
+            src="assets/img/SiteQuiz.png"
+            alt="Preview Quiz"
+            class="img-modal-projeto"
+          />
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">DOM</span>
+              <span class="metrica-label">Manipulação</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">State</span>
+              <span class="metrica-label">Controle Local</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">Zero</span>
+              <span class="metrica-label">Bibliotecas</span>
+            </div>
           </div>
-          <div class="card-badge">Front-End</div>
-          <h2>Quiz de Programação</h2>
-          <p>Quiz interativo feito com JavaScript Vanilla. Foco em lógica e manipulação direta do DOM.</p>
-          <div class="card-tags">
-            <span class="card-tag">HTML</span>
-            <span class="card-tag">CSS</span>
-            <span class="card-tag">JavaScript</span>
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+            <p>
+              Replicar gerenciamento de estado complexo usando apenas JavaScript
+              puro.
+            </p>
+          </div>
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+            <ul class="modal-lista">
+              <li>
+                <strong>Lógica Visual:</strong> Feedback instantâneo para
+                acertos/erros (sem recarregar).
+              </li>
+              <li>
+                <strong>Estado Dinâmico:</strong> Atualização de pontuação e
+                transição de questões em tempo real.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-links">
+            <a
+              href="https://guilhermez2006.github.io/Quiz-Programacao/"
+              target="_blank"
+              ><i class="fas fa-external-link-alt"></i> Acessar Quiz</a
+            >
           </div>
         </div>
+      </div>
 
-        <div class="projeto-card" data-modal="modalDragon">
-          <div class="card-img-wrapper">
-            <img src="assets/img/SiteDragons.png" alt="Preview House Of The Dragon" class="img-projeto-card" />
+      <div id="modalDragon" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="titleCard">House Of The Dragon</h2>
+          <img
+            src="assets/img/SiteDragons.png"
+            alt="Preview House Of The Dragon"
+            class="img-modal-projeto"
+          />
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">Array</span>
+              <span class="metrica-label">Data Source</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">SPA</span>
+              <span class="metrica-label">Comportamento</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">UI</span>
+              <span class="metrica-label">Imersiva</span>
+            </div>
           </div>
-          <div class="card-badge">Front-End</div>
-          <h2>House Of The Dragon</h2>
-          <p>Interface dinâmica (SPA-like). Dados injetados via iteração de arrays no JavaScript sem reload.</p>
-          <div class="card-tags">
-            <span class="card-tag">HTML</span>
-            <span class="card-tag">CSS</span>
-            <span class="card-tag">JavaScript</span>
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+            <p>
+              Injeção dinâmica de conteúdo no DOM para criar uma navegação no
+              estilo SPA.
+            </p>
+          </div>
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+            <ul class="modal-lista">
+              <li>
+                <strong>Renderização:</strong> Consumo de dados via array de
+                objetos JSON-like.
+              </li>
+              <li>
+                <strong>Navegação:</strong> Alteração de interface via `innerHTML`
+                sem requisições extras.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-links">
+            <a
+              href="https://guilhermez2006.github.io/Projetodragon/"
+              target="_blank"
+              ><i class="fas fa-external-link-alt"></i> Ver site</a
+            >
           </div>
         </div>
+      </div>
 
-        <div class="projeto-card" data-modal="modalSocial">
-          <div class="card-img-wrapper">
-            <img src="assets/img/SiteCordel.png" alt="Preview Cordel Moderno" class="img-projeto-card" />
+      <div id="modalSocial" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 class="titleCard">Cordel Moderno</h2>
+          <img
+            src="assets/img/SiteCordel.png"
+            alt="Preview Cordel"
+            class="img-modal-projeto"
+          />
+          <div class="modal-metricas">
+            <div class="metrica-item">
+              <span class="metrica-valor">Parallax</span>
+              <span class="metrica-label">Efeito Visual</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">100%</span>
+              <span class="metrica-label">CSS Puro</span>
+            </div>
+            <div class="metrica-item">
+              <span class="metrica-valor">UX</span>
+              <span class="metrica-label">Leitura Otimizada</span>
+            </div>
           </div>
-          <div class="card-badge">Front-End</div>
-          <h2>Cordel Moderno</h2>
-          <p>Exploração visual com CSS3 puro. Efeitos parallax e tipografia otimizada para leitura.</p>
-          <div class="card-tags">
-            <span class="card-tag">HTML</span>
-            <span class="card-tag">CSS</span>
+          <div class="modal-secao">
+            <h4>Contexto</h4>
+            <p>
+              Desafio técnico de UI explorando os limites estilísticos do CSS3 sem
+              uso de scripts.
+            </p>
+          </div>
+          <div class="modal-secao">
+            <h4>Resultados</h4>
+            <ul class="modal-lista">
+              <li>
+                <strong>Visual:</strong> Parallax fluido usando propriedades
+                estáticas.
+              </li>
+              <li>
+                <strong>Tipografia:</strong> Hierarquia visual otimizada para
+                conforto na leitura.
+              </li>
+            </ul>
+          </div>
+          <div class="modal-links">
+            <a
+              href="https://guilhermez2006.github.io/Projeto-Cordel/"
+              target="_blank"
+              ><i class="fas fa-external-link-alt"></i> Ver site</a
+            >
           </div>
         </div>
+      </div>
 
-      </div>
-    </section>
-  </main>
+      <footer class="copyright">
+        <b>© 2026 Desenvolvido por </b>
+        <a href="https://www.linkedin.com/in/guilhermelima7/" target="_blank">
+          <span id="GuilhermeLima">Guilherme Lima</span>
+        </a>
+      </footer>
 
-  <div id="modalGameTracker" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">GameTracker – Gerencie seu Backlog</h2>
-      <img src="assets/img/siteGameTracker.png" alt="Preview GameTracker" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">100%</span>
-          <span class="metrica-label">Rotas Protegidas</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">JWT</span>
-          <span class="metrica-label">Autenticação</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">Atlas</span>
-          <span class="metrica-label">Banco na Nuvem</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>API RESTful projetada para gerenciar um catálogo de jogos com segurança e escalabilidade.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Segurança:</strong> Senhas hasheadas (bcrypt) e rotas bloqueadas por JWT.</li>
-          <li><strong>Back-end:</strong> Estruturado com Prisma ORM e banco MongoDB Atlas.</li>
-          <li><strong>Integração:</strong> Front-end consumindo a API com controle de sessão (localStorage).</li>
-        </ul>
-      </div>
-      <div class="modal-secao">
-        <h4>Stack</h4>
-        <div class="card-tags" style="justify-content:center; margin-top:8px;">
-          <span class="card-tag">Node.js</span>
-          <span class="card-tag">Express</span>
-          <span class="card-tag">Prisma ORM</span>
-          <span class="card-tag">MongoDB</span>
-          <span class="card-tag">JWT</span>
-        </div>
-      </div>
-      <div class="modal-links">
-        <a href="https://github.com/guilhermez2006/GameTracker-API" target="_blank"><i class="fab fa-github"></i> Repositório</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalInfoPrime" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">InfoPrime – Soluções e Tecnologia</h2>
-      <img src="assets/img/SiteInfoPrime.png" alt="Preview InfoPrime" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">100%</span>
-          <span class="metrica-label">Responsivo</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">UI/UX</span>
-          <span class="metrica-label">Otimizada</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">Zero</span>
-          <span class="metrica-label">Frameworks</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>Iniciativa própria para modernizar o site da empresa (focada em suporte de TI), melhorando usabilidade e captação de clientes.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Performance:</strong> Carregamento instantâneo usando HTML/CSS/JS puros.</li>
-          <li><strong>UI/UX:</strong> Navegação âncora suave e animações de retenção visual.</li>
-          <li><strong>Responsividade:</strong> Design fluido perfeito em mobile e desktop.</li>
-        </ul>
-      </div>
-      <div class="modal-secao">
-        <h4>Stack</h4>
-        <div class="card-tags" style="justify-content:center; margin-top:8px;">
-          <span class="card-tag">HTML5</span>
-          <span class="card-tag">CSS3</span>
-          <span class="card-tag">JavaScript</span>
-        </div>
-      </div>
-      <div class="modal-links">
-        <a href="https://guilhermez2006.github.io/InfoPrime-page/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver site</a>
-        <a href="https://github.com/guilhermez2006/InfoPrime-page" target="_blank"><i class="fab fa-github"></i> Repositório</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalApiCadastro" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">API de Cadastro</h2>
-      <img src="assets/img/apiCadastro.png" alt="Preview API de Cadastro" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">MVC</span>
-          <span class="metrica-label">Arquitetura</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">REST</span>
-          <span class="metrica-label">Padrão HTTP</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">409</span>
-          <span class="metrica-label">Conflict Handling</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>Projeto focado em código limpo, testando os princípios de arquitetura MVC e tratamento de dados no back-end.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Endpoints:</strong> Operações CRUD semânticas e claras.</li>
-          <li><strong>Validações:</strong> Bloqueio de cadastros duplicados retornando erro HTTP 409.</li>
-          <li><strong>Isolamento:</strong> Separação estrita entre rotas, controllers e banco.</li>
-        </ul>
-      </div>
-      <div class="modal-secao">
-        <h4>Stack</h4>
-        <div class="card-tags" style="justify-content:center; margin-top:8px;">
-          <span class="card-tag">Node.js</span>
-          <span class="card-tag">Express</span>
-          <span class="card-tag">Prisma ORM</span>
-          <span class="card-tag">MongoDB</span>
-        </div>
-      </div>
-      <div class="modal-links">
-        <a href="https://guilhermez2006.github.io/CadastroDeUsuarios/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver interface</a>
-        <a href="https://github.com/guilhermez2006/CadastroDeUsuarios" target="_blank"><i class="fab fa-github"></i> Repositório</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalQuiz" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">Quiz de Programação</h2>
-      <img src="assets/img/SiteQuiz.png" alt="Preview Quiz" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">DOM</span>
-          <span class="metrica-label">Manipulação</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">State</span>
-          <span class="metrica-label">Controle Local</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">Zero</span>
-          <span class="metrica-label">Bibliotecas</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>Replicar gerenciamento de estado complexo usando apenas JavaScript puro.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Lógica Visual:</strong> Feedback instantâneo para acertos/erros (sem recarregar).</li>
-          <li><strong>Estado Dinâmico:</strong> Atualização de pontuação e transição de questões em tempo real.</li>
-        </ul>
-      </div>
-      <div class="modal-links">
-        <a href="https://guilhermez2006.github.io/Quiz-Programacao/" target="_blank"><i class="fas fa-external-link-alt"></i> Acessar Quiz</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalDragon" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">House Of The Dragon</h2>
-      <img src="assets/img/SiteDragons.png" alt="Preview House Of The Dragon" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">Array</span>
-          <span class="metrica-label">Data Source</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">SPA</span>
-          <span class="metrica-label">Comportamento</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">UI</span>
-          <span class="metrica-label">Imersiva</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>Injeção dinâmica de conteúdo no DOM para criar uma navegação no estilo SPA.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Renderização:</strong> Consumo de dados via array de objetos JSON-like.</li>
-          <li><strong>Navegação:</strong> Alteração de interface via `innerHTML` sem requisições extras.</li>
-        </ul>
-      </div>
-      <div class="modal-links">
-        <a href="https://guilhermez2006.github.io/Projetodragon/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver site</a>
-      </div>
-    </div>
-  </div>
-
-  <div id="modalSocial" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="titleCard">Cordel Moderno</h2>
-      <img src="assets/img/SiteCordel.png" alt="Preview Cordel" class="img-modal-projeto" />
-      <div class="modal-metricas">
-        <div class="metrica-item">
-          <span class="metrica-valor">Parallax</span>
-          <span class="metrica-label">Efeito Visual</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">100%</span>
-          <span class="metrica-label">CSS Puro</span>
-        </div>
-        <div class="metrica-item">
-          <span class="metrica-valor">UX</span>
-          <span class="metrica-label">Leitura Otimizada</span>
-        </div>
-      </div>
-      <div class="modal-secao">
-        <h4>Contexto</h4>
-        <p>Desafio técnico de UI explorando os limites estilísticos do CSS3 sem uso de scripts.</p>
-      </div>
-      <div class="modal-secao">
-        <h4>Resultados</h4>
-        <ul class="modal-lista">
-          <li><strong>Visual:</strong> Parallax fluido usando propriedades estáticas.</li>
-          <li><strong>Tipografia:</strong> Hierarquia visual otimizada para conforto na leitura.</li>
-        </ul>
-      </div>
-      <div class="modal-links">
-        <a href="https://guilhermez2006.github.io/Projeto-Cordel/" target="_blank"><i class="fas fa-external-link-alt"></i> Ver site</a>
-      </div>
-    </div>
-  </div>
-
-  <footer class="copyright">
-    <b>© 2026 Desenvolvido por </b>
-    <a href="https://www.linkedin.com/in/guilhermelima7/" target="_blank">
-      <span id="GuilhermeLima">Guilherme Lima</span>
-    </a>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-</body>
-</html>
+      <script src="assets/js/script.js"></script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    </body>
+  </html>
