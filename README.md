@@ -42,10 +42,10 @@ MeuPortfolio/
 
 ## 💼 Projetos em Destaque
 
-1. **InfoPrime** - Modernização de interface institucional
-2. **API de Cadastro** - Backend com Node.js, Express, Prisma e MongoDB
-3. **Quiz de Programação** - Quiz interativo de lógica
-4. **Projeto Android** - História do Bugdroid
+1. **GameTracker API** - Full Stack com Node.js, Express, Prisma, JWT e MongoDB
+2. **InfoPrime** - Modernização de site corporativo de TI
+3. **API de Cadastro** - Full Stack com Node.js, Express, Prisma, JWT e MongoDB
+4. **Quiz de Programação** - Quiz interativo de lógica
 5. **House Of The Dragon** - Site interativo da série
 6. **Cordel Moderno** - Site poético com parallax
 
@@ -58,6 +58,8 @@ MeuPortfolio/
 - Express
 - MongoDB
 - Prisma ORM
+- Docker (Estudando)
+- PostgreSQL (Estudando)
 - Git
 - GitHub
 
